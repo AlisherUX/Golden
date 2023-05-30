@@ -1,24 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "../src/pages/Home";
+import AboutUs from "./pages/AboutUs";
+import Cart from "./pages/Cart";
+import Delivery from "./pages/Delivery";
+import DiscountSale from "./pages/DiscountSale";
+import Catalog from "./pages/Catalog";
+import Category from "./pages/Category";
+import Order from "./pages/Order";
+import Product from "./pages/Product";
+import PageNotFound from "./pages/PageNotFound";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />}/>
+        <Route path="/about-us" element={<AboutUs />}/>
+        <Route path="/cart" element={<Cart />}/>
+        <Route path="/delivery" element={<Delivery />}/>
+        <Route path="/discount" element={<DiscountSale />}/>
+        <Route path="/catalog" element={<Catalog />}/>
+        <Route path="/category" element={<Category />}/>
+        <Route path="/order" element={<Order />}/>
+        <Route path="/product" element={<Product />}/>
+        <Route path="*" element={<PageNotFound />}/>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
