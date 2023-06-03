@@ -1,28 +1,50 @@
 import styled from "styled-components";
 import { flex } from "../../utils/flex";
+import { Link } from "react-router-dom";
 import { adaptiveValue, colors } from "../../utils/variable";
 
 const HeaderWrapper = styled.header`
   width: 100%;
-  box-shadow: inset 0px -1px 0px #c4cdd5;
+  z-index: 100;
+  position: relative !important;
 `;
 
-const HeaderNavWrapper = styled.div`
+const HeaderNavContent = styled.div`
   width: 100%;
-  padding-block: 20px;
   ${flex.spaceBetween};
   ${adaptiveValue("padding-block", 20, 10)}
 `;
 
+const HeaderNavWrapper = styled.div`
+  width: 100%;
+  box-shadow: inset 0px -1px 0px #c4cdd5;
+`;
+
+const HeaderLogo = styled(Link)`
+  cursor: pointer;
+  width: 51px;
+  height: 42px;
+
+  @media (max-width: 780px) {
+    width: 45px;
+    height: 35px;
+  }
+  @media (max-width: 700px) {
+    display: none;
+  }
+`;
+
 const HeaderNav = styled.div`
   ${flex.spaceBetween};
-  gap: 32px;
   ${adaptiveValue("gap", 32, 10)}
+
+  @media (max-width: 700px) {
+    display: none;
+  }
 `;
 
 const HeaderLink = styled.a`
   font-weight: 300;
-  font-size: 20px;
   line-height: 24px;
   color: ${colors.dark};
   ${adaptiveValue("font-size", 20, 15)}
@@ -30,13 +52,10 @@ const HeaderLink = styled.a`
 
 const HeaderBtn = styled.button`
   background-color: Transparent;
-  height: 20px;
   border: none;
   font-weight: 300;
-  font-size: 18px;
   line-height: 24px;
   ${flex.center};
-  gap: 8px;
   cursor: pointer;
   color: ${colors.dark};
   ${adaptiveValue("font-size", 18, 13)};
@@ -45,21 +64,26 @@ const HeaderBtn = styled.button`
 `;
 
 const UserAction = styled.div`
-  max-width: 280px;
   width: 100%;
   ${flex.flexBetween};
-  ${adaptiveValue("max-width", 280, 220)}
+  ${adaptiveValue("max-width", 280, 200)}
+
+  @media (max-width: 700px) {
+    max-width: 80px;
+  }
 `;
 
 const CallContent = styled.a`
   font-weight: 400;
-  font-size: 18px;
   line-height: 21px;
   color: ${colors.gray};
   ${flex.alignCenter};
-  gap: 8px;
   ${adaptiveValue("gap", 8, 5)}
   ${adaptiveValue("font-size", 18, 14)}
+
+  @media (max-width: 700px) {
+    display: none;
+  }
 `;
 
 const HeaderItem = styled.a`
@@ -68,13 +92,36 @@ const HeaderItem = styled.a`
   cursor: pointer;
 `;
 
+const BurgerMenu = styled.div`
+  width: 24px;
+  height: 17px;
+  ${flex.flexBetween};
+  flex-direction: column;
+  display: none;
+
+  @media (max-width: 700px) {
+    display: flex;
+  }
+`;
+
+const BurgerMenuItem = styled.span`
+  width: 100%;
+  height: 2px;
+  background-color: ${colors.dark};
+  border-radius: 2px;
+`;
+
 export {
   HeaderWrapper,
   HeaderNavWrapper,
+  HeaderNavContent,
   HeaderNav,
+  HeaderLogo,
   HeaderLink,
   HeaderItem,
   HeaderBtn,
   UserAction,
-  CallContent
+  CallContent,
+  BurgerMenu,
+  BurgerMenuItem,
 };

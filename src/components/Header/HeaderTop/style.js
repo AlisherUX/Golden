@@ -5,8 +5,8 @@ import { flex } from "../../../utils/flex";
 const HeaderTopWrapper = styled.div`
     width: 100%;
     padding-block: 10px;
-    padding-inline: 100px;
     ${adaptiveValue("padding-inline", 100, 0)}
+    ${adaptiveValue("padding-block", 10, 12)}
     background-color: ${colors.gray}
 `;
 
@@ -25,9 +25,10 @@ const TextContent = styled.div`
 
 const DiscountText = styled.p`
     font-weight: 500;
-    font-size: 16px;
-    line-height: 26px;
+    ${adaptiveValue("font-size", 16, 12)}
+    ${adaptiveValue("line-height", 24, 18)}
     letter-spacing: 0.12em;
+    text-align: center;
 `;
 
 const ReCallText = styled.a`
