@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   HeaderLink,
   HeaderNav,
@@ -13,6 +13,7 @@ import {
   BurgerMenuItem,
   HeaderNavContent
 } from "./style";
+import BurgerWindow from "./BurgerWIndow";
 import { Link } from "react-router-dom";
 import { Container } from "../Container/style";
 import HeaderTop from "./HeaderTop";
@@ -21,11 +22,15 @@ import HeaderDart from "../../assets/images/HeaderDart";
 import Call from "../../assets/images/Call";
 import Like from "../../assets/images/Like";
 import Cart from "../../assets/images/Cart";
-import BurgerWindow from "./BurgerWIndow";
 
 const Header = () => {
+const [button, setButton] = useState(false);
+
+const clickable = () =>{
+  setButton(!button)
+};
+
   return (
-    <div>
       <HeaderWrapper>
         <HeaderTop />
          <HeaderNavWrapper>
@@ -33,7 +38,7 @@ const Header = () => {
             <HeaderNavContent>
              <HeaderLogo to="/"> <Logo/> </HeaderLogo>
 
-                <BurgerMenu>
+                <BurgerMenu onClick={() => clickable()}>
                   <BurgerMenuItem></BurgerMenuItem>
                   <BurgerMenuItem></BurgerMenuItem>
                   <BurgerMenuItem></BurgerMenuItem>
@@ -63,10 +68,9 @@ const Header = () => {
              </UserAction>
             </HeaderNavContent>
           </Container>
+       <BurgerWindow open={button}/>
         </HeaderNavWrapper>
-       <BurgerWindow/>
      </HeaderWrapper>
-    </div>
   );
 };
 

@@ -5,8 +5,6 @@ import { adaptiveValue, colors } from "../../utils/variable";
 
 const HeaderWrapper = styled.header`
   width: 100%;
-  z-index: 100;
-  position: relative !important;
 `;
 
 const HeaderNavContent = styled.div`
@@ -18,6 +16,8 @@ const HeaderNavContent = styled.div`
 const HeaderNavWrapper = styled.div`
   width: 100%;
   box-shadow: inset 0px -1px 0px #c4cdd5;
+  z-index: 100;
+  position: relative !important;
 `;
 
 const HeaderLogo = styled(Link)`
