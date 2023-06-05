@@ -3,6 +3,31 @@ import { flex } from "./flex";
 import { adaptiveValue, colors } from "./variable";
 
 export const GlobalStyles = createGlobalStyle`
+
+@font-face {
+   font-family: "SF-ProText-Regular";
+   src: url(/fonts/SF-ProText-Regular.ttf);
+   font-weight: 400;
+}
+
+@font-face {
+   font-family: "SF-ProText-SemiBold";
+   src: url(/fonts/SF-ProText-SemiBold.ttf);
+   font-weight: 600;
+}
+
+@font-face {
+   font-family: "SF-ProText-Medium";
+   src: url(/fonts/SF-ProText-Medium.ttf);
+   font-weight: 500;
+}
+
+@font-face {
+   font-family: "SF-ProText-Light";
+   src: url(/fonts/SF-ProText-Light.ttf);
+   font-weight: 300;
+}
+
  *{
     padding: 0;
     margin: 0;
@@ -13,19 +38,18 @@ export const GlobalStyles = createGlobalStyle`
 
  .swiper {
    width: 100%;
-  ${adaptiveValue("height", 726, 450)};
+   ${adaptiveValue("min-height", 726, 350)};
+   ${flex.alignCenter}
+   
+   @media (max-width: 660px) {
+      margin-bottom: 32px;
+   }
  }
- 
+
  .swiper-slide {
    text-align: center;
    font-size: 18px;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   
-  @media (max-width: 660px) {
-     margin-top: 130px;
-  }
+   width: 100%;
  }
  
  .swiper-slide img {
@@ -37,7 +61,7 @@ export const GlobalStyles = createGlobalStyle`
 
  .swiper-pagination-bullets {
     ${flex.center}
-    gap: 12px;
+   ${adaptiveValue("gap", 12, 32)};
  }
 
  .swiper-pagination-bullet {

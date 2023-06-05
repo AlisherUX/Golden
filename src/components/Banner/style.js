@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { flex } from "../../utils/flex";
-import { adaptiveValue, colors } from "../../utils/variable";
+import { adaptiveValue, colors, fonts } from "../../utils/variable";
 
 const BannerWrapper = styled.div`
   width: 100%;
@@ -20,15 +20,21 @@ const BannerButtons = styled.button`
 const SwiperNavigation = styled.div`
   ${flex.flexBetween};
   ${flex.alignCenter};
-  // width: 180px;
-  // margin: 0 auto;
-  // padding-bottom: 48px;
+  max-width: 180px;
+  width: 100%;
+  margin: 0 auto;
+  ${adaptiveValue("padding-bottom", 48, 40)};
+  
+  @media (max-width: 660px) {
+    padding-top: 22px;
+    max-width: 100%;
+  }
 `;
 
 const BannerContent = styled.div`
   ${flex.alignCenter}
   ${adaptiveValue("gap", 64, 0)};
-
+ 
   @media (max-width: 660px) {
     ${flex.justFlex};
     flex-direction: column;
@@ -38,11 +44,7 @@ const BannerContent = styled.div`
 const BannerImg = styled.img`
   ${adaptiveValue("max-width", 624, 224)};
   width: 100%;
-  margin-left: 40px;
 
-  @media (max-width: 1000px) {
-    margin-left: 0px;
-  }
   @media (max-width: 660px) {
   ${adaptiveValue("max-width", 624, 324)};
   }
@@ -54,7 +56,7 @@ const BannerEntries = styled.div`
 `;
 
 const BannerTitle = styled.h1`
-  font-weight: 600;
+  font-family: ${fonts.sfSB};
   ${adaptiveValue("font-size", 44, 22)};
   ${adaptiveValue("line-height", 62, 34)};
   color: ${colors.dark};
@@ -66,12 +68,16 @@ const BannerTitle = styled.h1`
     display: block;
     gap: 10px;
   }
+
+  @media (max-width: 510px) {
+    ${adaptiveValue("margin-bottom", 24, 15)};
+  }
 `;
 
 const BannerText = styled.div`
   max-width: 287px;
   width: 100%;
-  font-weight: 400;
+  font-family: ${fonts.sfReg};
   font-size: 14px;
   line-height: 24px;
   color: ${colors.gray};
@@ -89,6 +95,10 @@ const BannerText = styled.div`
     max-width: 100%;
     gap: 8px;
   }
+
+  @media (max-width: 510px) {
+    display: none;
+  }
 `;
 
 const BannerPrice = styled.div`
@@ -98,7 +108,7 @@ const BannerPrice = styled.div`
   margin-bottom: 16px;
 
   > span {
-    font-weight: 400;
+    font-family: ${fonts.sfReg};
     font-size: 12px;
     line-height: 22px;
     color: ${colors.gray};
@@ -113,7 +123,7 @@ const Prices = styled.div`
 `;
 
 const BannerNowPrice = styled.p`
-  font-weight: 600;
+  font-family: ${fonts.sfSB};
   ${adaptiveValue("font-size", 24, 18)};
   ${adaptiveValue("line-height", 29, 21)};
   color: ${colors.dark};
@@ -121,7 +131,7 @@ const BannerNowPrice = styled.p`
 `;
 
 const BannerOldPrice = styled.p`
-  font-weight: 300;
+  font-family: ${fonts.sfL};
   ${adaptiveValue("font-size", 22, 14)};
   ${adaptiveValue("line-height", 26, 17)};
   color: ${colors.lightGray};

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { flex } from "../../utils/flex";
-import { adaptiveValue, colors } from "../../utils/variable";
+import { adaptiveValue, colors, fonts } from "../../utils/variable";
 
 const HeaderWrapper = styled.header`
   width: 100%;
@@ -46,7 +46,7 @@ const HeaderNav = styled.div`
 `;
 
 const HeaderLink = styled.a`
-  font-weight: 300;
+  font-family: ${fonts.sfL};
   line-height: 24px;
   color: ${colors.dark};
   ${adaptiveValue("font-size", 20, 15)};
@@ -55,7 +55,7 @@ const HeaderLink = styled.a`
 const HeaderBtn = styled.button`
   background-color: Transparent;
   border: none;
-  font-weight: 300;
+  font-family: ${fonts.sfL};
   line-height: 24px;
   ${flex.center};
   cursor: pointer;
@@ -68,7 +68,7 @@ const HeaderBtn = styled.button`
 const UserAction = styled.div`
   width: 100%;
   ${flex.flexBetween};
-  ${adaptiveValue("max-width", 280, 220)}
+  ${adaptiveValue("max-width", 303, 220)}
 
   @media (max-width: 700px) {
     max-width: 80px;
@@ -76,7 +76,7 @@ const UserAction = styled.div`
 `;
 
 const CallContent = styled.a`
-  font-weight: 400;
+  font-family: ${fonts.sfReg};
   line-height: 21px;
   color: ${colors.gray};
   ${flex.alignCenter};

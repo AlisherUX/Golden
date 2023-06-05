@@ -1,13 +1,14 @@
 import React, {useRef, useEffect, useState} from 'react'
 import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Container } from '../Container/style';
+import { BannerArrow, BannerImg } from '../../assets/images';
+import BlueButton from '../BlueButton';
+import * as Style from "./style";
+
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import { Container } from '../Container/style';
-import * as Style from "./style";
-import { BannerArrow, BannerImg } from '../../assets/images';
-import BlueButton from '../BlueButton';
 
 const Banner = () => {
     const useSwiperRef = () => {
@@ -27,10 +28,8 @@ const Banner = () => {
     const [prevEl, prevElRef] = useSwiperRef();
 
   return (
-    <div>
-
-    <Style.BannerWrapper>
-       
+     <Style.BannerWrapper>
+      <Container>
         <Swiper
         cssMode={true}
         navigation={{
@@ -40,15 +39,15 @@ const Banner = () => {
         pagination={{
           el: ".pagination-bullets",
           type: "bullets",
+          clickable: true,
         }}
         mousewheel={true}
         keyboard={true}
         modules={[Navigation, Pagination, Mousewheel, Keyboard]}
         className="mySwiper"
-        style={{overflow: "visible"}}
       >
-        <SwiperSlide style={{background:"red"}}>
-          <Container>
+
+        <SwiperSlide>
             <Style.BannerContent>
               <Style.BannerImg src={BannerImg}/>
               
@@ -79,11 +78,11 @@ const Banner = () => {
                 <BlueButton text={'Добавить в корзину'}></BlueButton>
               </Style.BannerEntries>
             </Style.BannerContent>
-          </Container>
+ 
         </SwiperSlide>
 {/* a */}
         <SwiperSlide>
-          <Container>
+
           <Style.BannerContent>
               <Style.BannerImg src={BannerImg}/>
               
@@ -114,11 +113,11 @@ const Banner = () => {
                 <BlueButton text={'Добавить в корзину'}></BlueButton>
               </Style.BannerEntries>
             </Style.BannerContent>
-          </Container>
+
         </SwiperSlide>
 {/* a */}
         <SwiperSlide>
-          <Container>
+
           <Style.BannerContent>
               <Style.BannerImg src={BannerImg}/>
               
@@ -149,11 +148,11 @@ const Banner = () => {
                 <BlueButton text={'Добавить в корзину'}></BlueButton>
               </Style.BannerEntries>
             </Style.BannerContent>
-          </Container>
         </SwiperSlide>
       </Swiper>
+          </Container>
         
-      <Style.SwiperNavigation>
+      <Style.SwiperNavigation >
         <Style.BannerButtons ref={prevElRef}>
             <BannerArrow style={{transform: "rotate(180deg)"}}/>
         </Style.BannerButtons>
@@ -163,8 +162,6 @@ const Banner = () => {
         </Style.BannerButtons>
       </Style.SwiperNavigation>
     </Style.BannerWrapper>
-    yhjyhggliugiugl
-    </div>
   )
 }
 

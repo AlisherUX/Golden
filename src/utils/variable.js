@@ -1,5 +1,10 @@
-//Colors
+//Fonts
+const sfReg = "SF-ProText-Regular";
+const sfL = "SF-ProText-Light";
+const sfSB = "SF-ProText-SemiBold";
+const sfM = "SF-ProText-Medium";
 
+//Colors
 const primaryColor = "#4295E4";
 const secondaryColor = "#F2F8FF"
 const dark = "#161C24";
@@ -20,6 +25,13 @@ const colors = {
     white,
 }
 
+const fonts = {
+    sfSB,
+    sfM,
+    sfReg,
+    sfL
+}
+
 export const adaptiveValue = (property, startSize, minSize) => {
     const addSize = startSize - minSize;
     return `
@@ -30,4 +42,4 @@ export const adaptiveValue = (property, startSize, minSize) => {
 `;
 };
 
-export { colors };
+export { colors, fonts };

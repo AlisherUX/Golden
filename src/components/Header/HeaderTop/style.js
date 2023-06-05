@@ -1,11 +1,11 @@
 import styled from "styled-components";
-import { adaptiveValue, colors } from "../../../utils/variable";
+import { adaptiveValue, colors, fonts } from "../../../utils/variable";
 import { flex } from "../../../utils/flex";
 
 const HeaderTopWrapper = styled.div`
   width: 100%;
   padding-block: 10px;
-  ${adaptiveValue("padding-inline", 100, 0)}
+  ${adaptiveValue("padding-inline", 100, 15)}
   ${adaptiveValue("padding-block", 10, 12)}
     background-color: ${colors.gray}
 `;
@@ -24,15 +24,15 @@ const TextContent = styled.div`
 `;
 
 const DiscountText = styled.p`
-  font-weight: 500;
+  font-family: ${fonts.sfM};
   ${adaptiveValue("font-size", 16, 12)}
   ${adaptiveValue("line-height", 24, 18)}
-    letter-spacing: 0.12em;
+  letter-spacing: 0.12em;
   text-align: center;
 `;
 
 const ReCallText = styled.a`
-  font-weight: 500;
+  font-family: ${fonts.sfM};
   font-size: 16px;
   line-height: 26px;
   letter-spacing: 0.12em;

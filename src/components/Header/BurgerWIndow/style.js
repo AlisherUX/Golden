@@ -7,6 +7,7 @@ const WindowWrapper = styled.div`
   top: 142px;
   left: 0;
   bottom: 0;
+  z-index: 100;
   flex-direction: column;
   ${flex.flexBetween}
   width: 100%;
@@ -63,6 +64,7 @@ const BurgerBottomContent = styled.div`
 const BurgerCallContent = styled.a`
   ${flex.alignCenter}
   gap: 8px;
+  color: ${colors.gray};
 `;
 
 const BurgerReCall = styled.a`
