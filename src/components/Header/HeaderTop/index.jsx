@@ -1,14 +1,14 @@
 import React from 'react'
-import { HeaderTopWrapper, TextContent, ReCallText, DiscountText } from './style';
+import * as Style from './style';
 
 const HeaderTop = () => {
   return (
-    <HeaderTopWrapper>
-        <TextContent>
-            <DiscountText>Скидка 10% по промокоду “ZAMOK” на все заказы до 10.09</DiscountText>
-            <ReCallText href='tel:+9989999999'>Обратный звонок</ReCallText>
-        </TextContent>
-    </HeaderTopWrapper>
+    <Style.HeaderTopWrapper>
+        <Style.TextContent>
+            <Style.DiscountText>Скидка 10% по промокоду “ZAMOK” на все заказы до 10.09</Style.DiscountText>
+            <Style.ReCallText href='tel:+9989999999'>Обратный звонок</Style.ReCallText>
+        </Style.TextContent>
+    </Style.HeaderTopWrapper>
   )
 }
 

@@ -10,6 +10,7 @@ import Category from "./pages/Category";
 import Order from "./pages/Order";
 import Product from "./pages/Product";
 import PageNotFound from "./pages/PageNotFound";
+import Favourite from "./pages/Favourite";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/" element={<Home />}/>
         <Route path="/about-us" element={<AboutUs />}/>
         <Route path="/cart" element={<Cart />}/>
+        <Route path="/like" element={<Favourite />}/>
         <Route path="/delivery" element={<Delivery />}/>
         <Route path="/discount" element={<DiscountSale />}/>
         <Route path="/catalog" element={<Catalog />}/>

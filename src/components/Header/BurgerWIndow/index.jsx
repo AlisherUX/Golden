@@ -1,27 +1,30 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
-import { BurgerNavBtn, BurgerNavLine, BurgerNavLink, BurgerNavWrapper, WindowWrapper } from './style';
-import RightArrow from '../../../assets/images/RightArrow';
+import * as Style from './style';
+import { Call, RightArrow } from '../../../assets/images';
+
 
 const BurgerWindow = ({open}) => {
-  return <WindowWrapper open={open}>
+  return <Style.WindowWrapper open={open}>
 
-     <BurgerNavWrapper>
-
-         <Link to="/"><BurgerNavLink>Главная</BurgerNavLink></Link>
-         <BurgerNavLine/>
-         <BurgerNavBtn>Каталог <RightArrow/></BurgerNavBtn>
-         <BurgerNavLine/>
-         <Link to="/discount"><BurgerNavLink>Оптовая продажа</BurgerNavLink></Link>
-         <BurgerNavLine/>
-         <Link to="/about-us"><BurgerNavLink>О нас</BurgerNavLink></Link>
-         <BurgerNavLine/>
-
-     </BurgerNavWrapper>
-
-     dfjldj
+     <Style.BurgerNavWrapper>
+         <Style.BurgerNavLink href='/'>Главная</Style.BurgerNavLink>
     
-  </WindowWrapper>
+         <Style.BurgerNavBtn href='/catalog'>Каталог <RightArrow/></Style.BurgerNavBtn>
+        
+         <Style.BurgerNavLink href='/discount'>Оптовая продажа</Style.BurgerNavLink>
+        
+         <Style.BurgerNavLink href='/about-us'>О нас</Style.BurgerNavLink>
+     </Style.BurgerNavWrapper>
+
+     <Style.BurgerBottomContent>
+         <Style.BurgerCallContent href={`tel:+${79665588499}`}>
+            <Call/>
+             +7 (966) 55 88 499
+         </Style.BurgerCallContent>
+         <Style.BurgerReCall href='tel:+9989999999'>Обратный звонок</Style.BurgerReCall>
+     </Style.BurgerBottomContent>
+    
+  </Style.WindowWrapper>
 }
 
 export default BurgerWindow;

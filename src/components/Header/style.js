@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import { flex } from "../../utils/flex";
 import { Link } from "react-router-dom";
+import { flex } from "../../utils/flex";
 import { adaptiveValue, colors } from "../../utils/variable";
 
 const HeaderWrapper = styled.header`
@@ -10,14 +10,16 @@ const HeaderWrapper = styled.header`
 const HeaderNavContent = styled.div`
   width: 100%;
   ${flex.spaceBetween};
-  ${adaptiveValue("padding-block", 20, 10)}
+  padding-block: 25px;
+
+  @media (max-width: 375px) {
+    padding-block: 19px;
+  }
 `;
 
 const HeaderNavWrapper = styled.div`
   width: 100%;
   box-shadow: inset 0px -1px 0px #c4cdd5;
-  z-index: 100;
-  position: relative !important;
 `;
 
 const HeaderLogo = styled(Link)`
@@ -36,7 +38,7 @@ const HeaderLogo = styled(Link)`
 
 const HeaderNav = styled.div`
   ${flex.spaceBetween};
-  ${adaptiveValue("gap", 32, 10)}
+  ${adaptiveValue("gap", 32, 10)};
 
   @media (max-width: 700px) {
     display: none;
@@ -47,7 +49,7 @@ const HeaderLink = styled.a`
   font-weight: 300;
   line-height: 24px;
   color: ${colors.dark};
-  ${adaptiveValue("font-size", 20, 15)}
+  ${adaptiveValue("font-size", 20, 15)};
 `;
 
 const HeaderBtn = styled.button`
@@ -66,7 +68,7 @@ const HeaderBtn = styled.button`
 const UserAction = styled.div`
   width: 100%;
   ${flex.flexBetween};
-  ${adaptiveValue("max-width", 280, 200)}
+  ${adaptiveValue("max-width", 280, 220)}
 
   @media (max-width: 700px) {
     max-width: 80px;
@@ -86,7 +88,7 @@ const CallContent = styled.a`
   }
 `;
 
-const HeaderItem = styled.a`
+const HeaderItem = styled.div`
   width: 32px;
   height: 32px;
   cursor: pointer;

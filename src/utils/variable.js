@@ -6,6 +6,7 @@ const dark = "#161C24";
 const deepDark = "#0D2436";
 const gray = "#454F5B";
 const light = "#fff";
+const lightGray = "#A4A4A4";
 const white = "#EAEAEA";
 
 const colors = {
@@ -15,6 +16,7 @@ const colors = {
     deepDark,
     gray,
     light,
+    lightGray,
     white,
 }
 

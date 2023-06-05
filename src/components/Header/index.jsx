@@ -1,27 +1,10 @@
 import React, { useState } from "react";
-import {
-  HeaderLink,
-  HeaderNav,
-  HeaderNavWrapper,
-  HeaderWrapper,
-  HeaderBtn,
-  UserAction,
-  CallContent,
-  HeaderItem,
-  HeaderLogo,
-  BurgerMenu,
-  BurgerMenuItem,
-  HeaderNavContent
-} from "./style";
-import BurgerWindow from "./BurgerWIndow";
 import { Link } from "react-router-dom";
-import { Container } from "../Container/style";
 import HeaderTop from "./HeaderTop";
-import Logo from "../../assets/images/Logo";
-import HeaderDart from "../../assets/images/HeaderDart";
-import Call from "../../assets/images/Call";
-import Like from "../../assets/images/Like";
-import Cart from "../../assets/images/Cart";
+import { Container } from "../Container/style";
+import BurgerWindow from "./BurgerWIndow";
+import * as Style from "./style";
+import { Call, Cart, HeaderDart, Like, Logo } from "../../assets/images";
 
 const Header = () => {
 const [button, setButton] = useState(false);
@@ -31,46 +14,50 @@ const clickable = () =>{
 };
 
   return (
-      <HeaderWrapper>
+      <Style.HeaderWrapper>
         <HeaderTop />
-         <HeaderNavWrapper>
+         <Style.HeaderNavWrapper>
           <Container>
-            <HeaderNavContent>
-             <HeaderLogo to="/"> <Logo/> </HeaderLogo>
+            <Style.HeaderNavContent>
+             <Style.HeaderLogo to="/"> <Logo/> </Style.HeaderLogo>
 
-                <BurgerMenu onClick={() => clickable()}>
-                  <BurgerMenuItem></BurgerMenuItem>
-                  <BurgerMenuItem></BurgerMenuItem>
-                  <BurgerMenuItem></BurgerMenuItem>
-                </BurgerMenu>
+                <Style.BurgerMenu onClick={() => clickable()}>
+                  <Style.BurgerMenuItem></Style.BurgerMenuItem>
+                  <Style.BurgerMenuItem></Style.BurgerMenuItem>
+                  <Style.BurgerMenuItem></Style.BurgerMenuItem>
+                </Style.BurgerMenu>
 
-              <HeaderNav>
-               <Link to="/"><HeaderLink>Главная</HeaderLink></Link>
-               <HeaderBtn>Каталог <HeaderDart/></HeaderBtn>
-                <Link to="/discount"><HeaderLink>Оптовая продажа</HeaderLink></Link>
-                <Link to="/about-us"><HeaderLink>О нас</HeaderLink></Link>
-             </HeaderNav>
+              <Style.HeaderNav>
+               <Link to="/"><Style.HeaderLink>Главная</Style.HeaderLink></Link>
+               <Style.HeaderBtn>Каталог <HeaderDart/></Style.HeaderBtn>
+                <Link to="/discount"><Style.HeaderLink>Оптовая продажа</Style.HeaderLink></Link>
+                <Link to="/about-us"><Style.HeaderLink>О нас</Style.HeaderLink></Link>
+             </Style.HeaderNav>
 
-             <UserAction>
-                <CallContent href={`tel:+${79665588499}`}>
-                 <Call />
+             <Style.UserAction>
+                <Style.CallContent href={`tel:+${79665588499}`}>
+                 <Call/>
                   +7 (966) 55 88 499
-               </CallContent>
+                </Style.CallContent>
 
-               <HeaderItem>
-                 <Like />
-                </HeaderItem>
+                <Link to='/like'>
+                  <Style.HeaderItem>
+                    <Like/>
+                  </Style.HeaderItem>
+                </Link>
 
-                <HeaderItem>
-                  <Cart />
-                </HeaderItem>
+                <Link to='/cart'>
+                  <Style.HeaderItem>
+                    <Cart/>
+                  </Style.HeaderItem>
+                </Link>
 
-             </UserAction>
-            </HeaderNavContent>
+             </Style.UserAction>
+            </Style.HeaderNavContent>
           </Container>
        <BurgerWindow open={button}/>
-        </HeaderNavWrapper>
-     </HeaderWrapper>
+        </Style.HeaderNavWrapper>
+     </Style.HeaderWrapper>
   );
 };
 

@@ -4,13 +4,13 @@ import { flex } from "../../../utils/flex";
 
 const WindowWrapper = styled.div`
   position: fixed;
+  top: 142px;
   left: 0;
-  bottom: -10;
+  bottom: 0;
   flex-direction: column;
   ${flex.flexBetween}
   width: 100%;
-  height: 80vh;
-  padding: 24px 16px;
+  padding: 24px 16px 40px;
   background: ${colors.light};
   transform: ${({ open }) =>
     open === true ? "translateX(0%)" : "translateX(-100%)"};
@@ -20,13 +20,14 @@ const WindowWrapper = styled.div`
   @media (max-width: 700px) {
     display: flex;
   }
+  @media (max-width: 375px) {
+    top: 130px;
+  }
 `;
 
 const BurgerNavWrapper = styled.nav`
   ${flex.justFlex};
   flex-direction: column;
-  width: 100%;
-  gap: 16px;
 `;
 
 const BurgerNavBtn = styled.button`
@@ -34,7 +35,12 @@ const BurgerNavBtn = styled.button`
   ${flex.alignCenter};
   background: transparent;
   border: none;
-  width: 100%;
+  border-bottom: 1px solid ${colors.white};
+  padding-block: 16px;
+
+  &:active {
+    background: ${colors.white};
+  }
 `;
 
 const BurgerNavLink = styled.a`
@@ -42,13 +48,38 @@ const BurgerNavLink = styled.a`
   font-size: 16px;
   line-height: 26px;
   color: ${colors.gray};
-  height: 58px;
+  padding-block: 16px;
+  border-bottom: 1px solid ${colors.white};
+
+  &:active {
+    background: ${colors.white};
+  }
 `;
 
-const BurgerNavLine = styled.span`
-  width: 100%;
-  height: 1px;
-  background-color: ${colors.white};
+const BurgerBottomContent = styled.div`
+  ${flex.flexBetween}
 `;
 
-export { WindowWrapper, BurgerNavWrapper, BurgerNavBtn, BurgerNavLink, BurgerNavLine };
+const BurgerCallContent = styled.a`
+  ${flex.alignCenter}
+  gap: 8px;
+`;
+
+const BurgerReCall = styled.a`
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0.12em;
+  text-decoration-line: underline;
+  color: ${colors.primaryColor};
+`;
+
+export {
+  WindowWrapper,
+  BurgerNavWrapper,
+  BurgerNavBtn,
+  BurgerNavLink,
+  BurgerCallContent,
+  BurgerBottomContent,
+  BurgerReCall,
+};
