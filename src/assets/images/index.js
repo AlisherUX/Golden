@@ -5,4 +5,6 @@ export { default as HeaderDart } from "./HeaderDart";
 export { default as Logo } from "./Logo";
 export { default as RightArrow } from "./RightArrow";
 export { default as BannerArrow } from "./BannerArrow";
+export { default as Box } from "./Box";
+export { default as Incentive } from "./Incentive";
 export { default as BannerImg } from "./BannerImg.png";

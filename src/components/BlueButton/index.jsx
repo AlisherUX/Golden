@@ -16,6 +16,10 @@ const Button = styled.button`
         background: transparent;
         color: ${colors.primaryColor};
     }
+    &:active{
+        background: transparent;
+        color: ${colors.primaryColor};
+    }
     @media (max-width: 460px) {
       max-width: 100%;
     }
