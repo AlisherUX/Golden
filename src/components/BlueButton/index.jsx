@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from "styled-components";
-import { colors } from "../../utils/variable";
+import { adaptiveValue, colors } from "../../utils/variable";
 
 const Button = styled.button`
     background-color: ${colors.primaryColor};
@@ -11,6 +11,7 @@ const Button = styled.button`
     color: ${colors.light};
     cursor: pointer;
     transition: 0.3s;
+    display: block;
 
     &:hover{
         background: transparent;
@@ -21,7 +22,8 @@ const Button = styled.button`
         color: ${colors.primaryColor};
     }
     @media (max-width: 460px) {
-      max-width: 100%;
+      max-width: max-content;
+      ${adaptiveValue("padding-inline", 119, 90)};
     }
 `;
 

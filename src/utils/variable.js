@@ -8,11 +8,13 @@ const sfM = "SF-ProText-Medium";
 const primaryColor = "#4295E4";
 const secondaryColor = "#F2F8FF"
 const dark = "#161C24";
+const lightBlue = "#56A9F8";
 const deepDark = "#0D2436";
 const gray = "#454F5B";
 const light = "#fff";
 const lightGray = "#A4A4A4";
 const white = "#EAEAEA";
+const lactic = "#FAFAFA";
 
 const colors = {
     primaryColor,
@@ -22,7 +24,9 @@ const colors = {
     gray,
     light,
     lightGray,
+    lightBlue,
     white,
+    lactic,
 }
 
 const fonts = {

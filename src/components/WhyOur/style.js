@@ -7,10 +7,9 @@ const WhyOurWrapper = styled.div`
     width: 100%;
 `;
 
-const WhyOurTitle = styled.p`
+const Title = styled.p`
     ${adaptiveValue("font-size", 44, 22)};
     ${adaptiveValue("line-height", 62, 34)};
-    ${adaptiveValue("margin-bottom", 56, 24)};
     font-family: ${fonts.sfSB};
     color: ${colors.dark};
     text-align: center;
@@ -51,6 +50,7 @@ const BoxContent = styled.div`
     ${flex.center}
     gap: 30px;
     flex-wrap: wrap;
+    ${adaptiveValue("margin-top", 56, 24)};
 `;
 
-export { WhyOurWrapper, BoxContent, WhyOurTitle, WhyOurBox, BoxTxt }
+export { WhyOurWrapper, BoxContent, Title, WhyOurBox, BoxTxt }

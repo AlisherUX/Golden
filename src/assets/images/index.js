@@ -8,3 +8,7 @@ export { default as BannerArrow } from "./BannerArrow";
 export { default as Box } from "./Box";
 export { default as Incentive } from "./Incentive";
 export { default as BannerImg } from "./BannerImg.png";
+export { default as Handle } from "./hanle.png";
+export { default as handle2 } from "./handle2.png";
+export { default as Handle3 } from "./handle3.png";
+export { default as Lock } from "./lock.png";

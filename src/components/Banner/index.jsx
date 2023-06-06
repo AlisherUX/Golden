@@ -9,7 +9,7 @@ import * as Style from "./style";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import { data } from "./data";
+// import { data } from "./data";
 
 const Banner = () => {
     const useSwiperRef = () => {
@@ -49,15 +49,8 @@ const Banner = () => {
       >
 
         <SwiperSlide>
-          {data.map((el) => {
-            return(
-            <Style.BannerContent key={el.id}>
-              <img src={el.img} alt={el.title} />
-            </Style.BannerContent>
-            )
-          })};
             <Style.BannerContent>
-              {/* <Style.BannerImg src={BannerImg}/> */}
+              <Style.BannerImg src={BannerImg}/>
               
               <Style.BannerEntries>
                 <Style.BannerTitle>

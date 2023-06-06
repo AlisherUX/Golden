@@ -7,7 +7,7 @@ const WhyOur = () => {
   return (
     <Style.WhyOurWrapper>
         <Container>
-                    <Style.WhyOurTitle>Почему GoldenService? </Style.WhyOurTitle>
+                    <Style.Title>Почему GoldenService? </Style.Title>
             <Style.BoxContent>
 
                 <Style.WhyOurBox>
