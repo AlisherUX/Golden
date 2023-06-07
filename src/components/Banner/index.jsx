@@ -2,14 +2,14 @@ import React, {useRef, useEffect, useState} from 'react'
 import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Container } from '../Container/style';
-import { BannerArrow, BannerImg } from '../../assets/images';
+import { BannerArrow } from '../../assets/images';
 import BlueButton from '../BlueButton';
 import * as Style from "./style";
 
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-// import { data } from "./data";
+import { data } from "./data";
 
 const Banner = () => {
     const useSwiperRef = () => {
@@ -49,106 +49,111 @@ const Banner = () => {
       >
 
         <SwiperSlide>
-            <Style.BannerContent>
-              <Style.BannerImg src={BannerImg}/>
-              
-              <Style.BannerEntries>
-                <Style.BannerTitle>
-                <span>Golden Soft</span> GS-200Z-5 для офиса
-                </Style.BannerTitle>
+          {data.map((el) => {
+            return(
+              <Style.BannerContent key={el.id}>
+                <Style.BannerImg src={el.img} alt={el.title}/>
 
-                <Style.BannerText>
-                  <span>
-                    Замок дверной электронный Golden Soft 
-                    GS-200Z-5 имеет роскошный глянцевый 
-                    блеск,четкие линии, красивые формы.
-                  </span>
-                  <span>
-                    Подходит для установки на деревянную/межкомнатную дверь.
-                  </span>
-                </Style.BannerText>
+                <Style.BannerEntries>
+                  <Style.BannerTitle>
+                    <span>{el.title}</span>{el.titleItem}
+                  </Style.BannerTitle>
 
-                <Style.BannerPrice>
-                  <span>Цена</span>
+                  <Style.BannerText>
+                    <span>
+                      {el.text}
+                    </span>
+                    <span>
+                      {el.description}
+                    </span>
+                  </Style.BannerText>
 
-                  <Style.Prices>
-                    <Style.BannerNowPrice>33 000₽</Style.BannerNowPrice>
-                    <Style.BannerOldPrice>37 000₽</Style.BannerOldPrice>
-                  </Style.Prices>
-                </Style.BannerPrice>
-                <BlueButton text={'Добавить в корзину'}></BlueButton>
-              </Style.BannerEntries>
-            </Style.BannerContent>
- 
+                  <Style.BannerPrice>
+                    <span>Цена</span>
+
+                    <Style.Prices>
+                      <Style.BannerNowPrice>{el.nowprice}</Style.BannerNowPrice>
+                      <Style.BannerOldPrice>{el.oldprice}</Style.BannerOldPrice>
+                    </Style.Prices>
+
+                  </Style.BannerPrice>
+                  <BlueButton text={'Добавить в корзину'}/>
+                </Style.BannerEntries>
+              </Style.BannerContent>
+            )
+          })};
         </SwiperSlide>
 {/* a */}
         <SwiperSlide>
+        {data.map((el) => {
+            return(
+              <Style.BannerContent key={el.id}>
+                <Style.BannerImg src={el.img} alt={el.title}/>
 
-          <Style.BannerContent>
-              <Style.BannerImg src={BannerImg}/>
-              
-              <Style.BannerEntries>
-                <Style.BannerTitle>
-                <span>Golden Soft</span> GS-200Z-5 для офиса
-                </Style.BannerTitle>
+                <Style.BannerEntries>
+                  <Style.BannerTitle>
+                    <span>{el.title}</span>{el.titleItem}
+                  </Style.BannerTitle>
 
-                <Style.BannerText>
-                  <span>
-                    Замок дверной электронный Golden Soft 
-                    GS-200Z-5 имеет роскошный глянцевый 
-                    блеск,четкие линии, красивые формы.
-                  </span>
-                  <span>
-                    Подходит для установки на деревянную/межкомнатную дверь.
-                  </span>
-                </Style.BannerText>
+                  <Style.BannerText>
+                    <span>
+                      {el.text}
+                    </span>
+                    <span>
+                      {el.description}
+                    </span>
+                  </Style.BannerText>
 
-                <Style.BannerPrice>
-                  <span>Цена</span>
+                  <Style.BannerPrice>
+                    <span>Цена</span>
 
-                  <Style.Prices>
-                    <Style.BannerNowPrice>33 000₽</Style.BannerNowPrice>
-                    <Style.BannerOldPrice>37 000₽</Style.BannerOldPrice>
-                  </Style.Prices>
-                </Style.BannerPrice>
-                <BlueButton text={'Добавить в корзину'}></BlueButton>
-              </Style.BannerEntries>
-            </Style.BannerContent>
+                    <Style.Prices>
+                      <Style.BannerNowPrice>{el.nowprice}</Style.BannerNowPrice>
+                      <Style.BannerOldPrice>{el.oldprice}</Style.BannerOldPrice>
+                    </Style.Prices>
 
+                  </Style.BannerPrice>
+                  <BlueButton text={'Добавить в корзину'}/>
+                </Style.BannerEntries>
+              </Style.BannerContent>
+            )
+          })};
         </SwiperSlide>
 {/* a */}
         <SwiperSlide>
+        {data.map((el) => {
+            return(
+              <Style.BannerContent key={el.id}>
+                <Style.BannerImg src={el.img} alt={el.title}/>
 
-          <Style.BannerContent>
-              <Style.BannerImg src={BannerImg}/>
-              
-              <Style.BannerEntries>
-                <Style.BannerTitle>
-                <span>Golden Soft</span> GS-200Z-5 для офиса
-                </Style.BannerTitle>
+                <Style.BannerEntries>
+                  <Style.BannerTitle>
+                    <span>{el.title}</span>{el.titleItem}
+                  </Style.BannerTitle>
 
-                <Style.BannerText>
-                  <span>
-                    Замок дверной электронный Golden Soft 
-                    GS-200Z-5 имеет роскошный глянцевый 
-                    блеск,четкие линии, красивые формы.
-                  </span>
-                  <span>
-                    Подходит для установки на деревянную/межкомнатную дверь.
-                  </span>
-                </Style.BannerText>
+                  <Style.BannerText>
+                    <span>
+                      {el.text}
+                    </span>
+                    <span>
+                      {el.description}
+                    </span>
+                  </Style.BannerText>
 
-                <Style.BannerPrice>
-                  <span>Цена</span>
+                  <Style.BannerPrice>
+                    <span>Цена</span>
 
-                  <Style.Prices>
-                    <Style.BannerNowPrice>33 000₽</Style.BannerNowPrice>
-                    <Style.BannerOldPrice>37 000₽</Style.BannerOldPrice>
-                  </Style.Prices>
-                </Style.BannerPrice>
-                <BlueButton text={'Добавить в корзину'}></BlueButton>
-              </Style.BannerEntries>
-            </Style.BannerContent>
+                    <Style.Prices>
+                      <Style.BannerNowPrice>{el.nowprice}</Style.BannerNowPrice>
+                      <Style.BannerOldPrice>{el.oldprice}</Style.BannerOldPrice>
+                    </Style.Prices>
+
+                  </Style.BannerPrice>
+                  <BlueButton text={'Добавить в корзину'}/>
+                </Style.BannerEntries>
+              </Style.BannerContent>
+            )
+          })};
         </SwiperSlide>
       </Swiper>
           </Container>

@@ -3,7 +3,8 @@ import * as Style from "./style";
 import { Container } from '../Container/style';
 import { Title } from '../WhyOur/style';
 import BlueButton from '../BlueButton';
-import { Handle, Handle3, Lock, handle2 } from '../../assets/images';
+import { Link } from 'react-router-dom';
+import { data } from "./data";
 
 const Category = () => {
   return (
@@ -11,43 +12,21 @@ const Category = () => {
             <Title>Категории</Title>
         <Container>
             <Style.CategoryCards>
-
-                <Style.CategoryCard>
-                    <Style.CardItemsWrapper>
-                        <Style.CardEntry>Для отелей</Style.CardEntry>
-                        <Style.CardBtn>Перейти</Style.CardBtn>
-                    </Style.CardItemsWrapper>
-
-                    <Style.CardImg src={Handle}/>
-                </Style.CategoryCard>
-                <Style.CategoryCard>
-                    <Style.CardItemsWrapper>
-                        <Style.CardEntry>Для отелей</Style.CardEntry>
-                        <Style.CardBtn>Перейти</Style.CardBtn>
-                    </Style.CardItemsWrapper>
-
-                    <Style.CardImg src={Handle3}/>
-                </Style.CategoryCard>
-                <Style.CategoryCard>
-                    <Style.CardItemsWrapper>
-                        <Style.CardEntry>Для отелей</Style.CardEntry>
-                        <Style.CardBtn>Перейти</Style.CardBtn>
-                    </Style.CardItemsWrapper>
-
-                    <Style.CardImg src={handle2}/>
-                </Style.CategoryCard>
-                <Style.CategoryCard>
-                    <Style.CardItemsWrapper>
-                        <Style.CardEntry>Для отелей</Style.CardEntry>
-                        <Style.CardBtn>Перейти</Style.CardBtn>
-                    </Style.CardItemsWrapper>
-
-                    <Style.CardImg src={Lock}/>
-                </Style.CategoryCard>
-
+                {data.map((el) => {
+                    return(
+                    <Style.CategoryCard>
+                        <Style.CardItemsWrapper>
+                            <Style.CardEntry>{el.text}</Style.CardEntry>
+                            <Style.CardBtn>Перейти</Style.CardBtn>
+                        </Style.CardItemsWrapper>
+    
+                        <Style.CardImg src={el.img}/>
+                    </Style.CategoryCard>
+                    )
+                })};
             </Style.CategoryCards>
         </Container>
-            <BlueButton text={'Все категории'}/>
+          <Link to='/category'>   <BlueButton text={'Все категории'}/></Link>
     </Style.CategoryWrapper>
   )
 }

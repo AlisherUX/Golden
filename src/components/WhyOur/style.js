@@ -43,7 +43,6 @@ const BoxTxt = styled.p`
 `;
 
 const BoxContent = styled.div`
-    max-width: 1240px;
     width: 100%;
     margin: 0 auto;
     ${flex.flexBetween}

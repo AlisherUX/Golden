@@ -1,30 +1,22 @@
 import React from 'react';
 import * as Style from "./style";
 import { Container } from '../Container/style';
-import { Box, Incentive } from '../../assets/images';
+import { data } from './data';
 
 const WhyOur = () => {
   return (
     <Style.WhyOurWrapper>
         <Container>
-                    <Style.Title>Почему GoldenService? </Style.Title>
+            <Style.Title>Почему GoldenService? </Style.Title>
             <Style.BoxContent>
-
-                <Style.WhyOurBox>
-                    <Box/>
-                    <Style.BoxTxt>Возврат удвоенной стоимости каждого замка в случае брака.</Style.BoxTxt>
-                </Style.WhyOurBox>
-
-                <Style.WhyOurBox>
-                    <Incentive/>
-                    <Style.BoxTxt>Наносим ваш логотип компании на наш продукт</Style.BoxTxt>
-                </Style.WhyOurBox>
-
-                <Style.WhyOurBox>
-                    <Box/>
-                    <Style.BoxTxt>Возврат удвоенной стоимости каждого замка в случае брака.</Style.BoxTxt>
-                </Style.WhyOurBox>
-
+                {data.map((el) => {
+                    return(
+                            <Style.WhyOurBox key={el.id}>
+                                {el.img}
+                                <Style.BoxTxt>{el.text}</Style.BoxTxt>
+                            </Style.WhyOurBox>
+                    )
+                })};
             </Style.BoxContent>
         </Container>
     </Style.WhyOurWrapper>

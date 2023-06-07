@@ -1,30 +1,18 @@
 import React from 'react';
 import * as Style from "./style";
+import { data } from "./data";
 
 const Statistic = () => {
   return (
     <Style.StatisticWrapper>
-
-      <Style.StatisticBox>
-        <Style.StatisticNum>5,567</Style.StatisticNum>
-        <Style.StatisticTxt>Счастливых клиентов</Style.StatisticTxt>
-      </Style.StatisticBox>
-
-      <Style.StatisticBox>
-        <Style.StatisticNum>1245</Style.StatisticNum>
-        <Style.StatisticTxt>Продуктов на выбор</Style.StatisticTxt>
-      </Style.StatisticBox>
-
-      <Style.StatisticBox>
-        <Style.StatisticNum>372</Style.StatisticNum>
-        <Style.StatisticTxt>Продаж в день</Style.StatisticTxt>
-      </Style.StatisticBox>
-
-      <Style.StatisticBox>
-        <Style.StatisticNum>20</Style.StatisticNum>
-        <Style.StatisticTxt>Лет на рынке</Style.StatisticTxt>
-      </Style.StatisticBox>
-
+      {data.map((el) => {
+        return(
+        <Style.StatisticBox key={el.id}>
+          <Style.StatisticNum>{el.number}</Style.StatisticNum>
+          <Style.StatisticTxt>{el.text}</Style.StatisticTxt>
+        </Style.StatisticBox>
+        )
+      })};
     </Style.StatisticWrapper>
   )
 }
