@@ -4,7 +4,7 @@ import { flex } from "../../../utils/flex";
 
 const WindowWrapper = styled.div`
   position: fixed;
-  top: 142px;
+  top: 124px;
   left: 0;
   bottom: 0;
   z-index: 100;

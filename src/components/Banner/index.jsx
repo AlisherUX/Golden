@@ -45,7 +45,7 @@ const Banner = () => {
         mousewheel={true}
         keyboard={true}
         modules={[Navigation, Pagination, Mousewheel, Keyboard]}
-        className="mySwiper"
+      
       >
 
         <SwiperSlide>
@@ -72,8 +72,8 @@ const Banner = () => {
                     <span>Цена</span>
 
                     <Style.Prices>
-                      <Style.BannerNowPrice>{el.nowprice}</Style.BannerNowPrice>
-                      <Style.BannerOldPrice>{el.oldprice}</Style.BannerOldPrice>
+                      <Style.NowPrice>{el.nowprice}</Style.NowPrice>
+                      <Style.OldPrice>{el.oldprice}</Style.OldPrice>
                     </Style.Prices>
 
                   </Style.BannerPrice>
@@ -81,7 +81,7 @@ const Banner = () => {
                 </Style.BannerEntries>
               </Style.BannerContent>
             )
-          })};
+          })}
         </SwiperSlide>
 {/* a */}
         <SwiperSlide>
@@ -108,8 +108,8 @@ const Banner = () => {
                     <span>Цена</span>
 
                     <Style.Prices>
-                      <Style.BannerNowPrice>{el.nowprice}</Style.BannerNowPrice>
-                      <Style.BannerOldPrice>{el.oldprice}</Style.BannerOldPrice>
+                      <Style.NowPrice>{el.nowprice}</Style.NowPrice>
+                      <Style.OldPrice>{el.oldprice}</Style.OldPrice>
                     </Style.Prices>
 
                   </Style.BannerPrice>
@@ -117,7 +117,7 @@ const Banner = () => {
                 </Style.BannerEntries>
               </Style.BannerContent>
             )
-          })};
+          })}
         </SwiperSlide>
 {/* a */}
         <SwiperSlide>
@@ -144,8 +144,8 @@ const Banner = () => {
                     <span>Цена</span>
 
                     <Style.Prices>
-                      <Style.BannerNowPrice>{el.nowprice}</Style.BannerNowPrice>
-                      <Style.BannerOldPrice>{el.oldprice}</Style.BannerOldPrice>
+                      <Style.NowPrice>{el.nowprice}</Style.NowPrice>
+                      <Style.OldPrice>{el.oldprice}</Style.OldPrice>
                     </Style.Prices>
 
                   </Style.BannerPrice>
@@ -153,7 +153,7 @@ const Banner = () => {
                 </Style.BannerEntries>
               </Style.BannerContent>
             )
-          })};
+          })}
         </SwiperSlide>
       </Swiper>
           </Container>

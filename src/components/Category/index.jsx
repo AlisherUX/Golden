@@ -23,7 +23,7 @@ const Category = () => {
                         <Style.CardImg src={el.img}/>
                     </Style.CategoryCard>
                     )
-                })};
+                })}
             </Style.CategoryCards>
         </Container>
           <Link to='/category'>   <BlueButton text={'Все категории'}/></Link>

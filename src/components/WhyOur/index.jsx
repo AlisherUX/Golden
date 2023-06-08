@@ -16,7 +16,7 @@ const WhyOur = () => {
                                 <Style.BoxTxt>{el.text}</Style.BoxTxt>
                             </Style.WhyOurBox>
                     )
-                })};
+                })}
             </Style.BoxContent>
         </Container>
     </Style.WhyOurWrapper>

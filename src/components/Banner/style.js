@@ -44,6 +44,8 @@ const BannerContent = styled.div`
 const BannerImg = styled.img`
   ${adaptiveValue("max-width", 624, 224)};
   width: 100%;
+  margin-top: 120px;
+  margin-bottom: 50px;
 
   @media (max-width: 660px) {
   ${adaptiveValue("max-width", 624, 324)};
@@ -122,7 +124,7 @@ const Prices = styled.div`
   gap: 12px;
 `;
 
-const BannerNowPrice = styled.p`
+const NowPrice = styled.p`
   font-family: ${fonts.sfSB};
   ${adaptiveValue("font-size", 24, 18)};
   ${adaptiveValue("line-height", 29, 21)};
@@ -130,7 +132,7 @@ const BannerNowPrice = styled.p`
   display: inline;
 `;
 
-const BannerOldPrice = styled.p`
+const OldPrice = styled.p`
   font-family: ${fonts.sfL};
   ${adaptiveValue("font-size", 22, 14)};
   ${adaptiveValue("line-height", 26, 17)};
@@ -149,7 +151,7 @@ export {
   BannerTitle,
   BannerText,
   BannerPrice,
-  BannerNowPrice,
-  BannerOldPrice,
+  NowPrice,
+  OldPrice,
   Prices,
 };

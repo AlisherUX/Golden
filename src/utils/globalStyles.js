@@ -38,7 +38,6 @@ export const GlobalStyles = createGlobalStyle`
 
  .swiper {
    width: 100%;
-   ${adaptiveValue("min-height", 726, 350)};
    ${flex.alignCenter}
    
    @media (max-width: 660px) {

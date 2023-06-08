@@ -4,6 +4,7 @@ import Banner from "../../components/Banner";
 import Statistic from "../../components/Statistic";
 import WhyOur from "../../components/WhyOur";
 import Category from "../../components/Category";
+import Product from "../../components/Product";
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
       <Statistic/>
       <WhyOur/>
       <Category/>
+      <Product/>
     </div>
   );
 };
