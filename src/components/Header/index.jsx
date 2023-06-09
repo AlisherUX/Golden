@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import HeaderTop from "./HeaderTop";
 import { Container } from "../Container/style";
@@ -17,6 +17,14 @@ const clickable = () =>{
 const click = () =>{
   setBtn(!btn)
 };
+
+useEffect(() => {
+  if(button){
+    document.body.style = "overflow: hidden";
+  }else{
+    document.body.style = "overflow: auto";
+  }
+}, [button]);
 
   return (
       <Style.HeaderWrapper>

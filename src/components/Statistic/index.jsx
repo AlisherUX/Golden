@@ -12,7 +12,7 @@ const Statistic = () => {
           <Style.StatisticTxt>{el.text}</Style.StatisticTxt>
         </Style.StatisticBox>
         )
-      })};
+      })}
     </Style.StatisticWrapper>
   )
 }

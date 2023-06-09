@@ -8,9 +8,10 @@ import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
 
-import { BannerArrow, Handle4, Handle5, Handle6, Handle7, Present, Tick } from "../../assets/images";
+import { BannerArrow, Cross, Tick } from "../../assets/images";
 import { BannerButtons, NowPrice, OldPrice, Prices } from "../Banner/style";
 import { Navigation } from "swiper";
+import { data } from "./data";
 
 const Product = () => {
   const useSwiperRef = () => {
@@ -47,200 +48,50 @@ const Product = () => {
           <Swiper
             navigation={{ prevEl, nextEl }}
             modules={[Navigation]}
-            slidesPerView={4}
             spaceBetween={30}
             freeMode={true}
-            className="mySwiper"
+            className="productSwiper"
+            breakpoints={{
+              320:{
+                slidesPerView: 1,
+              },
+              430:{
+                slidesPerView: 2,
+              },
+              670:{
+                slidesPerView: 3,
+              },
+              1180:{
+                slidesPerView: 4,
+              }
+            }}
           >
-            <SwiperSlide>
-              <Style.CardImgWrapper>
-                <img src={Handle4} alt="" />
-                <Style.PresentWrapper>
-                  <Present/>
-                  Подарок
-                </Style.PresentWrapper>
-                <Style.SaleStiker>SALE</Style.SaleStiker>
-                <Style.StockStiker>
-                  <Tick/>
-                  В наличии
-                </Style.StockStiker>
-              </Style.CardImgWrapper>
-              <Style.ProductCardInfoWrapper>
-                <Style.ProductCardTxt>Дверной Замок Golden Soft для отеля</Style.ProductCardTxt>
-                <Prices>
-                  <NowPrice style={{fontSize: "20px"}}>33 000₽</NowPrice>
-                  <OldPrice style={{fontSize: "18px"}}>37 000₽</OldPrice>
-                </Prices>
-              </Style.ProductCardInfoWrapper>
-            </SwiperSlide>
-            <SwiperSlide>
-              <Style.CardImgWrapper>
-                <img src={Handle5} alt="" />
-                <Style.PresentWrapper>
-                  <Present/>
-                  Подарок
-                </Style.PresentWrapper>
-                  <Style.SaleStiker>SALE</Style.SaleStiker>
-                <Style.StockStiker>
-                  <Tick/>
-                  В наличии
-                </Style.StockStiker>
-              </Style.CardImgWrapper>
-              <Style.ProductCardInfoWrapper>
-                <Style.ProductCardTxt>Дверной Замок Golden Soft для отеля</Style.ProductCardTxt>
-                <Prices>
-                  <NowPrice style={{fontSize: "20px"}}>7 000₽</NowPrice>
-                  <OldPrice style={{fontSize: "18px"}}>8 000₽</OldPrice>
-                </Prices>
-              </Style.ProductCardInfoWrapper>
-            </SwiperSlide>
-            <SwiperSlide>
-              <Style.CardImgWrapper>
-                <img src={Handle6} alt="" />
-                <Style.PresentWrapper>
-                  <Present/>
-                  Подарок
-                </Style.PresentWrapper>
-                  <Style.SaleStiker>SALE</Style.SaleStiker>
-                <Style.StockStiker>
-                  <Tick/>
-                  В наличии
-                </Style.StockStiker>
-              </Style.CardImgWrapper>
-              <Style.ProductCardInfoWrapper>
-                <Style.ProductCardTxt>Дверной Замок Golden Soft для отеля</Style.ProductCardTxt>
-                <Prices>
-                  <NowPrice style={{fontSize: "20px"}}>33 000₽</NowPrice>
-                  <OldPrice style={{fontSize: "18px"}}>30 000₽</OldPrice>
-                </Prices>
-              </Style.ProductCardInfoWrapper>
-            </SwiperSlide>
-            <SwiperSlide>
-              <Style.CardImgWrapper>
-                <img src={Handle7} alt="" />
-                <Style.PresentWrapper>
-                  <Present/>
-                  Подарок
-                </Style.PresentWrapper>
-                  <Style.SaleStiker>SALE</Style.SaleStiker>
-                <Style.StockStiker>
-                  <Tick/>
-                  В наличии
-                </Style.StockStiker>
-              </Style.CardImgWrapper>
-              <Style.ProductCardInfoWrapper>
-                <Style.ProductCardTxt>Дверной Замок Golden Soft для отеля</Style.ProductCardTxt>
-                <Prices>
-                  <NowPrice style={{fontSize: "20px"}}>9 000₽</NowPrice>
-                  <OldPrice style={{fontSize: "18px"}}>12 000₽</OldPrice>
-                </Prices>
-              </Style.ProductCardInfoWrapper>
-            </SwiperSlide>
-            <SwiperSlide>
-              <Style.CardImgWrapper>
-                <img src={Handle5} alt="" />
-                <Style.PresentWrapper>
-                  <Present/>
-                  Подарок
-                </Style.PresentWrapper>
-                  <Style.SaleStiker>SALE</Style.SaleStiker>
-                <Style.StockStiker>
-                  <Tick/>
-                  В наличии
-                </Style.StockStiker>
-              </Style.CardImgWrapper>
-              <Style.ProductCardInfoWrapper>
-                <Style.ProductCardTxt>Дверной Замок Golden Soft для отеля</Style.ProductCardTxt>
-                <Prices>
-                  <NowPrice style={{fontSize: "20px"}}>13 000₽</NowPrice>
-                  <OldPrice style={{fontSize: "18px"}}>20 000₽</OldPrice>
-                </Prices>
-              </Style.ProductCardInfoWrapper>
-            </SwiperSlide>
-            <SwiperSlide>
-              <Style.CardImgWrapper>
-                <img src={Handle6} alt="" />
-                <Style.PresentWrapper>
-                  <Present/>
-                  Подарок
-                </Style.PresentWrapper>
-                  <Style.SaleStiker>SALE</Style.SaleStiker>
-                <Style.StockStiker>
-                  <Tick/>
-                  В наличии
-                </Style.StockStiker>
-              </Style.CardImgWrapper>
-              <Style.ProductCardInfoWrapper>
-                <Style.ProductCardTxt>Дверной Замок Golden Soft для отеля</Style.ProductCardTxt>
-                <Prices>
-                  <NowPrice style={{fontSize: "20px"}}>30 000₽</NowPrice>
-                  <OldPrice style={{fontSize: "18px"}}>37 000₽</OldPrice>
-                </Prices>
-              </Style.ProductCardInfoWrapper>
-            </SwiperSlide>
-            <SwiperSlide>
-              <Style.CardImgWrapper>
-                <img src={Handle7} alt="" />
-                <Style.PresentWrapper>
-                  <Present/>
-                  Подарок
-                </Style.PresentWrapper>
-                  <Style.SaleStiker>SALE</Style.SaleStiker>
-                <Style.StockStiker>
-                  <Tick/>
-                  В наличии
-                </Style.StockStiker>
-              </Style.CardImgWrapper>
-              <Style.ProductCardInfoWrapper>
-                <Style.ProductCardTxt>Дверной Замок Golden Soft для отеля</Style.ProductCardTxt>
-                <Prices>
-                  <NowPrice style={{fontSize: "20px"}}>33 000₽</NowPrice>
-                  <OldPrice style={{fontSize: "18px"}}>37 000₽</OldPrice>
-                </Prices>
-              </Style.ProductCardInfoWrapper>
-            </SwiperSlide>
-            <SwiperSlide>
-              <Style.CardImgWrapper>
-                <img src={Handle4} alt="" />
-                <Style.PresentWrapper>
-                  <Present/>
-                  Подарок
-                </Style.PresentWrapper>
-                  <Style.SaleStiker>SALE</Style.SaleStiker>
-                <Style.StockStiker>
-                  <Tick/>
-                  В наличии
-                </Style.StockStiker>
-              </Style.CardImgWrapper>
-              <Style.ProductCardInfoWrapper>
-                <Style.ProductCardTxt>Дверной Замок Golden Soft для отеля</Style.ProductCardTxt>
-                <Prices>
-                  <NowPrice style={{fontSize: "20px"}}>20 000₽</NowPrice>
-                  <OldPrice style={{fontSize: "18px"}}>29 000₽</OldPrice>
-                </Prices>
-              </Style.ProductCardInfoWrapper>
-            </SwiperSlide>
-            <SwiperSlide>
-              <Style.CardImgWrapper>
-                <img src={Handle6} alt="" />
-                <Style.PresentWrapper>
-                  <Present/>
-                  Подарок
-                </Style.PresentWrapper>
-                  <Style.SaleStiker>SALE</Style.SaleStiker>
-                <Style.StockStiker>
-                  <Tick/>
-                В наличии
-                </Style.StockStiker>
-              </Style.CardImgWrapper>
-              <Style.ProductCardInfoWrapper>
-                <Style.ProductCardTxt>Дверной Замок Golden Soft для отеля</Style.ProductCardTxt>
-                <Prices>
-                  <NowPrice style={{fontSize: "20px"}}>18 000₽</NowPrice>
-                  <OldPrice style={{fontSize: "18px"}}>26 000₽</OldPrice>
-                </Prices>
-              </Style.ProductCardInfoWrapper>
-            </SwiperSlide>
+            {data.map((el) => {
+              return (
+                <SwiperSlide className="product-slides" key={el.id}>
+                  <Style.CardImgWrapper>
+                    <img src={el.img} />
+                    <Style.PresentWrapper>
+                      {el.presentIcon}
+                      {el.present}
+                    </Style.PresentWrapper>
+                    <Style.SaleStiker>{el.sale}</Style.SaleStiker>
+                    <Style.StockStiker>
+                      {/* {el.cash ? <Tick/> "В наличии" : <Cross/> "Нет в наличии"} */}
+                    </Style.StockStiker>
+                  </Style.CardImgWrapper>
+                  <Style.ProductCardInfoWrapper>
+                    <Style.ProductCardTxt>
+                      {el.cardTxt}
+                    </Style.ProductCardTxt>
+                    <Prices>
+                      <NowPrice style={{ fontSize: "20px" }}>{el.nowPrice}</NowPrice>
+                      <OldPrice style={{ fontSize: "18px" }}>{el.oldPrice}</OldPrice>
+                    </Prices>
+                  </Style.ProductCardInfoWrapper>
+                </SwiperSlide>
+              );
+            })}
           </Swiper>
         </Style.ProductSwiperWrapper>
       </Container>

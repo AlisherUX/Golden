@@ -43,9 +43,9 @@ const BannerContent = styled.div`
 
 const BannerImg = styled.img`
   ${adaptiveValue("max-width", 624, 224)};
+  ${adaptiveValue("margin-top", 120, 25)};
+  ${adaptiveValue("margin-bottom", 50, 25)};
   width: 100%;
-  margin-top: 120px;
-  margin-bottom: 50px;
 
   @media (max-width: 660px) {
   ${adaptiveValue("max-width", 624, 324)};

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { flex } from "../../utils/flex";
 import { colors, fonts } from "../../utils/variable";
-// import { adaptiveValue } from "../../utils/variable";
+import { adaptiveValue } from "../../utils/variable";
 
 const ProductWrapper = styled.div`
     width: 100%;
@@ -10,7 +10,7 @@ const ProductWrapper = styled.div`
 const ProductTitleContent = styled.div`
     width: 100%;
     ${flex.flexBetween};
-    margin-bottom: 64px;
+    ${adaptiveValue("margin-bottom", 64, 24)};
 `;
 
 const ProductSwiperWrapper = styled.div`
@@ -22,12 +22,16 @@ const ProductNavigation = styled.div`
   ${flex.alignCenter};
   max-width: 120px;
   width: 100%;
+
+  @media (max-width: 510px) {
+    display: none;
+  }
 `;
 
 const CardImgWrapper = styled.div`
     padding-block: 28px;
     padding-inline: 12px;
-    background-color: ${colors.lactic};
+    background-color: ${colors.whiteBlue};
     position: relative;
 `;
 

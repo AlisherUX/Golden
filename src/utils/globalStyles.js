@@ -93,4 +93,10 @@ export const GlobalStyles = createGlobalStyle`
  .swiper-button-disabled{
   opacity: 0.4;
  }
+
+ .product-slides{
+    @media (max-width: 660px) {
+       max-width: 268px;
+    }
+ }
 `;
