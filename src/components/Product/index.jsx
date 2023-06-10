@@ -70,20 +70,21 @@ const Product = () => {
               return (
                 <SwiperSlide className="product-slides" key={el.id}>
                   <Style.CardImgWrapper>
-                    <img src={el.img} />
+                    <img src={el.img} alt=""/>
                     <Style.PresentWrapper>
                       {el.presentIcon}
                       {el.present}
                     </Style.PresentWrapper>
                     <Style.SaleStiker>{el.sale}</Style.SaleStiker>
                     <Style.StockStiker>
-                      {/* {el.cash ? <Tick/> "В наличии" : <Cross/> "Нет в наличии"} */}
+                      {el.cash ? <Tick/> : <Cross/>}
+                      {el.cash ? "В наличии" : "Нет в наличии"}
                     </Style.StockStiker>
                   </Style.CardImgWrapper>
                   <Style.ProductCardInfoWrapper>
-                    <Style.ProductCardTxt>
+                    <Style.MiniTxt>
                       {el.cardTxt}
-                    </Style.ProductCardTxt>
+                    </Style.MiniTxt>
                     <Prices>
                       <NowPrice style={{ fontSize: "20px" }}>{el.nowPrice}</NowPrice>
                       <OldPrice style={{ fontSize: "18px" }}>{el.oldPrice}</OldPrice>

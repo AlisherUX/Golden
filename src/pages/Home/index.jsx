@@ -5,6 +5,7 @@ import Statistic from "../../components/Statistic";
 import WhyOur from "../../components/WhyOur";
 import Category from "../../components/Category";
 import Product from "../../components/Product";
+import Contact from "../../components/Contact";
 
 const Home = () => {
   return (
@@ -15,6 +16,7 @@ const Home = () => {
       <WhyOur/>
       <Category/>
       <Product/>
+      <Contact/>
     </div>
   );
 };
