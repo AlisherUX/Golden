@@ -6,12 +6,9 @@ import BlueButton from '../BlueButton';
 import { Link } from 'react-router-dom';
 import { data } from "./data";
 
-const Category = () => {
+const Card = () => {
   return (
     <Style.CategoryWrapper>
-            <Title>Категории</Title>
-        <Container>
-            <Style.CategoryCards>
                 {data.map((el) => {
                     return(
                     <Style.CategoryCard>
@@ -24,11 +21,8 @@ const Category = () => {
                     </Style.CategoryCard>
                     )
                 })}
-            </Style.CategoryCards>
-        </Container>
-          <Link to='/category'>   <BlueButton text={'Все категории'}/></Link>
     </Style.CategoryWrapper>
   )
 }
 
-export default Category;
+export default Card;

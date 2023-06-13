@@ -34,7 +34,7 @@ useEffect(() => {
           <Container>
             <Style.HeaderNavContent>
              <CatalogWindow/>
-             <Style.HeaderLogo to="/"> <Logo/> </Style.HeaderLogo>
+             <Style.LogoWrapper to="/"> <Logo/> </Style.LogoWrapper>
 
                 <Style.BurgerMenu onClick={() => clickable()}>
                   <Style.BurgerMenuItem></Style.BurgerMenuItem>

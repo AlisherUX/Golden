@@ -6,6 +6,7 @@ import WhyOur from "../../components/WhyOur";
 import Category from "../../components/Category";
 import Product from "../../components/Product";
 import Contact from "../../components/Contact";
+import Footer from "../../components/Footer";
 
 const Home = () => {
   return (
@@ -17,6 +18,7 @@ const Home = () => {
       <Category/>
       <Product/>
       <Contact/>
+      <Footer/>
     </div>
   );
 };

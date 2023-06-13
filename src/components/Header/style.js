@@ -23,7 +23,7 @@ const HeaderNavWrapper = styled.div`
   box-shadow: inset 0px -1px 0px #c4cdd5;
 `;
 
-const HeaderLogo = styled(Link)`
+const LogoWrapper = styled(Link)`
   cursor: pointer;
   width: 51px;
   height: 42px;
@@ -119,7 +119,7 @@ export {
   HeaderNavWrapper,
   HeaderNavContent,
   HeaderNav,
-  HeaderLogo,
+  LogoWrapper,
   HeaderLink,
   HeaderItem,
   HeaderBtn,

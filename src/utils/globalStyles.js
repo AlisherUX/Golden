@@ -1,6 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 import { flex } from "./flex";
-import { adaptiveValue, colors } from "./variable";
+import { adaptiveValue, colors, fonts } from "./variable";
 
 export const GlobalStyles = createGlobalStyle`
 
@@ -92,11 +92,31 @@ export const GlobalStyles = createGlobalStyle`
 
  .swiper-button-disabled{
   opacity: 0.4;
- }
+ };
 
  .product-slides{
     @media (max-width: 660px) {
        max-width: 268px;
-    }
- }
+    };
+ };
+
+ .error_message{
+   color: red;
+   font-size: 14px;
+   font-family: ${fonts.sfReg};
+ };
+
+ ::-webkit-scrollbar{
+   background: ${colors.secondaryColor};
+ };
+
+ ::-webkit-scrollbar-button{
+   display: none;
+ };
+
+ ::-webkit-scrollbar-thumb{
+   background-color: #92C5F6;
+   border-radius: 4px;
+   position: relative;
+ };
 `;

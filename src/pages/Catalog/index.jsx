@@ -1,9 +1,67 @@
-import React from 'react'
+import React, { useEffect, useState } from "react";
+import Header from "../../components/Header";
+import * as Style from "./style";
+import { Container } from "../../components/Container/style";
+import { Title } from "../../components/WhyOur/style";
+import Footer from "../../components/Footer";
+import axios from "axios";
+
 
 const Catalog = () => {
-  return (
-    <div>Catalog</div>
-  )
+const [data, setData] = useState([]);
+
+async function getData(){
+  const res = await axios.get(
+    "https://6484329bee799e3216265e4c.mockapi.io/golden"
+  );
+
+  if(res.status == 200){
+    setData(res.data)
+  }
 }
+
+useEffect(() => {
+  getData()
+}, []);
+
+  return (
+    <Style.Catalog>
+      <Header />
+      <Container>
+        <Style.CtalogBreadCrumbs aria-label="breadcrumb">
+          <Style.CatalogLink
+            className="link"
+            underline="hover"
+            color="inherit"
+            to="/"
+          >
+            Главная
+          </Style.CatalogLink>
+          <Style.CatalogTypography color="text.primary">
+            Каталог
+          </Style.CatalogTypography>
+        </Style.CtalogBreadCrumbs>
+
+        <Style.CatalogContent>
+          <Title>Категории</Title>
+
+          <Style.CatalogCards>
+
+            {data?.map((el) => {
+              return(
+                <Style.CatalogCard key={el.id}>
+                  <Style.CatalogCardImg src={el.img}/>
+                  <Style.CatalogCardTxt>{el.text}</Style.CatalogCardTxt>
+                </Style.CatalogCard>
+              )
+            })}
+
+          </Style.CatalogCards>
+        </Style.CatalogContent>
+      </Container>
+      <Footer/>
+    </Style.Catalog>
+  );
+};
 
 export default Catalog;
