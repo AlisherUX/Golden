@@ -2,15 +2,15 @@ import { Handle4, Handle5, Handle6, Handle7, Present, Tick } from "../../assets/
 
 const data = [
     {
-        id: 1,
-        cash: true,
-        img: Handle4,
-        presentIcon: <Present/>,
-        present: "Подарок",
-        sale: "SALE",
-        cardTxt: "Дверной Замок Golden Soft для отеля",
-        nowPrice: "33 000₽",
-        oldPrice: "37 000₽",
+        "id": 1,
+        "cash": true,
+        "img": Handle4,
+        "presentIcon": <Present/>,
+        "present": "Подарок",
+        "sale": "SALE",
+        "cardTxt": "Дверной Замок Golden Soft для отеля",
+        "nowPrice": "33 000₽",
+        "oldPrice: "37 000₽",
     },
     {
         id: 2,
