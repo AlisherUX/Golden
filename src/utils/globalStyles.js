@@ -107,7 +107,7 @@ export const GlobalStyles = createGlobalStyle`
  };
 
  ::-webkit-scrollbar{
-   background: ${colors.secondaryColor};
+   background: transparent;
  };
 
  ::-webkit-scrollbar-button{

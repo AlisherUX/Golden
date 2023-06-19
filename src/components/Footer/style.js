@@ -71,6 +71,10 @@ const FooterNavsWrapper = styled.div`
    max-width: 100%;
    ${flex.flexBetween};
   }
+
+  @media (max-width: 581px) {
+    display: none;
+  }
 `;
 
 const FooterNav = styled.nav`
@@ -106,6 +110,16 @@ const NavLink = styled.p`
     font-family: ${fonts.sfL};
 `;
 
+
+const AccordionsWrapper = styled.div`
+  display: none;
+
+  @media (max-width: 581px) {
+    display: flex;
+    flex-direction: column;
+  }
+`;
+
 export {
   FooterLogoWrapper,
   FooterWrapper,
@@ -118,5 +132,6 @@ export {
   NavTitle,
   NavSubTitle,
   NavLink,
-  NavLinksWrapper
+  NavLinksWrapper,
+  AccordionsWrapper
 };

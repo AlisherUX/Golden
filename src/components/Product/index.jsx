@@ -7,11 +7,12 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
-
-import { BannerArrow, Cross, Tick } from "../../assets/images";
-import { BannerButtons, NowPrice, OldPrice, Prices } from "../Banner/style";
-import { Navigation } from "swiper";
 import { data } from "./data";
+
+import { BannerArrow } from "../../assets/images";
+import { BannerButtons } from "../Banner/style";
+import { Navigation } from "swiper";
+import ProductCard from "../ProductCard";
 
 const Product = () => {
   const useSwiperRef = () => {
@@ -68,28 +69,8 @@ const Product = () => {
           >
             {data.map((el) => {
               return (
-                <SwiperSlide className="product-slides" key={el.id}>
-                  <Style.CardImgWrapper>
-                    <img src={el.img} alt=""/>
-                    <Style.PresentWrapper>
-                      {el.presentIcon}
-                      {el.present}
-                    </Style.PresentWrapper>
-                    <Style.SaleStiker>{el.sale}</Style.SaleStiker>
-                    <Style.StockStiker>
-                      {el.cash ? <Tick/> : <Cross/>}
-                      {el.cash ? "В наличии" : "Нет в наличии"}
-                    </Style.StockStiker>
-                  </Style.CardImgWrapper>
-                  <Style.ProductCardInfoWrapper>
-                    <Style.MiniTxt>
-                      {el.cardTxt}
-                    </Style.MiniTxt>
-                    <Prices>
-                      <NowPrice style={{ fontSize: "20px" }}>{el.nowPrice}</NowPrice>
-                      <OldPrice style={{ fontSize: "18px" }}>{el.oldPrice}</OldPrice>
-                    </Prices>
-                  </Style.ProductCardInfoWrapper>
+                <SwiperSlide>
+                  <ProductCard id={el.id} img={el.img} cash={el.cash} cardTxt={el.cardTxt} presentIcon={el.presentIcon} nowPrice={el.nowPrice} oldPrice={el.oldPrice}/>
                 </SwiperSlide>
               );
             })}

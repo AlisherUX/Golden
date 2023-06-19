@@ -10,9 +10,7 @@ const Category = () => {
     const [data, setData] = useState([]);
 
     async function getData(){
-        const res = await axios.get(
-          "https://6484329bee799e3216265e4c.mockapi.io/category"
-        );
+        const res = await axios.get(`${process.env.REACT_APP_CATEGORY_URL}`);
       
         if(res.status === 200){
           setData(res.data)
@@ -42,7 +40,7 @@ const Category = () => {
                 })}
             </Style.CategoryCards>
         </Container>
-          <Link to='/category'>   <BlueButton text={'Все категории'}/></Link>
+          <Link to='/catalog'>   <BlueButton text={'Все категории'}/></Link>
     </Style.CategoryWrapper>
   )
 }
