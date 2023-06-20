@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import * as Style from "./style";
-import Header from "../../components/Header";
-import Contact from "../../components/Contact";
-import Footer from "../../components/Footer";
-import Product from "../../components/Product";
-import AboutProducts from "../../components/AboutProducts";
-import { Container } from "../../components/Container/style";
-import ProductCard from "../../components/ProductCard";
+import Header from "components/Header";
+import Contact from "components/Contact";
+import Footer from "components/Footer";
+import Product from "components/ProductSwiper";
+import AboutProducts from "components/AboutProducts";
+import { Container } from "components/Container/style";
+import ProductCard from "components/ProductCard";
 import {
   CatalogLink,
   CatalogTypography,
@@ -30,7 +30,7 @@ const Category = () => {
   }, []);
 
   return (
-    <Style.CategoryWrapper>
+    <Style.Wrapper>
       <Header />
       <Container>
         <CtalogBreadCrumbs aria-label="breadcrumb">
@@ -65,7 +65,7 @@ const Category = () => {
               cash={el.cash}
               cardTxt={el.cardTxt}
               nowPrice={el.nowPrice}
-              oldPrice={el.oldPrice} 
+              oldPrice={el.oldPrice}
           />;
         })}
       </Container>
@@ -73,7 +73,7 @@ const Category = () => {
       <AboutProducts />
       <Contact />
       <Footer />
-    </Style.CategoryWrapper>
+    </Style.Wrapper>
   );
 };
 

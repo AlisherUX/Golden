@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import HeaderTop from "./HeaderTop";
-import { Container } from "../Container/style";
-import BurgerWindow from "./BurgerWIndow";
+import HeaderTop from "components/Header/HeaderTop";
+import { Container } from "components/Container/style";
+import BurgerWindow from "components/Header/BurgerWIndow";
 import * as Style from "./style";
-import { Call, Cart, HeaderDart, Like, Logo } from "../../assets/images";
-import CatalogWindow from "./CatalogWindow";
+import { Call, Cart, HeaderDart, Like, Logo } from "assets/images";
+import CatalogWindow from "components/Header/CatalogWindow";
 
 const Header = () => {
 const [button, setButton] = useState(false);

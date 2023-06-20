@@ -1,9 +1,9 @@
 import React, {useRef, useEffect, useState} from 'react'
 import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Container } from '../Container/style';
-import { BannerArrow } from '../../assets/images';
-import BlueButton from '../BlueButton';
+import { Container } from 'components/Container/style';
+import { BannerArrow } from 'assets/images';
+import BlueButton from 'components/BlueButton';
 import * as Style from "./style";
 
 import "swiper/css";

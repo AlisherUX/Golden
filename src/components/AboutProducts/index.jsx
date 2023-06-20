@@ -1,8 +1,8 @@
 import React from "react";
 import * as Style from "./style";
-import { Container } from "../Container/style";
+import { Container } from "components/Container/style";
 import { data } from "./data";
-import { Handle12, Handle13, TickBox } from "../../assets/images/index";
+import { Handle12, Handle13, TickBox } from "assets/images/index";
 
 const AboutProducts = () => {
   return (

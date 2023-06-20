@@ -4,10 +4,6 @@ import { Link } from "react-router-dom";
 import { adaptiveValue, colors, fonts } from "../../utils/variable";
 import { flex } from "../../utils/flex";
 
-const Catalog = styled.div`
-  width: 100%;
-`;
-
 const CatalogLink = styled(Link)`
   color: ${colors.dark};
 `;
@@ -59,7 +55,6 @@ const CatalogCardTxt = styled.p`
 `;
 
 export {
-  Catalog,
   CtalogBreadCrumbs,
   CatalogLink,
   CatalogTypography,

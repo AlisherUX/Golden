@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from "styled-components";
-import { adaptiveValue, colors } from "../../utils/variable";
+import { adaptiveValue, colors } from "utils/variable";
 
 const Button = styled.button`
     background-color: ${colors.primaryColor};

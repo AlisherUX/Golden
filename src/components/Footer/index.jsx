@@ -1,7 +1,7 @@
 import React from "react";
 import * as Style from "./style";
-import { Container } from "../Container/style";
-import { Facebook, Twitter, WhiteLogo, Wk } from "../../assets/images";
+import { Container } from "components/Container/style";
+import { Facebook, Twitter, WhiteLogo, Wk } from "assets/images";
 import { Link } from "react-router-dom";
 import {
   Accordion,

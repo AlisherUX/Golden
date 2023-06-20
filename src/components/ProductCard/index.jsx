@@ -1,7 +1,7 @@
 import React from "react";
 import * as Style from "./style";
-import { Cross, Present, Tick } from "../../assets/images";
-import { NowPrice, OldPrice, Prices } from "../Banner/style";
+import { Cross, Present, Tick } from "assets/images";
+import { NowPrice, OldPrice, Prices } from "components/Banner/style";
 
 
 const ProductCard = ({cash, oldPrice, nowPrice, id, img, cardTxt}) => {

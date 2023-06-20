@@ -1,7 +1,7 @@
 import React, { useRef, useState, useEffect } from "react";
 import * as Style from "./style";
-import { Container } from "../Container/style";
-import { Title } from "../WhyOur/style";
+import { Container } from "components/Container/style";
+import { Title } from "components/WhyOur/style";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/free-mode";
@@ -12,12 +12,12 @@ import { Navigation } from "swiper";
 import ProductCard from "../ProductCard";
 import axios from "axios";
 
-const Product = () => {
+const ProductSwiper = () => {
   const [data, setData] = useState([]);
 
   async function getData() {
     const res = await axios.get(`${process.env.REACT_APP_PRODUCTCARD_URL}`);
-    if (res.status == 200) {
+    if (res.status === 200) {
       setData(res.data);
     }
   }
@@ -99,4 +99,4 @@ const Product = () => {
   );
 };
 
-export default Product;
+export default ProductSwiper;

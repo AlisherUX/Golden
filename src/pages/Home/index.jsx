@@ -4,7 +4,7 @@ import Banner from "../../components/Banner";
 import Statistic from "../../components/Statistic";
 import WhyOur from "../../components/WhyOur";
 import Category from "../../components/Category";
-import Product from "../../components/Product";
+import Product from "../../components/ProductSwiper";
 import Contact from "../../components/Contact";
 import Footer from "../../components/Footer";
 

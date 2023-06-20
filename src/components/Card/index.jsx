@@ -1,10 +1,7 @@
 import React from 'react';
-import * as Style from "./style";
-import { Container } from '../Container/style';
-import { Title } from '../WhyOur/style';
-import BlueButton from '../BlueButton';
 import { Link } from 'react-router-dom';
 import { data } from "./data";
+import * as Style from "./style";
 
 const Card = () => {
   return (

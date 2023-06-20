@@ -1,11 +1,23 @@
 import styled from "styled-components";
+import { flex } from "../../utils/flex";
 
-const ProductImg = styled.img`
-    margin-top: 10px;
+const ProductImagesContent = styled.div`
+    ${flex.justFlex}
+    flex-direction: column;
+    gap: 20px;
 `;
 
-const ProductInfo = styled.p`
-    margin-top: 10px;
+const MainImg = styled.img`
+    max-width: 605px;
+    width: 100%;
 `;
 
-export { ProductImg, ProductInfo };
+// const MinImagesWrapper = styled.div`
+//     df
+// `;
+
+const ProductInfoContent = styled.div`
+    ${flex.justFlex}
+`;
+
+export { ProductImagesContent, ProductInfoContent, MainImg };

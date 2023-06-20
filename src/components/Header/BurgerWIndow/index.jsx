@@ -1,6 +1,6 @@
 import React from 'react'
 import * as Style from './style';
-import { Call, RightArrow } from '../../../assets/images';
+import { Call, RightArrow } from 'assets/images';
 
 
 const BurgerWindow = ({open}) => {

@@ -1,30 +1,38 @@
-import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import React from 'react';
 import * as Style from "./style";
-import axios from 'axios';
+import Header from 'components/Header';
+import ProductSwiper from 'components/ProductSwiper';
+import Footer from 'components/Footer';
+import Contact from 'components/Contact';
+import AboutProducts from 'components/AboutProducts';
+import { Container } from 'components/Container/style';
+import MainImg from "../../assets/images/MainImg.png"
+import { Wrapper } from 'pages/Category/style';
+import { BreadCrumb } from 'components/BreadCrumbs/style';
 
-const Product = () => {
-//   const { id } = useParams();
-//   const [product, setProduct] = useState([]);
-
-//   const getData = async () => {
-//     const res = await axios.get(`${process.env.REACT_APP_PRODUCTCARD_URL}/${id}`);
-//     if (res.status == 200) {
-//         setProduct(res.data);
-//     }
-// };
-
-// useEffect(() => {
-//     getData();
-// }, [id]);
+const ProductView = () => {
 
   return (
-    <div>
-      Product
-    <Style.ProductImg/>
-    <Style.ProductInfo/>
-    </div>
+    <Wrapper>
+      <Header/>
+      <Container>
+        <BreadCrumb/>
+      </Container>
+      <Container style={{display: "flex"}}>
+        <Style.ProductImagesContent>
+          <Style.MainImg src={MainImg}/>
+        </Style.ProductImagesContent>
+
+        <Style.ProductInfoContent>
+
+        </Style.ProductInfoContent>
+      </Container>
+      <ProductSwiper/>
+      <AboutProducts/>
+      <Contact/>
+      <Footer/>
+    </Wrapper>
   )
 }
 
-export default Product;
+export default ProductView;

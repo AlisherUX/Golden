@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import * as Style from "./style";
-import { Container } from '../Container/style';
-import { Title } from '../WhyOur/style';
-import BlueButton from '../BlueButton';
 import { Link } from 'react-router-dom';
 import axios from "axios";
+import { Container } from 'components/Container/style';
+import { Title } from 'components/WhyOur/style';
+import BlueButton from 'components/BlueButton';
+import * as Style from "./style";
 
 const Category = () => {
     const [data, setData] = useState([]);
