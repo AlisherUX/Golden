@@ -1,22 +1,31 @@
 import styled from "styled-components";
 import { flex } from "../../utils/flex";
-import { colors, fonts } from "../../utils/variable";
+import { adaptiveValue, colors, fonts } from "../../utils/variable";
 
 const ComponentWrapper = styled.div`
     width: 100%;
 `;
 
 const ContentWrapper = styled.div`
-    margin-top: 62px;
+    ${adaptiveValue("margin-top", 62, 36)};
+    ${adaptiveValue("gap", 30, 16)};
     display: flex;
     justify-content: space-between;
-    gap: 30px;
     align-items: center;
+
+    @media (max-width: 950px) {
+        display: flex;
+        flex-direction: column-reverse;
+    }
 `;
 
 const ContentImg = styled.img`
-    max-width: 605px;
+    ${adaptiveValue("max-width", 605, 343)};
     width: 100%;
+
+    @media (max-width: 950px) {
+        ${adaptiveValue("max-width", 605, 505)};
+    }
 `;
 
 const ContentEntries = styled.div`
@@ -27,24 +36,24 @@ const ContentEntries = styled.div`
 `;
 
 const EntriesTitle = styled.p`
-    margin-bottom: 24px;
-    font-size: 32px;
-    line-height: 42px;
+    ${adaptiveValue("margin-bottom", 24, 12)};
+    ${adaptiveValue("font-size", 32, 16)};
+    ${adaptiveValue("line-height", 42, 26)};
     font-family: ${fonts.sfM};
     color: ${colors.dark};
 `;
 
 const EntriesTextTop = styled.p`
-    font-size: 18px;
-    line-height: 32px;
-    margin-bottom: 16px;
+    ${adaptiveValue("font-size", 18, 14)};
+    ${adaptiveValue("line-height", 32, 24)};
+    ${adaptiveValue("margin-bottom", 16, 8)};
     font-family: ${fonts.sfReg};
     color: ${colors.gray};
 `;
 
 const EntriesTextBottom = styled.p`
-    font-size: 18px;
-    line-height: 32px;
+    ${adaptiveValue("font-size", 18, 14)};
+    ${adaptiveValue("line-height", 32, 24)};
     font-family: ${fonts.sfReg};
     color: ${colors.gray};
 `;
@@ -53,22 +62,23 @@ const FeaturesWrapper = styled.div`
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    ${adaptiveValue("row-gap", 16, 12)};
+    ${adaptiveValue("margin-top", 8, 12)};
+    ${adaptiveValue("margin-bottom", 24, 12)};
     column-gap: 32px;
-    row-gap: 16px;
-    margin-top: 8px;
-    margin-bottom: 24px;
 `;
 
 const Feature = styled.div`
     display: flex;
-    gap: 12px;
+    ${adaptiveValue("gap", 12, 8)};
 `;
 
 const FeatureText = styled.p`
     color: ${colors.dark};
     font-family: ${fonts.sfReg};
-    font-size: 20px;
-    line-height: 24px;
+    opacity: 0.9;
+    ${adaptiveValue("font-size", 20, 16)};
+    ${adaptiveValue("line-height", 24, 26)};
 `;
 
 export {

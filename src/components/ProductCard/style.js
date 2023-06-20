@@ -1,9 +1,10 @@
 import styled from "styled-components";
 import { flex } from "../../utils/flex";
 import { colors, fonts } from "../../utils/variable";
+import { Link } from "react-router-dom";
 // import { adaptiveValue } from "../../utils/variable";
 
-const ProductCardContent = styled.div`
+const ProductCardContent = styled(Link)`
     max-width: 288px;
     width: 100%;
 `;
@@ -13,6 +14,11 @@ const CardImgWrapper = styled.div`
     padding-inline: 12px;
     background-color: ${colors.whiteBlue};
     position: relative;
+`;
+
+const CardImg = styled.img`
+    max-width: 288px;
+    width: 100%;
 `;
 
 const ProductCardInfoWrapper = styled.div`
@@ -76,4 +82,5 @@ const PresentWrapper = styled.div`
     left: 12px;
 `;
 
-export { ProductCardContent, CardImgWrapper, ProductCardInfoWrapper, MiniTxt, StockStiker, SaleStiker, PresentWrapper };
+
+export { ProductCardContent, CardImgWrapper, ProductCardInfoWrapper, CardImg, MiniTxt, StockStiker, SaleStiker, PresentWrapper };

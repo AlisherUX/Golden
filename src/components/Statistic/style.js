@@ -16,6 +16,7 @@ const StatisticWrapper = styled.div`
 
 const StatisticBox = styled.div`
     ${flex.justFlex};
+
     ${flex.center};
     flex-direction: column;
     ${adaptiveValue("gap", 16, 8)};

@@ -4,23 +4,10 @@ import * as Style from "./style";
 import { Container } from "../../components/Container/style";
 import { Title } from "../../components/WhyOur/style";
 import Footer from "../../components/Footer";
-import axios from "axios";
 import { Link } from "react-router-dom";
+import { data } from "./data";
 
 const Catalog = () => {
-  const [data, setData] = useState([]);
-
-  async function getData() {
-    const res = await axios.get(`${process.env.REACT_APP_CATALOG_URL}`);
-
-    if (res.status === 200) {
-      setData(res.data);
-    }
-  }
-
-  useEffect(() => {
-    getData();
-  }, []);
 
   return (
     <Style.Catalog>
@@ -44,7 +31,7 @@ const Catalog = () => {
           <Title>Категории</Title>
 
           <Style.CatalogCards>
-            {data?.map((el) => {
+            {data.map((el) => {
               return (
                 <Link to='/category'>
                   <Style.CatalogCard key={el.id}>
