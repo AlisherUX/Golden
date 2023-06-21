@@ -11,11 +11,10 @@ import Order from "./pages/Order";
 import Product from "./pages/Product";
 import PageNotFound from "./pages/PageNotFound";
 import Favourite from "./pages/Favourite";
-import { SkeletonTheme } from "react-loading-skeleton";
+import 'react-loading-skeleton/dist/skeleton.css'
 
 function App() {
   return (
-    <SkeletonTheme baseColor="#202020" highlightColor="#444">
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -31,7 +30,6 @@ function App() {
           <Route path="*" element={<PageNotFound />} />
         </Routes>
       </BrowserRouter>
-    </SkeletonTheme>
   );
 }
 

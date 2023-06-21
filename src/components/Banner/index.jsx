@@ -1,4 +1,4 @@
-import React, {useRef, useEffect, useState} from 'react'
+import React, { useRef, useEffect, useState } from 'react'
 import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Container } from 'components/Container/style';
@@ -12,159 +12,159 @@ import "swiper/css/pagination";
 import { data } from "./data";
 
 const Banner = () => {
-    const useSwiperRef = () => {
-        const [wrapper, setWrapper] = useState(null);
-        const ref = useRef(null);
+  const useSwiperRef = () => {
+    const [wrapper, setWrapper] = useState(null);
+    const ref = useRef(null);
 
-        useEffect(() => {
-            if (ref.current){
-                setWrapper(ref.current);
-            }
-        }, []);
+    useEffect(() => {
+      if (ref.current) {
+        setWrapper(ref.current);
+      }
+    }, []);
 
-        return [wrapper, ref];
-    };
+    return [wrapper, ref];
+  };
 
-    const [nextEl, nextElRef] = useSwiperRef();
-    const [prevEl, prevElRef] = useSwiperRef();
+  const [nextEl, nextElRef] = useSwiperRef();
+  const [prevEl, prevElRef] = useSwiperRef();
 
   return (
-     <Style.BannerWrapper>
+    <Style.BannerWrapper>
       <Container>
         <Swiper
-        cssMode={true}
-        navigation={{
+          cssMode={true}
+          navigation={{
             prevEl,
             nextEl,
-        }}
-        pagination={{
-          el: ".pagination-bullets",
-          type: "bullets",
-          clickable: true,
-        }}
-        mousewheel={true}
-        keyboard={true}
-        modules={[Navigation, Pagination, Mousewheel, Keyboard]}
-      
-      >
+          }}
+          pagination={{
+            el: ".pagination-bullets",
+            type: "bullets",
+            clickable: true,
+          }}
+          mousewheel={true}
+          keyboard={true}
+          modules={[Navigation, Pagination, Mousewheel, Keyboard]}
 
-        <SwiperSlide>
-          {data.map((el) => {
-            return(
-              <Style.BannerContent key={el.id}>
-                <Style.BannerImg src={el.img} alt={el.title}/>
+        >
 
-                <Style.BannerEntries>
-                  <Style.BannerTitle>
-                    <span>{el.title}</span>{el.titleItem}
-                  </Style.BannerTitle>
+          <SwiperSlide>
+            {data.map((el) => {
+              return (
+                <Style.BannerContent key={el.id}>
+                  <Style.BannerImg src={el.img} alt={el.title} />
 
-                  <Style.BannerText>
-                    <span>
-                      {el.text}
-                    </span>
-                    <span>
-                      {el.description}
-                    </span>
-                  </Style.BannerText>
+                  <Style.BannerEntries>
+                    <Style.BannerTitle>
+                      <span>{el.title}</span>{el.titleItem}
+                    </Style.BannerTitle>
 
-                  <Style.BannerPrice>
-                    <span>Цена</span>
+                    <Style.BannerText>
+                      <span>
+                        {el.text}
+                      </span>
+                      <span>
+                        {el.description}
+                      </span>
+                    </Style.BannerText>
 
-                    <Style.Prices>
-                      <Style.NowPrice>{el.nowprice}</Style.NowPrice>
-                      <Style.OldPrice>{el.oldprice}</Style.OldPrice>
-                    </Style.Prices>
+                    <Style.BannerPrice>
+                      <span>Цена</span>
 
-                  </Style.BannerPrice>
-                  <BlueButton text={'Добавить в корзину'}/>
-                </Style.BannerEntries>
-              </Style.BannerContent>
-            )
-          })}
-        </SwiperSlide>
-{/* a */}
-        <SwiperSlide>
-        {data.map((el) => {
-            return(
-              <Style.BannerContent key={el.id}>
-                <Style.BannerImg src={el.img} alt={el.title}/>
+                      <Style.Prices>
+                        <Style.NowPrice>{el.nowprice}</Style.NowPrice>
+                        <Style.OldPrice>{el.oldprice}</Style.OldPrice>
+                      </Style.Prices>
 
-                <Style.BannerEntries>
-                  <Style.BannerTitle>
-                    <span>{el.title}</span>{el.titleItem}
-                  </Style.BannerTitle>
+                    </Style.BannerPrice>
+                    <BlueButton text={'Добавить в корзину'} />
+                  </Style.BannerEntries>
+                </Style.BannerContent>
+              )
+            })}
+          </SwiperSlide>
+          {/* a */}
+          <SwiperSlide>
+            {data.map((el) => {
+              return (
+                <Style.BannerContent key={el.id}>
+                  <Style.BannerImg src={el.img} alt={el.title} />
 
-                  <Style.BannerText>
-                    <span>
-                      {el.text}
-                    </span>
-                    <span>
-                      {el.description}
-                    </span>
-                  </Style.BannerText>
+                  <Style.BannerEntries>
+                    <Style.BannerTitle>
+                      <span>{el.title}</span>{el.titleItem}
+                    </Style.BannerTitle>
 
-                  <Style.BannerPrice>
-                    <span>Цена</span>
+                    <Style.BannerText>
+                      <span>
+                        {el.text}
+                      </span>
+                      <span>
+                        {el.description}
+                      </span>
+                    </Style.BannerText>
 
-                    <Style.Prices>
-                      <Style.NowPrice>{el.nowprice}</Style.NowPrice>
-                      <Style.OldPrice>{el.oldprice}</Style.OldPrice>
-                    </Style.Prices>
+                    <Style.BannerPrice>
+                      <span>Цена</span>
 
-                  </Style.BannerPrice>
-                  <BlueButton text={'Добавить в корзину'}/>
-                </Style.BannerEntries>
-              </Style.BannerContent>
-            )
-          })}
-        </SwiperSlide>
-{/* a */}
-        <SwiperSlide>
-        {data.map((el) => {
-            return(
-              <Style.BannerContent key={el.id}>
-                <Style.BannerImg src={el.img} alt={el.title}/>
+                      <Style.Prices>
+                        <Style.NowPrice>{el.nowprice}</Style.NowPrice>
+                        <Style.OldPrice>{el.oldprice}</Style.OldPrice>
+                      </Style.Prices>
 
-                <Style.BannerEntries>
-                  <Style.BannerTitle>
-                    <span>{el.title}</span>{el.titleItem}
-                  </Style.BannerTitle>
+                    </Style.BannerPrice>
+                    <BlueButton text={'Добавить в корзину'} />
+                  </Style.BannerEntries>
+                </Style.BannerContent>
+              )
+            })}
+          </SwiperSlide>
+          {/* a */}
+          <SwiperSlide>
+            {data.map((el) => {
+              return (
+                <Style.BannerContent key={el.id}>
+                  <Style.BannerImg src={el.img} alt={el.title} />
 
-                  <Style.BannerText>
-                    <span>
-                      {el.text}
-                    </span>
-                    <span>
-                      {el.description}
-                    </span>
-                  </Style.BannerText>
+                  <Style.BannerEntries>
+                    <Style.BannerTitle>
+                      <span>{el.title}</span>{el.titleItem}
+                    </Style.BannerTitle>
 
-                  <Style.BannerPrice>
-                    <span>Цена</span>
+                    <Style.BannerText>
+                      <span>
+                        {el.text}
+                      </span>
+                      <span>
+                        {el.description}
+                      </span>
+                    </Style.BannerText>
 
-                    <Style.Prices>
-                      <Style.NowPrice>{el.nowprice}</Style.NowPrice>
-                      <Style.OldPrice>{el.oldprice}</Style.OldPrice>
-                    </Style.Prices>
+                    <Style.BannerPrice>
+                      <span>Цена</span>
 
-                  </Style.BannerPrice>
-                  <BlueButton text={'Добавить в корзину'}/>
-                </Style.BannerEntries>
-              </Style.BannerContent>
-            )
-          })}
-        </SwiperSlide>
-      </Swiper>
-          </Container>
-        
+                      <Style.Prices>
+                        <Style.NowPrice>{el.nowprice}</Style.NowPrice>
+                        <Style.OldPrice>{el.oldprice}</Style.OldPrice>
+                      </Style.Prices>
+
+                    </Style.BannerPrice>
+                    <BlueButton text={'Добавить в корзину'} />
+                  </Style.BannerEntries>
+                </Style.BannerContent>
+              )
+            })}
+          </SwiperSlide>
+        </Swiper>
+      </Container>
+
       <Style.SwiperNavigation >
         <Style.BannerButtons ref={prevElRef}>
-            <BannerArrow style={{transform: "rotate(180deg)"}}/>
+          <BannerArrow style={{ transform: "rotate(180deg)" }} />
         </Style.BannerButtons>
         <div className="pagination-bullets"></div>
         <Style.BannerButtons ref={nextElRef}>
-           <BannerArrow/>
+          <BannerArrow />
         </Style.BannerButtons>
       </Style.SwiperNavigation>
     </Style.BannerWrapper>

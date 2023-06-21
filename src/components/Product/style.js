@@ -1,24 +1,38 @@
 import styled from "styled-components";
 import { flex } from "../../utils/flex";
 import { colors, fonts } from "../../utils/variable";
-import { Link } from "react-router-dom";
-// import { adaptiveValue } from "../../utils/variable";
+import { adaptiveValue } from "../../utils/variable";
 
-const ProductCardContent = styled(Link)`
-    max-width: 288px;
+const ProductWrapper = styled.div`
     width: 100%;
+`;
+
+const ProductTitleContent = styled.div`
+    width: 100%;
+    ${flex.flexBetween};
+    ${adaptiveValue("margin-bottom", 64, 24)};
+`;
+
+const ProductSwiperWrapper = styled.div`
+    width: 100%;
+`;
+
+const ProductNavigation = styled.div`
+  ${flex.flexBetween};
+  ${flex.alignCenter};
+  max-width: 120px;
+  width: 100%;
+
+  @media (max-width: 510px) {
+    display: none;
+  }
 `;
 
 const CardImgWrapper = styled.div`
     padding-block: 28px;
     padding-inline: 12px;
-    background-color: #F9F9F9;
+    background-color: ${colors.whiteBlue};
     position: relative;
-`;
-
-const CardImg = styled.img`
-    max-width: 288px;
-    width: 100%;
 `;
 
 const ProductCardInfoWrapper = styled.div`
@@ -82,5 +96,4 @@ const PresentWrapper = styled.div`
     left: 12px;
 `;
 
-
-export { ProductCardContent, CardImgWrapper, ProductCardInfoWrapper, CardImg, MiniTxt, StockStiker, SaleStiker, PresentWrapper };
+export { ProductWrapper, ProductTitleContent, ProductSwiperWrapper, ProductNavigation, CardImgWrapper, ProductCardInfoWrapper, MiniTxt, StockStiker, SaleStiker, PresentWrapper };

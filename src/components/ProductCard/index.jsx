@@ -13,7 +13,7 @@ const ProductCard = ({cash, oldPrice, nowPrice, id, img, cardTxt}) => {
                 <Present/>
                 Подарок
               </Style.PresentWrapper>
-              {/* <Style.SaleStiker>SALE</Style.SaleStiker> */}
+              <Style.SaleStiker>SALE</Style.SaleStiker>
               <Style.StockStiker>
                 {cash ? <Tick /> : <Cross />}
                 {cash ? "В наличии" : "Нет в наличии"}

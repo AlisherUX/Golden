@@ -1,35 +1,20 @@
 import React, { useRef, useState, useEffect } from "react";
 import * as Style from "./style";
-import { Container } from "components/Container/style";
-import { Title } from "components/WhyOur/style";
+import { Container } from "../Container/style";
+import { Title } from "../WhyOur/style";
 import { Swiper, SwiperSlide } from "swiper/react";
+
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
+import { data } from "./data";
+
 import { BannerArrow } from "../../assets/images";
 import { BannerButtons } from "../Banner/style";
 import { Navigation } from "swiper";
 import ProductCard from "../ProductCard";
-import axios from "axios";
-import Skeleton from "react-loading-skeleton";
 
-const ProductSwiper = () => {
-  const [data, setData] = useState([]);
-  const sekletMap = Array.from({length: 4});
-
-
-
-  async function getData() {
-    const res = await axios.get(`${process.env.REACT_APP_PRODUCTCARD_URL}`);
-    if (res.status === 200) {
-      setData(res.data);
-    }
-  }
-
-  useEffect(() => {
-    getData();
-  }, []);
-
+const Product = () => {
   const useSwiperRef = () => {
     const [wrapper, setWrapper] = useState(null);
     const ref = useRef(null);
@@ -60,7 +45,6 @@ const ProductSwiper = () => {
           </Style.ProductNavigation>
         </Style.ProductTitleContent>
 
-        
         <Style.ProductSwiperWrapper>
           <Swiper
             navigation={{ prevEl, nextEl }}
@@ -69,36 +53,27 @@ const ProductSwiper = () => {
             freeMode={true}
             className="productSwiper"
             breakpoints={{
-              320: {
+              320:{
                 slidesPerView: 1,
               },
-              430: {
+              430:{
                 slidesPerView: 2,
               },
-              670: {
+              670:{
                 slidesPerView: 3,
               },
-              1180: {
+              1180:{
                 slidesPerView: 4,
-              },
+              }
             }}
           >
-            {data.length ? data.map((el) => {
+            {data.map((el) => {
               return (
-                <SwiperSlide key={el.id}>
-                  <ProductCard
-                    id={el.id}
-                    img={el.img}
-                    cash={el.cash}
-                    cardTxt={el.cardTxt}
-                    nowPrice={el.nowPrice}
-                    oldPrice={el.oldPrice}
-                  />
+                <SwiperSlide>
+                  <ProductCard id={el.id} img={el.img} cash={el.cash} cardTxt={el.cardTxt} presentIcon={el.presentIcon} nowPrice={el.nowPrice} oldPrice={el.oldPrice}/>
                 </SwiperSlide>
               );
-            }) : sekletMap.map((_, el) => <SwiperSlide>
-              <Skeleton height={426}/>
-            </SwiperSlide>) }
+            })}
           </Swiper>
         </Style.ProductSwiperWrapper>
       </Container>
@@ -106,4 +81,4 @@ const ProductSwiper = () => {
   );
 };
 
-export default ProductSwiper;
+export default Product;

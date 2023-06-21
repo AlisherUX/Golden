@@ -14,9 +14,11 @@ import {
 } from "../Catalog/style";
 import { Title } from "../../components/WhyOur/style";
 import axios from "axios";
+import Skeleton from "react-loading-skeleton";
 
 const Category = () => {
   const [data, setData] = useState([]);
+  const sekletMap = Array.from({ length: 8 });
 
   async function getData() {
     const res = await axios.get(`${process.env.REACT_APP_PRODUCTCARD_URL}`);
@@ -49,25 +51,19 @@ const Category = () => {
         </Title>
       </Container>
 
-      <Container
-        style={{
-          display: "flex",
-          justifyContent: "flex-start",
-          gap: "1.7%",
-          flexWrap: "wrap",
-          marginBottom: "80px",
-        }}
-      >
-        {data?.map((el) => {
-          return <ProductCard
+      <Container>
+        <Style.CardsWrapper>
+          {data.length ? data.map((el) => {
+            return <ProductCard
               id={el.id}
               img={el.img}
               cash={el.cash}
               cardTxt={el.cardTxt}
               nowPrice={el.nowPrice}
               oldPrice={el.oldPrice}
-          />;
-        })}
+            />;
+          }) : sekletMap.map((_, el) => <Skeleton width={288} height={426} />)}
+        </Style.CardsWrapper>
       </Container>
       <Product />
       <AboutProducts />

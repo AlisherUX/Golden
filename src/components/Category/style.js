@@ -57,6 +57,13 @@ const CardEntry = styled.p`
     margin-top: auto;
 `;
 
+const SkeletonCard = styled.div`
+    ${adaptiveValue("max-width", 600, 200)};
+    ${adaptiveValue("height", 470, 197)};
+    width: 100%;
+    background-color: #EBEBEB;
+`;
+
 const CardBtn = styled.button`
     font-family: ${fonts.sfM};
     color: ${colors.dark};
@@ -82,4 +89,4 @@ const CardBtn = styled.button`
     }
 `;
 
-export { CategoryWrapper, CategoryCards, CategoryCard, CardImg, CardItemsWrapper, CardEntry, CardBtn };
+export { CategoryWrapper, CategoryCards, CategoryCard, CardImg, CardItemsWrapper, CardEntry, CardBtn, SkeletonCard };
