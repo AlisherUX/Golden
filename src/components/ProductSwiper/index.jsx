@@ -86,14 +86,7 @@ const ProductSwiper = () => {
             {data.length ? data.map((el) => {
               return (
                 <SwiperSlide key={el.id}>
-                  <ProductCard
-                    id={el.id}
-                    img={el.img}
-                    cash={el.cash}
-                    cardTxt={el.cardTxt}
-                    nowPrice={el.nowPrice}
-                    oldPrice={el.oldPrice}
-                  />
+                  <ProductCard data={el} />
                 </SwiperSlide>
               );
             }) : sekletMap.map((_, el) => <SwiperSlide>

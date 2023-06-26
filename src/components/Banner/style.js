@@ -24,7 +24,7 @@ const SwiperNavigation = styled.div`
   width: 100%;
   margin: 0 auto;
   ${adaptiveValue("padding-bottom", 48, 40)};
-  
+
   @media (max-width: 660px) {
     padding-top: 22px;
     max-width: 100%;
@@ -34,7 +34,7 @@ const SwiperNavigation = styled.div`
 const BannerContent = styled.div`
   ${flex.alignCenter}
   ${adaptiveValue("gap", 64, 0)};
- 
+
   @media (max-width: 660px) {
     ${flex.justFlex};
     flex-direction: column;
@@ -48,7 +48,7 @@ const BannerImg = styled.img`
   width: 100%;
 
   @media (max-width: 660px) {
-  ${adaptiveValue("max-width", 624, 324)};
+    ${adaptiveValue("max-width", 624, 324)};
   }
 `;
 
@@ -65,7 +65,7 @@ const BannerTitle = styled.h1`
   ${flex.justFlex}
   flex-direction: column;
   text-align: left;
-  
+
   @media (max-width: 660px) {
     display: block;
     gap: 10px;

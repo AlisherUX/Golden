@@ -5,7 +5,7 @@ import { Container } from 'components/Container/style';
 import { BannerArrow } from 'assets/images';
 import BlueButton from 'components/BlueButton';
 import * as Style from "./style";
-
+import "./style.css";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
