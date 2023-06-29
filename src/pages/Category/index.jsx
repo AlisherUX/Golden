@@ -7,14 +7,10 @@ import Product from "components/ProductSwiper";
 import AboutProducts from "components/AboutProducts";
 import { Container } from "components/Container/style";
 import ProductCard from "components/ProductCard";
-import {
-  CatalogLink,
-  CatalogTypography,
-  CtalogBreadCrumbs,
-} from "../Catalog/style";
 import { Title } from "../../components/WhyOur/style";
 import axios from "axios";
 import Skeleton from "react-loading-skeleton";
+import { BreadCrumbLink, BreadCrumbTypography, BreadCrumbs } from "pages/Catalog/style";
 
 const Category = () => {
   const [data, setData] = useState([]);
@@ -35,17 +31,17 @@ const Category = () => {
     <Style.Wrapper>
       <Header />
       <Container>
-        <CtalogBreadCrumbs aria-label="breadcrumb">
-          <CatalogLink
+        <BreadCrumbs aria-label="breadcrumb">
+          <BreadCrumbLink
             className="link"
             underline="hover"
             color="inherit"
             to="/"
           >
             Главная
-          </CatalogLink>
-          <CatalogTypography color="text.primary">Каталог</CatalogTypography>
-        </CtalogBreadCrumbs>
+          </BreadCrumbLink>
+          <BreadCrumbTypography color="text.primary" variant="p">Каталог</BreadCrumbTypography>
+        </BreadCrumbs>
         <Title style={{ textAlign: "left", marginBottom: "32px" }}>
           Накладные электронные замки
         </Title>

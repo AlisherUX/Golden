@@ -16,6 +16,8 @@ export { default as Cross } from "./Cross";
 export { default as Present } from "./Present";
 export { default as TickBox } from "./TickBox";
 export { default as GrayLike } from "./GrayLike";
+export { default as BlackCross } from "./BlackCross";
+export { default as TrashCan } from "./TrashCan";
 export { default as BannerImg } from "./BannerImg.png";
 export { default as Handle } from "./hanle.png";
 export { default as Handle2 } from "./handle2.png";

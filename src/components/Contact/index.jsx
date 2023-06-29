@@ -1,10 +1,10 @@
 import React from "react";
 import * as Style from "./style";
 import { Title } from "components/WhyOur/style";
-import { MiniTxt } from "components/ProductSwiper/style";
 import * as Yup from "yup";
 import { Formik, ErrorMessage } from "formik";
 import { Container } from "@mui/material";
+import { MiniTxt } from "components/ProductCard/style";
 
 const Contact = () => {
   const contactinitialValues = {

@@ -8,7 +8,7 @@ const RaitingWrapper = styled.div`
     gap: 8px;
 `;
 
-const Reviews = styled.p`
+const Reviews = styled.div`
     color: ${colors.gray};
     font-size: 13px;
     font-family: ${fonts.sfReg};

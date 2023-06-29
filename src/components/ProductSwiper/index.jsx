@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useRef, useState, useEffect, useContext } from "react";
 import * as Style from "./style";
 import { Container } from "components/Container/style";
 import { Title } from "components/WhyOur/style";
@@ -12,12 +12,13 @@ import { Navigation } from "swiper";
 import ProductCard from "../ProductCard";
 import axios from "axios";
 import Skeleton from "react-loading-skeleton";
+import MainContext from "reducer/CartContext";
+import { useSwiperRef } from "hooks/useSwiperRef";
 
 const ProductSwiper = () => {
   const [data, setData] = useState([]);
   const sekletMap = Array.from({length: 4});
-
-
+  const {cartItems} = useContext(MainContext)
 
   async function getData() {
     const res = await axios.get(`${process.env.REACT_APP_PRODUCTCARD_URL}`);
@@ -30,17 +31,7 @@ const ProductSwiper = () => {
     getData();
   }, []);
 
-  const useSwiperRef = () => {
-    const [wrapper, setWrapper] = useState(null);
-    const ref = useRef(null);
-
-    useEffect(() => {
-      if (ref.current) {
-        setWrapper(ref.current);
-      }
-    }, []);
-    return [wrapper, ref];
-  };
+  
 
   const [nextEl, nextElRef] = useSwiperRef();
   const [prevEl, prevElRef] = useSwiperRef();
@@ -86,7 +77,7 @@ const ProductSwiper = () => {
             {data.length ? data.map((el) => {
               return (
                 <SwiperSlide key={el.id}>
-                  <ProductCard data={el} />
+                  <ProductCard data={el} select={cartItems.some((item) => item.id === el.id)}/>
                 </SwiperSlide>
               );
             }) : sekletMap.map((_, el) => <SwiperSlide>

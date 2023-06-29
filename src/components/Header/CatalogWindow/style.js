@@ -1,10 +1,6 @@
 import styled from "styled-components";
 
 const CatalogWrapper = styled.div`
-    /* max-width: 790px;
-    width: 100%;
-    height: 444px;
-    background-color: red; */
     position: absolute;
     top: 70px;
     right: 155px;

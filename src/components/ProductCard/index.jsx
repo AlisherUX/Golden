@@ -4,16 +4,21 @@ import { Cross, Present, Tick } from "assets/images";
 import { NowPrice, OldPrice, Prices } from "components/Banner/style";
 import Raiting from "components/Raiting";
 import { Button } from "pages/Product/style";
-import MainContext from "components/reducer/CartContext";
+import MainContext from "reducer/CartContext";
 
 
-const ProductCard = (props) => {
-  const {cash, oldPrice, nowPrice, id, img, cardTxt} = props.data;
-  const {addToCart} = useContext(MainContext)
+const ProductCard = ({data, select}) => {
+  const {cash, oldPrice, nowPrice, id, img, cardTxt} = data;
+  const {addToCart, removeFromCart} = useContext(MainContext)
+
+  const CartToggle = () => {
+    return select ? removeFromCart(id) : addToCart(data);
+  };
+
   return (
           <Style.ProductCardContent to={`/product/detail/${id}`}>
             <Style.CardImgWrapper>
-              <Style.CardImg src={img}/>
+              <Style.CardImg src={img} alt=""/>
               <Style.PresentWrapper>
                 <Present/>
                 Подарок
@@ -31,7 +36,7 @@ const ProductCard = (props) => {
                 <NowPrice style={{ fontSize: "20px" }}>{oldPrice}</NowPrice>
                 <OldPrice style={{ fontSize: "18px" }}>{nowPrice}</OldPrice>
               </Prices>
-              <Button onClick={() => addToCart(props.data)} style={{paddingInline: "106px", margin: "0 auto"}}>Add To Card</Button>
+              <Button onClick={CartToggle} style={{paddingInline: "85px", margin: "0 auto"}}>{select ? "Remove From Cart" : "Add To Cart"}</Button>
             </Style.ProductCardInfoWrapper>
           </Style.ProductCardContent>
   );

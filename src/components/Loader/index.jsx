@@ -1,5 +1,5 @@
 import { useState } from "react";
-import ClipLoader from "react-spinners/ClipLoader";
+// import ClipLoader from "react-spinners/ClipLoader";
 
 
 function Loading() {
@@ -8,7 +8,7 @@ function Loading() {
 
   return (
     <div className="sweet-loading">
-      <button onClick={() => setLoading(!loading)}>Toggle Loader</button>
+      {/* <button onClick={() => setLoading(!loading)}>Toggle Loader</button>
       <input value={color} onChange={(input) => setColor(input.target.value)} placeholder="Color of the loader" />
 
       <ClipLoader
@@ -18,7 +18,7 @@ function Loading() {
         size={150}
         aria-label="Loading Spinner"
         data-testid="loader"
-      />
+      /> */}
     </div>
   );
 }

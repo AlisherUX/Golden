@@ -4,15 +4,15 @@ import { Link } from "react-router-dom";
 import { adaptiveValue, colors, fonts } from "../../utils/variable";
 import { flex } from "../../utils/flex";
 
-const CatalogLink = styled(Link)`
+const BreadCrumbLink = styled(Link)`
   color: ${colors.dark};
 `;
 
-const CatalogTypography = styled(Typography)`
+const BreadCrumbTypography = styled(Typography)`
   color: ${colors.lightGray} !important;
 `;
 
-const CtalogBreadCrumbs = styled(Breadcrumbs)`
+const BreadCrumbs = styled(Breadcrumbs)`
   margin-top: 20px !important;
   margin-bottom: 40px !important;
 `;
@@ -55,9 +55,9 @@ const CatalogCardTxt = styled.p`
 `;
 
 export {
-  CtalogBreadCrumbs,
-  CatalogLink,
-  CatalogTypography,
+  BreadCrumbs,
+  BreadCrumbLink,
+  BreadCrumbTypography,
   CatalogContent,
   CatalogCards,
   CatalogCard,

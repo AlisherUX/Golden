@@ -42,11 +42,11 @@ const AboutProducts = () => {
             )
           })}
 
-          <Style.ContentImg src={Handle12} />
+          <Style.ContentImg src={Handle12} alt=""/>
         </Style.ContentWrapper>
 
         <Style.ContentWrapper>
-          <Style.ContentImg src={Handle13} />
+          <Style.ContentImg src={Handle13} alt=""/>
           {data.map( el => {
             return (
               <Style.ContentEntries key={el.id}>

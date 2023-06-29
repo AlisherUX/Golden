@@ -1,9 +1,9 @@
-import React, { useRef, useEffect, useState } from 'react'
+import React, { useRef, useEffect, useState } from "react";
 import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Container } from 'components/Container/style';
-import { BannerArrow } from 'assets/images';
-import BlueButton from 'components/BlueButton';
+import { Container } from "components/Container/style";
+import { BannerArrow } from "assets/images";
+import BlueButton from "components/BlueButton";
 import * as Style from "./style";
 import "./style.css";
 import "swiper/css";
@@ -45,9 +45,7 @@ const Banner = () => {
           mousewheel={true}
           keyboard={true}
           modules={[Navigation, Pagination, Mousewheel, Keyboard]}
-
         >
-
           <SwiperSlide>
             {data.map((el) => {
               return (
@@ -56,16 +54,13 @@ const Banner = () => {
 
                   <Style.BannerEntries>
                     <Style.BannerTitle>
-                      <span>{el.title}</span>{el.titleItem}
+                      <span>{el.title}</span>
+                      {el.titleItem}
                     </Style.BannerTitle>
 
                     <Style.BannerText>
-                      <span>
-                        {el.text}
-                      </span>
-                      <span>
-                        {el.description}
-                      </span>
+                      <span>{el.text}</span>
+                      <span>{el.description}</span>
                     </Style.BannerText>
 
                     <Style.BannerPrice>
@@ -75,12 +70,11 @@ const Banner = () => {
                         <Style.NowPrice>{el.nowprice}</Style.NowPrice>
                         <Style.OldPrice>{el.oldprice}</Style.OldPrice>
                       </Style.Prices>
-
                     </Style.BannerPrice>
-                    <BlueButton text={'Добавить в корзину'} />
+                    <BlueButton text={"Добавить в корзину"} />
                   </Style.BannerEntries>
                 </Style.BannerContent>
-              )
+              );
             })}
           </SwiperSlide>
           {/* a */}
@@ -92,16 +86,13 @@ const Banner = () => {
 
                   <Style.BannerEntries>
                     <Style.BannerTitle>
-                      <span>{el.title}</span>{el.titleItem}
+                      <span>{el.title}</span>
+                      {el.titleItem}
                     </Style.BannerTitle>
 
                     <Style.BannerText>
-                      <span>
-                        {el.text}
-                      </span>
-                      <span>
-                        {el.description}
-                      </span>
+                      <span>{el.text}</span>
+                      <span>{el.description}</span>
                     </Style.BannerText>
 
                     <Style.BannerPrice>
@@ -111,12 +102,11 @@ const Banner = () => {
                         <Style.NowPrice>{el.nowprice}</Style.NowPrice>
                         <Style.OldPrice>{el.oldprice}</Style.OldPrice>
                       </Style.Prices>
-
                     </Style.BannerPrice>
-                    <BlueButton text={'Добавить в корзину'} />
+                    <BlueButton text={"Добавить в корзину"} />
                   </Style.BannerEntries>
                 </Style.BannerContent>
-              )
+              );
             })}
           </SwiperSlide>
           {/* a */}
@@ -128,16 +118,13 @@ const Banner = () => {
 
                   <Style.BannerEntries>
                     <Style.BannerTitle>
-                      <span>{el.title}</span>{el.titleItem}
+                      <span>{el.title}</span>
+                      {el.titleItem}
                     </Style.BannerTitle>
 
                     <Style.BannerText>
-                      <span>
-                        {el.text}
-                      </span>
-                      <span>
-                        {el.description}
-                      </span>
+                      <span>{el.text}</span>
+                      <span>{el.description}</span>
                     </Style.BannerText>
 
                     <Style.BannerPrice>
@@ -147,18 +134,17 @@ const Banner = () => {
                         <Style.NowPrice>{el.nowprice}</Style.NowPrice>
                         <Style.OldPrice>{el.oldprice}</Style.OldPrice>
                       </Style.Prices>
-
                     </Style.BannerPrice>
-                    <BlueButton text={'Добавить в корзину'} />
+                    <BlueButton text={"Добавить в корзину"} />
                   </Style.BannerEntries>
                 </Style.BannerContent>
-              )
+              );
             })}
           </SwiperSlide>
         </Swiper>
       </Container>
 
-      <Style.SwiperNavigation >
+      <Style.SwiperNavigation>
         <Style.BannerButtons ref={prevElRef}>
           <BannerArrow style={{ transform: "rotate(180deg)" }} />
         </Style.BannerButtons>
@@ -168,7 +154,7 @@ const Banner = () => {
         </Style.BannerButtons>
       </Style.SwiperNavigation>
     </Style.BannerWrapper>
-  )
-}
+  );
+};
 
 export default Banner;

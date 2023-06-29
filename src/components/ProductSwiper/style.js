@@ -46,14 +46,6 @@ const ProductCardInfoWrapper = styled.div`
     border-right: 2px solid ${colors.lactic};
 `;
 
-const MiniTxt = styled.p`
-    font-family: ${fonts.sfReg};
-    font-size: 16px;
-    line-height: 26px;
-    color: ${colors.gray};
-    text-align: left;
-`;
-
 const StockStiker = styled.div`
     ${flex.justFlex};
     ${flex.alignCenter};
@@ -96,4 +88,4 @@ const PresentWrapper = styled.div`
     left: 12px;
 `;
 
-export { ProductWrapper, ProductTitleContent, ProductSwiperWrapper, ProductNavigation, CardImgWrapper, ProductCardInfoWrapper, MiniTxt, StockStiker, SaleStiker, PresentWrapper };
+export { ProductWrapper, ProductTitleContent, ProductSwiperWrapper, ProductNavigation, CardImgWrapper, ProductCardInfoWrapper, StockStiker, SaleStiker, PresentWrapper };

@@ -19,7 +19,7 @@
   background-color: #65B4FF;
   position: relative;
 
-  /* &:after{
+  &:after{
     content: '';
     position: absolute;
     top: -8px;
@@ -29,7 +29,7 @@
     border: 1px solid #ADD7FF;
     background: transparent;
     border-radius: 50%;
-  } */
+  }
  }
 
  .swiper-button-disabled{

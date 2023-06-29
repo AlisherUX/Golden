@@ -8,10 +8,10 @@ const ProductImagesContent = styled.div`
   gap: 20px;
 `;
 
-const MainImg = styled.img`
-  max-width: 605px;
-  width: 100%;
-`;
+// const MainImg = styled.img`
+//   max-width: 605px;
+//   width: 100%;
+// `;
 
 const ProductInfoContent = styled.div`
   ${flex.justFlex}
@@ -25,47 +25,6 @@ const InfoTitle = styled.p`
   line-height: 30px;
   margin-top: 16px;
 `;
-
-// const SwiperWrapper = styled.div`
-//   max-width: 400px;
-//   width: 100%;
-//   background-color: #cc9544;
-//   padding: 18px;
-//   border-radius: 20px;
-//   /* overflow: hidden; */
-//   position: relative;
-//   `;
-
-// const SwiperContent = styled.div`
-//   max-height: 400px;
-//   overflow: hidden;
-//   width: 100%;
-//   display: flex;
-// `;
-
-// const SwiperButtonR = styled.button`
-//     position: absolute;
-//     top: 200px;
-//     right: -50px;
-//     background: transparent;
-//     width: 35px;
-//     height: 35px;
-//     border: none;
-//     transform: rotate(-90deg);
-//     cursor: pointer;
-// `;
-
-// const SwiperButtonL = styled.button`
-//     position: absolute;
-//     top: 200px;
-//     left: -50px;
-//     background: transparent;
-//     width: 35px;
-//     height: 35px;
-//     border: none;
-//     transform: rotate(90deg);
-//     cursor: pointer;
-// `;
 
 const BreadCrumbWrapper = styled.div`
   ${adaptiveValue("margin-bottom", 40, 24)}
@@ -151,7 +110,7 @@ const LikeButton = styled.button`
 export {
   ProductImagesContent,
   ProductInfoContent,
-  MainImg,
+  // MainImg,
   BreadCrumbWrapper,
   RaitingContent,
   InfoTitle,
@@ -161,8 +120,4 @@ export {
   UserUnityWrapper,
   Button,
   LikeButton
-  //   SwiperWrapper,
-  //   SwiperContent,
-  //   SwiperButtonL,
-  //   SwiperButtonR,
 };

@@ -14,19 +14,19 @@ const Catalog = () => {
     <Wrapper>
       <Header />
       <Container>
-        <Style.CtalogBreadCrumbs aria-label="breadcrumb">
-          <Style.CatalogLink
+        <Style.BreadCrumbs aria-label="breadcrumb">
+          <Style.BreadCrumbLink
             className="link"
             underline="hover"
             color="inherit"
             to="/"
           >
             Главная
-          </Style.CatalogLink>
-          <Style.CatalogTypography color="text.primary">
+          </Style.BreadCrumbLink>
+          <Style.BreadCrumbTypography color="text.primary" variant="p">
             Каталог
-          </Style.CatalogTypography>
-        </Style.CtalogBreadCrumbs>
+          </Style.BreadCrumbTypography>
+        </Style.BreadCrumbs>
 
         <Style.CatalogContent>
           <Title>Категории</Title>
@@ -36,7 +36,7 @@ const Catalog = () => {
               return (
                 <Link to='/category'>
                   <Style.CatalogCard key={el.id}>
-                    <Style.CatalogCardImg src={el.img} />
+                    <Style.CatalogCardImg src={el.img} alt=""/>
                     <Style.CatalogCardTxt>{el.text}</Style.CatalogCardTxt>
                   </Style.CatalogCard>
                 </Link>

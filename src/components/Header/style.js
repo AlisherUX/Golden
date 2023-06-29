@@ -5,7 +5,7 @@ import { adaptiveValue, colors, fonts } from "../../utils/variable";
 
 const HeaderWrapper = styled.header`
   width: 100%;
-  `;
+`;
 
 const HeaderNavContent = styled.div`
   position: relative;
@@ -51,7 +51,7 @@ const HeaderLink = styled.a`
   line-height: 24px;
   color: ${colors.dark};
   ${adaptiveValue("font-size", 20, 15)};
-  `;
+`;
 
 const HeaderBtn = styled.button`
   background-color: Transparent;
@@ -89,9 +89,11 @@ const CallContent = styled.a`
   }
 `;
 
-const HeaderItem = styled.div`
+const HeaderItem = styled.button`
   width: 32px;
   height: 32px;
+  background: transparent;
+  border: none;
   cursor: pointer;
 `;
 

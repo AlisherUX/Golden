@@ -57,7 +57,7 @@ const BannerEntries = styled.div`
   flex-direction: column;
 `;
 
-const BannerTitle = styled.h1`
+const BannerTitle = styled.div`
   font-family: ${fonts.sfSB};
   ${adaptiveValue("font-size", 44, 22)};
   ${adaptiveValue("line-height", 62, 34)};
