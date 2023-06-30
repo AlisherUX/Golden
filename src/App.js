@@ -9,7 +9,6 @@ import Category from "./pages/Category";
 import Order from "./pages/Order";
 import Product from "./pages/Product";
 import PageNotFound from "./pages/PageNotFound";
-import Favourite from "./pages/Favourite";
 import 'react-loading-skeleton/dist/skeleton.css'
 
 function App() {
@@ -18,7 +17,6 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about-us" element={<AboutUs />} />
-          <Route path="/like" element={<Favourite />} />
           <Route path="/delivery" element={<Delivery />} />
           <Route path="/discount" element={<DiscountSale />} />
           <Route path="/catalog" element={<Catalog />} />

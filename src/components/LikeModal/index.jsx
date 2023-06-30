@@ -5,7 +5,7 @@ import { Button } from "@mui/material";
 import { BlackCross, Handle10, Handle9, TrashCan } from "assets/images";
 import ModalItem from "./ModalItem";
 
-export default function CartModal({ cartModal, handleModal, data }) {
+export default function LikeModal({ cartModal, handleModal, data }) {
   return (
     <div>
       <Modal

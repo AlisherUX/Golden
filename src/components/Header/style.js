@@ -5,6 +5,10 @@ import { adaptiveValue, colors, fonts } from "../../utils/variable";
 
 const HeaderWrapper = styled.header`
   width: 100%;
+  position: sticky;
+  top: 0px;
+  z-index: 50;
+  background: #fff;
 `;
 
 const HeaderNavContent = styled.div`
@@ -89,11 +93,9 @@ const CallContent = styled.a`
   }
 `;
 
-const HeaderItem = styled.button`
+const HeaderItem = styled.div`
   width: 32px;
   height: 32px;
-  background: transparent;
-  border: none;
   cursor: pointer;
 `;
 
