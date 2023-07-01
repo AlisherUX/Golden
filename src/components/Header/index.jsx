@@ -1,24 +1,31 @@
 import React, { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import HeaderTop from "components/Header/HeaderTop";
+import * as Style from "./style";
 import { Container } from "components/Container/style";
 import BurgerWindow from "components/Header/BurgerWIndow";
-import * as Style from "./style";
+import HeaderTop from "components/Header/HeaderTop";
 import { Call, Cart, HeaderDart, Like, Logo } from "assets/images";
 import CatalogWindow from "components/Header/CatalogWindow";
 import CartModal from "components/CartModal";
-import MainContext from "reducer/CartContext";
 import { Badge } from "@mui/material";
+import MainContext from "../../reducer/CartContext";
+import LikeModal from "components/LikeModal";
 
 const Header = () => {
   const [button, setButton] = useState(false);
   const [btn, setBtn] = useState(false);
   const [cartModal, setCartModal] = useState(false);
+  const [likeModal, setLikeModal] = useState(false);
   const { cartItems, likeItems } = useContext(MainContext);
   console.log(cartItems);
 
+  console.log(likeItems);
   const handleModal = () => {
     setCartModal(!cartModal);
+  };
+
+  const handleLikeModal = () => {
+    setLikeModal(!likeModal);
   };
 
   const clickable = () => {
@@ -44,6 +51,11 @@ const Header = () => {
           cartModal={cartModal}
           data={cartItems}
           handleModal={handleModal}
+        />
+        <LikeModal
+          likeModal={likeModal}
+          data={likeItems}
+          handleLikeModal={handleLikeModal}
         />
         <Style.HeaderNavWrapper>
           <Container>
@@ -80,8 +92,8 @@ const Header = () => {
                   +7 (966) 55 88 499
                 </Style.CallContent>
 
-                <Badge badgeContent={likeItems.length} color="primary">
-                  <Style.HeaderItem onClick={handleModal}>
+                <Badge badgeContent={+likeItems.length} color="primary">
+                  <Style.HeaderItem onClick={handleLikeModal}>
                     <Like />
                   </Style.HeaderItem>
                 </Badge>

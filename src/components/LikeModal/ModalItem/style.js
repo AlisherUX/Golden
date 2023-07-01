@@ -5,13 +5,11 @@ const CardContent = styled.div`
   width: 100%;
   display: flex;
   gap: 12px;
+  border: 1px solid ${colors.gray};
 `;
 
 const ProductImg = styled.div`
-  width: 136px;
-  height: 120px;
   border: 1px solid ${colors.white};
-  background: #000;
 
   & > img {
     width: 136px;
@@ -22,18 +20,15 @@ const ProductImg = styled.div`
 
 const UserActionContent = styled.div`
   width: 100%;
-  background: #000;
   display: flex;
 `;
 
 const LeftActionsWrapper = styled.div`
   width: 100%;
-  background: red;
 `;
 
 const RightActionsWrapper = styled.div`
   width: 100%;
-  background-color: yellow;
   display: flex;
   flex-direction: column;
   align-items: flex-end;

@@ -18,7 +18,7 @@ import { useSwiperRef } from "hooks/useSwiperRef";
 const ProductSwiper = () => {
   const [data, setData] = useState([]);
   const sekletMap = Array.from({length: 4});
-  const {cartItems} = useContext(MainContext)
+  const {cartItems, likeItems} = useContext(MainContext)
 
   async function getData() {
     const res = await axios.get(`${process.env.REACT_APP_PRODUCTCARD_URL}`);
@@ -77,7 +77,7 @@ const ProductSwiper = () => {
             {data.length ? data.map((el) => {
               return (
                 <SwiperSlide key={el.id}>
-                  <ProductCard data={el} select={cartItems.some((item) => item.id === el.id)}/>
+                  <ProductCard data={el} select={cartItems.find((item) => item.id === el.id)} like={likeItems.find((item) => item.id === el.id)}/>
                 </SwiperSlide>
               );
             }) : sekletMap.map((_, el) => <SwiperSlide>

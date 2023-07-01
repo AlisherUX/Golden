@@ -6,12 +6,14 @@ const ModalInnerWrapper = styled(Box)`
   position: absolute;
   top: 50%;
   left: 50%;
+  height: 700px;
   transform: translate(-50%, -50%);
   ${adaptiveValue("max-width", 836, 343)};
   width: 100%;
+  padding-bottom: 20px;
   background-color: #fff;
   box-shadow: 24px;
-  padding-top: 16px;
+  overflow-y: auto;
 `;
 
 const TopContentWrapper = styled.div`
@@ -22,6 +24,10 @@ const TopContentWrapper = styled.div`
   align-items: center;
   padding-inline: 40px;
   padding-bottom: 23px;
+  padding-top: 16px;
+  position: sticky;
+  top: 0px;
+  background-color: #fff;
 `;
 
 const TopContentTitle = styled(Typography)`

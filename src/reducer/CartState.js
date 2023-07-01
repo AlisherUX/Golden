@@ -3,9 +3,9 @@ import mainReducer from "./CartReducer";
 import MainContext from "./CartContext";
 import {
     ADD_TO_CART,
-    ADD_TO_LIKEBOX,
+    ADD_TO_LIKE,
     REMOVE_FROM_CART,
-    REMOVE_FROM_LIKEBOX,
+    REMOVE_FROM_LIKE,
 } from "./types";
 
 const CartState = ({ children }) => {
@@ -21,10 +21,10 @@ const CartState = ({ children }) => {
     const removeFromCart = (id) =>
         dispatch({ type: REMOVE_FROM_CART, payload: id });
 
-    const addToLike = (el) => dispatch({ type: ADD_TO_LIKEBOX, payload: el });
+    const addToLike = (el) => dispatch({ type: ADD_TO_LIKE, payload: el });
 
     const removeFromLike = (id) =>
-        dispatch({ type: REMOVE_FROM_LIKEBOX, payload: id });
+        dispatch({ type: REMOVE_FROM_LIKE, payload: id });
 
     useEffect(() => {
         localStorage.setItem("cartItems", JSON.stringify(state.cartItems));
