@@ -21,11 +21,17 @@ export default function LikeModal({ likeModal, handleLikeModal, data }) {
               <BlackCross />
             </Button>
           </Style.TopContentWrapper>
-          <Style.ChoosedProductsWrapper>
-            {data.map((el) => (
-              <ModalItem key={el.id} product={el} />
-            ))}
-          </Style.ChoosedProductsWrapper>
+
+          {data.length ? (
+            <Style.ChoosedProductsWrapper>
+              {data.map((el) => (
+                <ModalItem key={el.id} product={el} />
+              ))}
+            </Style.ChoosedProductsWrapper>
+          ) : (
+            <Style.EmptyText>Your like modal is empty</Style.EmptyText>
+          )}
+
         </Style.ModalInnerWrapper>
       </Modal>
     </div>

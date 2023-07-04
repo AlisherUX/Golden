@@ -5,11 +5,10 @@ const CardContent = styled.div`
   width: 100%;
   display: flex;
   gap: 12px;
+  border: 1px solid ${colors.gray};
 `;
 
 const ProductImg = styled.div`
-  width: 136px;
-  height: 120px;
   border: 1px solid ${colors.white};
 
   & > img {
@@ -26,6 +25,9 @@ const UserActionContent = styled.div`
 
 const LeftActionsWrapper = styled.div`
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 `;
 
 const RightActionsWrapper = styled.div`
@@ -54,7 +56,37 @@ const DeleteButton = styled.button`
   line-height: 26px;
   background-color: transparent;
   border: none;
-  cursor: not-allowed;
+  cursor: pointer;
+`;
+
+const Counter = styled.div`
+  width: 108px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`;
+
+const Characters = styled.button`
+  width: 16px;
+  height: 16px;
+  color: ${colors.gray};
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 23px;
+`;
+
+const NumberWrapper = styled.div`
+  padding-inline: 22px;
+  padding-block: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid ${colors.white};
+  color: #000;
 `;
 
 export {
@@ -64,5 +96,8 @@ export {
   LeftActionsWrapper,
   RightActionsWrapper,
   CardTitle,
-  DeleteButton
+  DeleteButton,
+  NumberWrapper,
+  Counter,
+  Characters
 };

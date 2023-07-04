@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import * as Style from "./style";
-import { Handle9, TrashCan } from "assets/images";
+import { TrashCan } from "assets/images";
 import { NowPrice } from "components/Banner/style";
+import MainContext from "reducer/CartContext";
 
 const ModalItem = ({ product }) => {
-  const { img, cardTxt, nowPrice } = product;
+  const { img, cardTxt, nowPrice, id } = product;
+  const {removeFromLike} = useContext(MainContext)
 
   return (
     <Style.CardContent>
@@ -17,7 +19,7 @@ const ModalItem = ({ product }) => {
         </Style.LeftActionsWrapper>
 
         <Style.RightActionsWrapper>
-          <Style.DeleteButton>
+          <Style.DeleteButton onClick={() => removeFromLike(id)}>
             <TrashCan />
             Удалить
           </Style.DeleteButton>

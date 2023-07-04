@@ -26,7 +26,8 @@ const Category = () => {
   useEffect(() => {
     getData();
   }, []);
-
+  
+  console.log(data, "alalalalal");
   return (
     <Style.Wrapper>
       <Header />

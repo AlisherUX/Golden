@@ -20,7 +20,7 @@ function App() {
           <Route path="/delivery" element={<Delivery />} />
           <Route path="/discount" element={<DiscountSale />} />
           <Route path="/catalog" element={<Catalog />} />
-          <Route path="/category" element={<Category />} />
+          <Route path="/category/:type" element={<Category />} />
           <Route path="/order" element={<Order />} />
           <Route path="/product/detail/:id" element={<Product />} />
           <Route path="*" element={<PageNotFound />} />

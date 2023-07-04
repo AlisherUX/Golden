@@ -46,7 +46,16 @@ const ChoosedProductsWrapper = styled.ul`
   gap: 20px;
 `;
 
+const EmptyText = styled.p`
+  font-size: 18px;
+  font-family: ${fonts.sfM};
+  color: ${colors.gray};
+  margin-top: 32%;
+  text-align: center;
+`;
+
 export {
+  EmptyText,
   ModalInnerWrapper,
   TopContentWrapper,
   TopContentTitle,

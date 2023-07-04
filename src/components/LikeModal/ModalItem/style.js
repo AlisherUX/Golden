@@ -53,7 +53,7 @@ const DeleteButton = styled.button`
   line-height: 26px;
   background-color: transparent;
   border: none;
-  cursor: not-allowed;
+  cursor: pointer;
 `;
 
 export {

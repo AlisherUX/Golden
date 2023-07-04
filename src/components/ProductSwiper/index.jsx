@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect, useContext } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import * as Style from "./style";
 import { Container } from "components/Container/style";
 import { Title } from "components/WhyOur/style";
@@ -77,7 +77,7 @@ const ProductSwiper = () => {
             {data.length ? data.map((el) => {
               return (
                 <SwiperSlide key={el.id}>
-                  <ProductCard data={el} select={cartItems.find((item) => item.id === el.id)} like={likeItems.find((item) => item.id === el.id)}/>
+                  <ProductCard cardTxt={el.cardTxt} cash={el.cash} oldPrice={el.oldPrice} id={el.id} img={el.img} nowPrice={el.nowPrice} select={cartItems.find((item) => item.id === el.id)} like={likeItems.find((item) => item.id === el.id)}/>
                 </SwiperSlide>
               );
             }) : sekletMap.map((_, el) => <SwiperSlide>
