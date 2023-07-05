@@ -2,21 +2,19 @@ import styled from "styled-components";
 import { flex } from "../../utils/flex";
 import { colors, fonts } from "../../utils/variable";
 import { Link } from "react-router-dom";
-// import { adaptiveValue } from "../../utils/variable";
 
-const ProductCardContent = styled(Link)`
+const ProductCardContent = styled.div`
   max-width: 288px;
   width: 100%;
 `;
 
-const CardImgWrapper = styled.div`
+const CardImgWrapper = styled(Link)`
   padding-block: 28px;
-  padding-inline: 12px;
   background-color: #f9f9f9;
-  position: relative;
-`;
+  `;
 
 const CardImg = styled.img`
+  position: relative;
   max-width: 288px;
   width: 100%;
 `;
@@ -44,12 +42,14 @@ const StockStiker = styled.div`
   ${flex.justFlex};
   ${flex.alignCenter};
   gap: 8px;
+  padding-inline-end: 8px;
   font-size: 14px;
   line-height: 24px;
   font-family: ${fonts.sfReg};
   color: ${colors.gray};
+  background-color: ${colors.light};
   position: absolute;
-  top: 17px;
+  top: 35px;
   left: 12px;
 `;
 
@@ -63,8 +63,8 @@ const SaleStiker = styled.span`
   line-height: 14px;
   font-family: ${fonts.sfM};
   position: absolute;
-  top: 17px;
-  right: 12px;
+  top: 35px;
+  right: 40px;
 `;
 
 const PresentWrapper = styled.div`
@@ -78,7 +78,7 @@ const PresentWrapper = styled.div`
   color: ${colors.dark};
   font-family: ${fonts.sfReg};
   position: absolute;
-  top: 49px;
+  top: 67px;
   left: 12px;
 `;
 

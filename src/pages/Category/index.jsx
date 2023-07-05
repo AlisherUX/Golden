@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import * as Style from "./style";
 import Header from "components/Header";
 import Contact from "components/Contact";
@@ -11,23 +11,29 @@ import { Title } from "../../components/WhyOur/style";
 import axios from "axios";
 import Skeleton from "react-loading-skeleton";
 import { BreadCrumbLink, BreadCrumbTypography, BreadCrumbs } from "pages/Catalog/style";
+import MainContext from "reducer/CartContext";
+import { useParams } from "react-router-dom";
 
 const Category = () => {
+  const { type } = useParams();
   const [data, setData] = useState([]);
   const sekletMap = Array.from({ length: 8 });
+  const {likeItems, cartItems} = useContext(MainContext)
+  const categoryText = type.toLocaleLowerCase();
 
-  async function getData() {
-    const res = await axios.get(`${process.env.REACT_APP_PRODUCTCARD_URL}`);
+  async function getProduct() {
+    const res = await axios.get(
+        `${process.env.REACT_APP_PRODUCTCARD_URL}?category=${categoryText}`
+    );
     if (res.status === 200) {
-      setData(res.data);
+        setData(res.data);
     }
-  }
+}
 
   useEffect(() => {
-    getData();
-  }, []);
+    getProduct();
+  }, [type]);
   
-  console.log(data, "alalalalal");
   return (
     <Style.Wrapper>
       <Header />
@@ -52,12 +58,9 @@ const Category = () => {
         <Style.CardsWrapper>
           {data.length ? data.map((el) => {
             return <ProductCard
-              id={el.id}
-              img={el.img}
-              cash={el.cash}
-              cardTxt={el.cardTxt}
-              nowPrice={el.nowPrice}
-              oldPrice={el.oldPrice}
+             data={el}
+             like={likeItems.find(item => item.id === el.id)}
+             select={cartItems.find(item => item.id === el.id)}
             />;
           }) : sekletMap.map((_, el) => <Skeleton width={288} height={426} />)}
         </Style.CardsWrapper>

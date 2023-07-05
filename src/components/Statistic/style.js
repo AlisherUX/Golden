@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { flex } from "../../utils/flex";
-import { adaptiveValue, colors, fonts } from "../../utils/variable";
+import { adaptiveValue, fonts } from "../../utils/variable";
 
 const StatisticWrapper = styled.div`
     ${flex.center};

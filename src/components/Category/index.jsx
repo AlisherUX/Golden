@@ -27,7 +27,8 @@ const Category = () => {
       <Title>Категории</Title>
       <Container>
         <Style.CategoryCards>
-          {data.length ? data.map((el) => {
+          {data.length
+            ? data.map((el) => {
                 return (
                   <Style.CategoryCard>
                     <Style.CardItemsWrapper>
@@ -40,8 +41,9 @@ const Category = () => {
                     <Style.CardImg src={el.img} />
                   </Style.CategoryCard>
                 );
-              }): sekletMap.map((_, el) => (
-                  <Style.SkeletonCard className="skeleton-card" />
+              })
+            : sekletMap.map((_, el) => (
+                <Style.SkeletonCard className="skeleton-card" />
               ))}
         </Style.CategoryCards>
       </Container>

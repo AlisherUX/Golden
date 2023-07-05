@@ -6,7 +6,7 @@ const Wrapper = styled.div`
 
 const CardsWrapper = styled.div`
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     gap: 1.7%;
     row-gap: 40px;
     flex-wrap: wrap;

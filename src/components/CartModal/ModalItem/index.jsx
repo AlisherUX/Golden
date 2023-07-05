@@ -6,8 +6,8 @@ import MainContext from "reducer/CartContext";
 
 const ModalItem = ({ product }) => {
   const { img, cardTxt, nowPrice, id } = product;
-  const {removeFromCart} = useContext(MainContext)
-
+  const { removeFromCart } = useContext(MainContext);
+console.log(cardTxt, "alisher");
   return (
     <Style.CardContent>
       <Style.ProductImg>
@@ -28,7 +28,7 @@ const ModalItem = ({ product }) => {
             <TrashCan />
             Удалить
           </Style.DeleteButton>
-          <NowPrice style={{fontSize: "16px"}}>{nowPrice}</NowPrice>
+          <NowPrice style={{ fontSize: "16px" }}>{nowPrice}</NowPrice>
         </Style.RightActionsWrapper>
       </Style.UserActionContent>
     </Style.CardContent>

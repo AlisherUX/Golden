@@ -25,6 +25,9 @@ const UserActionContent = styled.div`
 
 const LeftActionsWrapper = styled.div`
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 `;
 
 const RightActionsWrapper = styled.div`
@@ -43,7 +46,7 @@ const CardTitle = styled.p`
 `;
 
 const DeleteButton = styled.button`
-  width: 97px;
+  width: 110px;
   display: flex;
   align-items: center;
   justify-content: space-between;

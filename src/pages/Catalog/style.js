@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { Breadcrumbs, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
-import { adaptiveValue, colors, fonts } from "../../utils/variable";
+import { adaptiveValue, colors } from "../../utils/variable";
 import { flex } from "../../utils/flex";
 
 const BreadCrumbLink = styled(Link)`

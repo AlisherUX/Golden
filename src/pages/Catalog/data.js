@@ -1,4 +1,4 @@
-import { Handle, Handle10, Handle2, Handle3, Handle8, Handle9 } from "assets/images";
+import { Handle, Handle2, Handle3, Handle8, Handle9, Handle10, Handle4, Handle5 } from "assets/images";
 
 const data = [
   {
@@ -39,13 +39,13 @@ const data = [
   },
   {
     id: 7,
-    img: Handle2,
+    img: Handle4,
     text: "Замки для шкафчиков",
     type: "forKitchen",
   },
   {
     id: 8,
-    img: Handle2,
+    img: Handle5,
     text: "Замки для раздевалок",
     type: "forGarage",
   }

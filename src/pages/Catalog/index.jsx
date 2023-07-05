@@ -9,7 +9,6 @@ import { Wrapper } from "pages/Category/style";
 import CatalogCard from "components/CatalogCard";
 
 const Catalog = () => {
-
   return (
     <Wrapper>
       <Header />
@@ -24,7 +23,7 @@ const Catalog = () => {
             Главная
           </Style.BreadCrumbLink>
           <Style.BreadCrumbTypography color="text.primary" variant="p">
-            {/* Каталог */}Alisher
+            Каталог
           </Style.BreadCrumbTypography>
         </Style.BreadCrumbs>
 
@@ -34,10 +33,7 @@ const Catalog = () => {
           <Style.CatalogCards>
             {data.map((el) => (
               <CatalogCard
-                key={el.id}
-                image={el.img}
-                text={el.text}
-                type={el.type}
+               card={el}
               />
             ))}
           </Style.CatalogCards>

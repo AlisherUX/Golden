@@ -2,7 +2,7 @@ import * as React from "react";
 import Modal from "@mui/material/Modal";
 import { Button } from "@mui/material";
 import * as Style from "./style";
-import { BlackCross, Handle10, Handle9, TrashCan } from "assets/images";
+import { BlackCross, } from "assets/images";
 import ModalItem from "./ModalItem";
 
 export default function LikeModal({ likeModal, handleLikeModal, data }) {

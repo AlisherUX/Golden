@@ -7,22 +7,21 @@ import { Button } from "pages/Product/style";
 import MainContext from "reducer/CartContext";
 import { IconButton } from "@mui/material";
 
-const ProductCard = ({ cardTxt, cash, oldPrice, nowPrice, id, img, select, like }) => {
+const ProductCard = ({ data,  select, like }) => {
+  const {id, cardTxt, img, cash, nowPrice, oldPrice} = data
   const { addToCart, removeFromCart } = useContext(MainContext);
   const { addToLike, removeFromLike } = useContext(MainContext);
 
   const CartToggle = () => {
-    return select ? removeFromCart(id) : addToCart(cardTxt, id, cash, nowPrice, oldPrice, img);
+    return select ? removeFromCart(id) : addToCart(data);
   };
   const LikeToggle = () => {
-    return like ? removeFromLike(id) : addToLike(cardTxt, id, cash, nowPrice, oldPrice, img);
+    return like ? removeFromLike(id) : addToLike(data);
   };
 
-  console.log(select);
-
   return (
-    <Style.ProductCardContent to={`/product/detail/${id}`}>
-      <Style.CardImgWrapper>
+    <Style.ProductCardContent>
+      <Style.CardImgWrapper to={`/product/detail/${id}`}>
         <Style.CardImg src={img} alt="" />
         <Style.PresentWrapper>
           <Present />

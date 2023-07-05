@@ -2,7 +2,7 @@ import * as React from "react";
 import Modal from "@mui/material/Modal";
 import * as Style from "./style";
 import { Button } from "@mui/material";
-import { BlackCross, Handle10, Handle9, TrashCan } from "assets/images";
+import { BlackCross } from "assets/images";
 import ModalItem from "./ModalItem";
 import { EmptyText } from "components/LikeModal/style";
 
@@ -23,17 +23,15 @@ export default function CartModal({ cartModal, handleModal, data }) {
             </Button>
           </Style.TopContentWrapper>
           <Style.ChoosedProductsWrapper>
-
-          {data.length ? (
-            <Style.ChoosedProductsWrapper>
-              {data.map((el) => (
-                <ModalItem key={el.id} product={el} />
-              ))}
-            </Style.ChoosedProductsWrapper>
-          ) : (
-            <EmptyText>Your card modal is empty</EmptyText>
-          )}
-
+            {data.length ? (
+              <Style.ChoosedProductsWrapper>
+                {data.map((el) => (
+                  <ModalItem key={el.id} product={el} />
+                ))}
+              </Style.ChoosedProductsWrapper>
+            ) : (
+              <EmptyText>Your card modal is empty</EmptyText>
+            )}
           </Style.ChoosedProductsWrapper>
         </Style.ModalInnerWrapper>
       </Modal>

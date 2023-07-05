@@ -50,5 +50,5 @@ export {
   ModalInnerWrapper,
   TopContentWrapper,
   TopContentTitle,
-  ChoosedProductsWrapper
+  ChoosedProductsWrapper,
 };
