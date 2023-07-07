@@ -7,7 +7,7 @@ import Product from "components/ProductSwiper";
 import AboutProducts from "components/AboutProducts";
 import { Container } from "components/Container/style";
 import ProductCard from "components/ProductCard";
-import { Title } from "../../components/WhyOur/style";
+import { Title } from "components/WhyOur/style";
 import axios from "axios";
 import Skeleton from "react-loading-skeleton";
 import { BreadCrumbLink, BreadCrumbTypography, BreadCrumbs } from "pages/Catalog/style";
@@ -31,7 +31,7 @@ const Category = () => {
 }
 
   useEffect(() => {
-    getProduct();
+    getProduct()
   }, [type]);
   
   return (

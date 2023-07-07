@@ -32,6 +32,17 @@ export default function CartModal({ cartModal, handleModal, data }) {
             ) : (
               <EmptyText>Your card modal is empty</EmptyText>
             )}
+          <Style.MainPriceContent>
+              <Style.MainPriceWrapper>
+                <Style.PriceBox>
+                  <Style.TotalText>Итого:</Style.TotalText>
+                  <Style.Price></Style.Price>
+                </Style.PriceBox>
+                <Style.OrderButton>Оформить заказ</Style.OrderButton>
+              </Style.MainPriceWrapper>
+
+            <Style.ContinueButton>Продолжить покупки</Style.ContinueButton>
+          </Style.MainPriceContent>
           </Style.ChoosedProductsWrapper>
         </Style.ModalInnerWrapper>
       </Modal>

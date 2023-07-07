@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import { adaptiveValue, colors, fonts } from "../../utils/variable";
-import { flex } from "../../utils/flex";
+import { adaptiveValue, colors, fonts } from "utils/variable";
+import { flex } from "utils/flex";
 
 const FooterWrapper = styled.div`
   width: 100%;
@@ -32,11 +32,10 @@ const IconsContent = styled.div`
   margin-bottom: 10px;
 
   @media (max-width: 1340px) {
+    ${flex.spaceBetween};
+    flex-direction: row;
    width: 100%;
-   flex-direction: row;
    gap: 0;
-   ${flex.flexBetween};
-   align-items: center;
    margin-bottom: 24px;
   }
 `;
@@ -45,7 +44,7 @@ const FooterBottom = styled.div`
   width: 100%;
   ${adaptiveValue("padding-top", 24, 16)};
   ${adaptiveValue("margin-top", 50, 24)};
-  border-top: 1px solid #203546;
+  border-top: 1px solid ${colors.darkBlue};
   font-size: 14px;
   line-height: 17px;
   font-family: ${fonts.sfReg};
@@ -93,7 +92,7 @@ const NavTitle = styled.p`
 const NavSubTitle = styled.p`
   ${adaptiveValue("font-size", 14, 12)}
   ${adaptiveValue("line-height", 24, 14)}
-  color: #c4cdd5;
+  color: ${colors.silver};
   font-family: ${fonts.sfL};
 `;
 
@@ -115,7 +114,7 @@ const AccordionsWrapper = styled.div`
   display: none;
 
   @media (max-width: 581px) {
-    display: flex;
+    ${flex.justFlex}
     flex-direction: column;
   }
 `;

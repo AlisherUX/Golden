@@ -26,9 +26,7 @@ const ProductSwiper = () => {
       setData(res.data);
     }
   }
-
-  console.log(data.id, "from swiper");
-
+  
   useEffect(() => {
     getData();
   }, []);

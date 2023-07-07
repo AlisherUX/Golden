@@ -1,6 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 import { flex } from "./flex";
-import { fonts } from "./variable";
+import { colors, fonts } from "./variable";
 
 export const GlobalStyles = createGlobalStyle`
 
@@ -99,5 +99,9 @@ export const GlobalStyles = createGlobalStyle`
 
 button{
   cursor: pointer;
+  border: 1px solid ${colors.primaryColor};
+  max-width: max-content;
+  color: ${colors.light};
+  transition: 0.3s;
 }
 `;

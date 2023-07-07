@@ -1,14 +1,14 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import { flex } from "../../utils/flex";
-import { adaptiveValue, colors, fonts } from "../../utils/variable";
+import { flex } from "utils/flex";
+import { adaptiveValue, colors, fonts } from "utils/variable";
 
 const HeaderWrapper = styled.header`
   width: 100%;
   position: sticky;
   top: 0px;
   z-index: 50;
-  background: #fff;
+  background: ${colors.secondLight};
 `;
 
 const HeaderNavContent = styled.div`
@@ -24,7 +24,7 @@ const HeaderNavContent = styled.div`
 
 const HeaderNavWrapper = styled.div`
   width: 100%;
-  box-shadow: inset 0px -1px 0px #c4cdd5;
+  box-shadow: inset 0px -1px 0px ${colors.silver};
 `;
 
 const LogoWrapper = styled(Link)`
@@ -53,8 +53,8 @@ const HeaderNav = styled.div`
 const HeaderLink = styled.a`
   font-family: ${fonts.sfL};
   line-height: 24px;
-  color: ${colors.dark};
   ${adaptiveValue("font-size", 20, 15)};
+  color: ${colors.dark};
 `;
 
 const HeaderBtn = styled.button`
@@ -63,11 +63,10 @@ const HeaderBtn = styled.button`
   font-family: ${fonts.sfL};
   line-height: 24px;
   ${flex.center};
-  cursor: pointer;
-  color: ${colors.dark};
   ${adaptiveValue("font-size", 18, 13)};
   ${adaptiveValue("height", 20, 15)};
   ${adaptiveValue("gap", 8, 5)}
+  color: ${colors.dark};
 `;
 
 const UserAction = styled.div`
@@ -107,7 +106,7 @@ const BurgerMenu = styled.div`
   display: none;
 
   @media (max-width: 700px) {
-    display: flex;
+    ${flex.justFlex}
   }
 `;
 

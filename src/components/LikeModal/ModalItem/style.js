@@ -11,7 +11,7 @@ const CardContent = styled.div`
 
 const ProductImg = styled.div`
   border: 1px solid ${colors.white};
-  background-color: ${colors.whiteYellow};
+  background-color: ${colors.storm};
 
   & > img {
     width: 136px;

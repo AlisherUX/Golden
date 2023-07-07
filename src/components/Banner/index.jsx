@@ -77,7 +77,7 @@ const Banner = () => {
               );
             })}
           </SwiperSlide>
-          {/* a */}
+          
           <SwiperSlide>
             {data.map((el) => {
               return (

@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import { adaptiveValue, colors, fonts } from "../../../utils/variable";
-import { flex } from "../../../utils/flex";
+import { adaptiveValue, colors, fonts } from "utils/variable";
+import { flex } from "utils/flex";
 
 const HeaderTopWrapper = styled.div`
   width: 100%;

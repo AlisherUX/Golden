@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import { flex } from "../../utils/flex";
-import { adaptiveValue, colors, fonts } from "../../utils/variable";
+import { flex } from "utils/flex";
+import { adaptiveValue, colors, fonts } from "utils/variable";
 
 const ContactWrapper = styled.div`
   width: 100%;
@@ -8,7 +8,6 @@ const ContactWrapper = styled.div`
   background-color: ${colors.secondaryColor};
   ${adaptiveValue("padding-top", 64, 32)};
   ${adaptiveValue("padding-bottom", 56, 32)};
-  ${adaptiveValue("margin-top", 96, 36)};
 `;
 
 const ContactContent = styled.div`
@@ -36,7 +35,7 @@ const Input = styled.input`
   width: 240px;
   padding-inline: 16px;
   height: 50px;
-  background: rgba(22, 28, 36, 0.04);
+  background: ${colors.titan};
   color: ${colors.gray};
   font-size: 16px;
   line-height: 26px;
@@ -60,12 +59,9 @@ const SubmitBtn = styled.button`
   padding-inline: 69px;
   height: 50px;
   background-color: ${colors.primaryColor};
-  color: ${colors.light};
   font-size: 16px;
   line-height: 26px;
   font-family: ${fonts.sfM};
-  border: 1px solid ${colors.primaryColor};
-  transition: 0.3s;
 
   &:active {
     background: transparent;
@@ -78,7 +74,7 @@ const SubmitBtn = styled.button`
 `;
 
 const InputWrapper = styled.div`
-  display: flex;
+  ${flex.justFlex}
   flex-direction: column;
   gap: 10px;
 `;

@@ -3,7 +3,7 @@ import * as Style from "./style";
 import { AddLike, Cross, Present, RemoveLike, Tick } from "assets/images";
 import { NowPrice, OldPrice, Prices } from "components/Banner/style";
 import Raiting from "components/Raiting";
-import { Button } from "pages/Product/style";
+import { MainButton } from "pages/Product/style";
 import MainContext from "reducer/CartContext";
 import { IconButton } from "@mui/material";
 
@@ -43,9 +43,9 @@ const ProductCard = ({ data, select, like }) => {
           <OldPrice style={{ fontSize: "18px" }}>{nowPrice}</OldPrice>
         </Prices>
         <Style.ButtonsContent>
-          <Button onClick={CartToggle} style={{ paddingInline: "45px" }}>
+          <MainButton onClick={CartToggle} style={{ paddingInline: "45px" }}>
             {select ? "Remove From Cart" : "Add To Cart"}
-          </Button>
+          </MainButton>
 
           <IconButton onClick={LikeToggle} color="primary">
             {like ? <RemoveLike /> : <AddLike />}

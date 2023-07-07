@@ -4,6 +4,7 @@ import AccordionSummary from "@mui/material/AccordionSummary";
 import { Breadcrumbs, Link, Typography } from "@mui/material";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import axios from "axios";
 import * as Style from "./style";
 import Footer from "components/Footer";
 import ProductSwiper from "components/ProductSwiper";
@@ -16,8 +17,7 @@ import { Demo, GrayLike, TickBox } from "assets/images";
 import Raiting from "components/Raiting";
 import { Feature, FeatureText } from "components/AboutProducts/style";
 import { NowPrice, OldPrice, Prices } from "components/Banner/style";
-import { useParams } from "react-router-dom";
-import axios from "axios";
+// import { useParams } from "react-router-dom";
 
 const ProductView = () => {
   // const { id } = useParams();
@@ -90,7 +90,7 @@ const ProductView = () => {
               </Prices>
 
               <Style.UserUnity>
-                <Style.Button>Купить</Style.Button>
+                <Style.MainButton>Купить</Style.MainButton>
 
                 <Style.LikeButton>
                   <GrayLike />В избранное

@@ -26,7 +26,8 @@ const TopContentWrapper = styled.div`
   padding-top: 16px;
   position: sticky;
   top: 0px;
-  background-color: #fff;
+  z-index: 10;
+  background-color: ${colors.light};
 `;
 
 const TopContentTitle = styled(Typography)`

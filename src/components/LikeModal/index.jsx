@@ -34,7 +34,6 @@ export default function LikeModal({ likeModal, handleLikeModal, data }) {
           ) : (
             <Style.EmptyText>Your like modal is empty</Style.EmptyText>
           )}
-
         </Style.ModalInnerWrapper>
       </Modal>
     </div>

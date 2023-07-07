@@ -1,11 +1,10 @@
 import styled from "styled-components";
-import { flex } from "../../utils/flex";
-import { adaptiveValue, colors, fonts } from "../../utils/variable";
+import { flex } from "utils/flex";
+import { adaptiveValue, colors, fonts } from "utils/variable";
 
 const BannerWrapper = styled.div`
   width: 100%;
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.02)),
-    url(skud-200z-5-11.jpg);
+  background: ${colors.lactic};
 `;
 
 const BannerButtons = styled.button`
@@ -13,7 +12,6 @@ const BannerButtons = styled.button`
   width: 32px;
   height: 32px;
   border: none;
-  cursor: pointer;
   display: inline;
 `;
 
@@ -61,10 +59,10 @@ const BannerTitle = styled.div`
   font-family: ${fonts.sfSB};
   ${adaptiveValue("font-size", 44, 22)};
   ${adaptiveValue("line-height", 62, 34)};
-  color: ${colors.dark};
   ${flex.justFlex}
   flex-direction: column;
   text-align: left;
+  color: ${colors.dark};
 
   @media (max-width: 660px) {
     display: block;
@@ -82,12 +80,12 @@ const BannerText = styled.div`
   font-family: ${fonts.sfReg};
   font-size: 14px;
   line-height: 24px;
-  color: ${colors.gray};
   ${flex.justFlex}
   flex-direction: column;
   gap: 16px;
   ${adaptiveValue("margin-bottom", 32, 18)};
   ${adaptiveValue("margin-top", 20, 12)};
+  color: ${colors.gray};
 
   > span {
     text-align: left;
@@ -113,9 +111,9 @@ const BannerPrice = styled.div`
     font-family: ${fonts.sfReg};
     font-size: 12px;
     line-height: 22px;
-    color: ${colors.gray};
     display: block;
     margin-bottom: 5px;
+    color: ${colors.gray};
   }
 `;
 

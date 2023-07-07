@@ -1,15 +1,17 @@
 import styled from "styled-components";
+import { flex } from "utils/flex";
 import { colors, fonts } from "utils/variable";
 
 const CardContent = styled.div`
   width: 100%;
-  display: flex;
+  ${flex.justFlex}
   gap: 12px;
   border: 1px solid ${colors.gray};
 `;
 
 const ProductImg = styled.div`
-  border: 1px solid ${colors.white};
+  background-color: ${colors.secondLactic};
+  border: 1px solid ${colors.lightGray};
 
   & > img {
     width: 136px;
@@ -20,22 +22,20 @@ const ProductImg = styled.div`
 
 const UserActionContent = styled.div`
   width: 100%;
-  display: flex;
+  ${flex.justFlex}
 `;
 
 const LeftActionsWrapper = styled.div`
   width: 100%;
-  display: flex;
+  ${flex.flexBetween}
   flex-direction: column;
-  justify-content: space-between;
 `;
 
 const RightActionsWrapper = styled.div`
   width: 100%;
-  display: flex;
+  ${flex.flexBetween}
   flex-direction: column;
   align-items: flex-end;
-  justify-content: space-between;
 `;
 
 const CardTitle = styled.p`
@@ -45,46 +45,29 @@ const CardTitle = styled.p`
   line-height: 26px;
 `;
 
-// const DeleteButton = styled.button`
-//   width: 97px;
-//   display: flex;
-//   align-items: center;
-//   justify-content: space-between;
-//   color: ${colors.primaryColor};
-//   font-size: 16px;
-//   font-family: ${fonts.sfM};
-//   line-height: 26px;
-//   background-color: transparent;
-//   border: none;
-//   cursor: pointer;
-// `;
-
 const Counter = styled.div`
   width: 108px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  ${flex.spaceBetween}
 `;
 
 const Characters = styled.button`
   width: 16px;
   height: 16px;
   color: ${colors.gray};
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  ${flex.center}
   background: transparent;
   border: none;
-  cursor: pointer;
   font-size: 23px;
+
+  &:disabled{
+    color: ${colors.lightGray};
+  }
 `;
 
 const NumberWrapper = styled.div`
   padding-inline: 22px;
   padding-block: 5px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  ${flex.center}
   border: 1px solid ${colors.white};
   color: #000;
 `;

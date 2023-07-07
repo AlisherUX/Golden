@@ -1,5 +1,5 @@
-import { adaptiveValue, colors, fonts } from "utils/variable";
 import styled from "styled-components";
+import { adaptiveValue, colors, fonts } from "utils/variable";
 import { flex } from "utils/flex";
 
 const CatalogCard = styled.div`
@@ -13,7 +13,7 @@ const CatalogCardImg = styled.img`
   ${adaptiveValue("height", 300, 161)}
   background-color: ${colors.lactic};
   ${flex.center};
-  border: 1px solid #eaeaea;
+  border: 1px solid ${colors.white};
 `;
 
 const CatalogCardTxt = styled.p`

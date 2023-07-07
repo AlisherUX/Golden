@@ -37,8 +37,8 @@ const MiniTxt = styled.p`
   font-family: ${fonts.sfReg};
   font-size: 16px;
   line-height: 26px;
-  color: ${colors.gray};
   text-align: left;
+  color: ${colors.gray};
 `;
 
 const StockStiker = styled.div`

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { flex } from "../../utils/flex";
+import { flex } from "utils/flex";
 import { adaptiveValue, colors, fonts } from "utils/variable";
 
 const ProductImagesContent = styled.div`
@@ -7,11 +7,6 @@ const ProductImagesContent = styled.div`
   flex-direction: column;
   gap: 20px;
 `;
-
-// const MainImg = styled.img`
-//   max-width: 605px;
-//   width: 100%;
-// `;
 
 const ProductInfoContent = styled.div`
   ${flex.justFlex}
@@ -32,8 +27,7 @@ const BreadCrumbWrapper = styled.div`
 `;
 
 const RaitingContent = styled.div`
-  display: flex;
-  align-items: center;
+  ${flex.alignCenter}
   gap: 12px;
   color: ${colors.gray};
   font-size: 14px;
@@ -43,7 +37,7 @@ const RaitingContent = styled.div`
 `;
 
 const Facilities = styled.div`
-  display: flex;
+  ${flex.justFlex}
   flex-direction: column;
   gap: 8px;
   margin-top: 12px;
@@ -57,21 +51,16 @@ const FacilitiesTitle = styled.p`
 `;
 
 const UserUnity = styled.div`
-  display: flex;
-  align-items: center;
+  ${flex.alignCenter}
   gap: 30px;
 `;
 
-const Button = styled.button`
+const MainButton = styled.button`
   background-color: ${colors.primaryColor};
-  border: 1px solid ${colors.primaryColor};
   ${adaptiveValue("padding-inline", 118, 91)};
   padding-block: 16px;
   max-width: max-content;
   width: 100%;
-  color: ${colors.light};
-  cursor: pointer;
-  transition: 0.3s;
   display: block;
 
   &:hover {
@@ -85,7 +74,7 @@ const Button = styled.button`
 `;
 
 const UserUnityWrapper = styled.div`
-  display: flex;
+  ${flex.justFlex}
   gap: 17px;
   flex-direction: column;
   margin-top: 24px;
@@ -93,24 +82,22 @@ const UserUnityWrapper = styled.div`
 `;
 
 const LikeButton = styled.button`
-  background: transparent;
   width: 116px;
-  display: flex;
-  align-items: center;
   height: 24px;
+  ${flex.alignCenter}
   gap: 8px;
   border: none;
+  background: transparent;
   color: ${colors.gray};
   font-size: 14px;
   font-family: ${fonts.sfReg};
   line-height: 24px;
-  cursor: pointer;
 `;
 
 export {
   ProductImagesContent,
   ProductInfoContent,
-  // MainImg,
+  MainButton,
   BreadCrumbWrapper,
   RaitingContent,
   InfoTitle,
@@ -118,6 +105,5 @@ export {
   FacilitiesTitle,
   UserUnity,
   UserUnityWrapper,
-  Button,
-  LikeButton
+  LikeButton,
 };

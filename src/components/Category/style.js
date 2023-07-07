@@ -1,14 +1,14 @@
 import styled from "styled-components";
-import { flex } from "../../utils/flex";
-import { adaptiveValue, colors, fonts } from "../../utils/variable";
+import { flex } from "utils/flex";
+import { adaptiveValue, colors, fonts } from "utils/variable";
 
 const CategoryWrapper = styled.div`
   width: 100%;
-  ${adaptiveValue("margin-top", 100, 40)};
-  ${adaptiveValue("margin-bottom", 100, 40)};
-  display: flex;
+  ${adaptiveValue("padding-top", 100, 40)};
+  ${adaptiveValue("padding-bottom", 50, 20)};
+  ${flex.alignCenter}
   flex-direction: column;
-  align-items: center;
+  background: ${colors.light};
 `;
 
 const CategoryCards = styled.div`
@@ -26,6 +26,7 @@ const CategoryCard = styled.div`
   ${adaptiveValue("padding", 40, 10)};
   width: 100%;
   background-color: ${colors.lactic};
+  border:  1px solid ${colors.white};
   ${flex.justFlex}
 
   @media (max-width: 960px) {
@@ -74,8 +75,6 @@ const CardBtn = styled.button`
   ${adaptiveValue("padding-block", 12, 5)};
   border: 1px solid ${colors.gray};
   border-radius: 2px;
-  cursor: pointer;
-  transition: 0.5s;
 
   &:hover {
     background: ${colors.gray};

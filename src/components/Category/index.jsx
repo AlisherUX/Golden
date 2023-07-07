@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import * as Style from "./style";
 import { Container } from "components/Container/style";
 import { Title } from "components/WhyOur/style";
 import BlueButton from "components/BlueButton";
-import * as Style from "./style";
 
 const Category = () => {
   const [data, setData] = useState([]);
@@ -33,7 +33,7 @@ const Category = () => {
                   <Style.CategoryCard>
                     <Style.CardItemsWrapper>
                       <Style.CardEntry>{el.text}</Style.CardEntry>
-                      <Link to="/category">
+                      <Link to={`/category/${el.type}`}>
                         <Style.CardBtn>Перейти</Style.CardBtn>
                       </Link>
                     </Style.CardItemsWrapper>
