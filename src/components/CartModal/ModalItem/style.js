@@ -45,19 +45,19 @@ const CardTitle = styled.p`
   line-height: 26px;
 `;
 
-const DeleteButton = styled.button`
-  width: 97px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  color: ${colors.primaryColor};
-  font-size: 16px;
-  font-family: ${fonts.sfM};
-  line-height: 26px;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-`;
+// const DeleteButton = styled.button`
+//   width: 97px;
+//   display: flex;
+//   align-items: center;
+//   justify-content: space-between;
+//   color: ${colors.primaryColor};
+//   font-size: 16px;
+//   font-family: ${fonts.sfM};
+//   line-height: 26px;
+//   background-color: transparent;
+//   border: none;
+//   cursor: pointer;
+// `;
 
 const Counter = styled.div`
   width: 108px;
@@ -96,7 +96,6 @@ export {
   LeftActionsWrapper,
   RightActionsWrapper,
   CardTitle,
-  DeleteButton,
   NumberWrapper,
   Counter,
   Characters

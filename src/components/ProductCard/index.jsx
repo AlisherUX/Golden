@@ -7,8 +7,8 @@ import { Button } from "pages/Product/style";
 import MainContext from "reducer/CartContext";
 import { IconButton } from "@mui/material";
 
-const ProductCard = ({ data,  select, like }) => {
-  const {id, cardTxt, img, cash, nowPrice, oldPrice} = data
+const ProductCard = ({ data, select, like }) => {
+  const { id, cardTxt, img, cash, nowPrice, oldPrice } = data;
   const { addToCart, removeFromCart } = useContext(MainContext);
   const { addToLike, removeFromLike } = useContext(MainContext);
 
@@ -21,34 +21,35 @@ const ProductCard = ({ data,  select, like }) => {
 
   return (
     <Style.ProductCardContent>
-      <Style.CardImgWrapper to={`/product/detail/${id}`}>
-        <Style.CardImg src={img} alt="" />
-        <Style.PresentWrapper>
-          <Present />
-          Подарок
-        </Style.PresentWrapper>
-        <Style.SaleStiker>SALE</Style.SaleStiker>
-        <Style.StockStiker>
-          {cash ? <Tick /> : <Cross />}
-          {cash ? "В наличии" : "Нет в наличии"}
-        </Style.StockStiker>
-      </Style.CardImgWrapper>
-      <Raiting />
+      <Style.CardLink to={`/product/detail/${id}`}>
+        <Style.CardImgWrapper>
+          <Style.CardImg src={img} alt="" />
+          <Style.PresentWrapper>
+            <Present />
+            Подарок
+          </Style.PresentWrapper>
+          <Style.SaleStiker>SALE</Style.SaleStiker>
+          <Style.StockStiker>
+            {cash ? <Tick /> : <Cross />}
+            {cash ? "В наличии" : "Нет в наличии"}
+          </Style.StockStiker>
+        </Style.CardImgWrapper>
+      </Style.CardLink>
       <Style.ProductCardInfoWrapper>
+      <Raiting />
         <Style.MiniTxt>{cardTxt}</Style.MiniTxt>
         <Prices>
           <NowPrice style={{ fontSize: "20px" }}>{oldPrice}</NowPrice>
           <OldPrice style={{ fontSize: "18px" }}>{nowPrice}</OldPrice>
         </Prices>
         <Style.ButtonsContent>
-          <Button
-            onClick={CartToggle}
-            style={{ paddingInline: "45px"}}
-          >
+          <Button onClick={CartToggle} style={{ paddingInline: "45px" }}>
             {select ? "Remove From Cart" : "Add To Cart"}
           </Button>
 
-          <IconButton onClick={LikeToggle} color="primary"> { like ? <RemoveLike/> : <AddLike/>} </IconButton>
+          <IconButton onClick={LikeToggle} color="primary">
+            {like ? <RemoveLike /> : <AddLike />}
+          </IconButton>
         </Style.ButtonsContent>
       </Style.ProductCardInfoWrapper>
     </Style.ProductCardContent>

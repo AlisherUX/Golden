@@ -1,11 +1,14 @@
-import * as React from "react";
+import React, { useContext } from "react";
+import * as Style from "./style";
 import Modal from "@mui/material/Modal";
 import { Button } from "@mui/material";
-import * as Style from "./style";
-import { BlackCross, } from "assets/images";
+import MainContext from "reducer/CartContext";
 import ModalItem from "./ModalItem";
+import { BlackCross, } from "assets/images";
 
 export default function LikeModal({ likeModal, handleLikeModal, data }) {
+  const { cartItems } = useContext(MainContext);
+
   return (
     <div>
       <Modal
@@ -25,7 +28,7 @@ export default function LikeModal({ likeModal, handleLikeModal, data }) {
           {data.length ? (
             <Style.ChoosedProductsWrapper>
               {data.map((el) => (
-                <ModalItem key={el.id} product={el} />
+                <ModalItem key={el.id} product={el} select={cartItems.find((item) => item.id === el.id)}/>
               ))}
             </Style.ChoosedProductsWrapper>
           ) : (

@@ -15,7 +15,7 @@ const light = "#fff";
 const lightGray = "#A4A4A4";
 const white = "#EAEAEA";
 const lactic = "#FAFAFA";
-const whiteBlue = "#F7F7F7";
+const whiteYellow = "#F7F7F7";
 
 const colors = {
     primaryColor,
@@ -28,7 +28,7 @@ const colors = {
     lightBlue,
     white,
     lactic,
-    whiteBlue
+    whiteYellow
 }
 
 const fonts = {

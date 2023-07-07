@@ -18,7 +18,7 @@ import { useSwiperRef } from "hooks/useSwiperRef";
 const ProductSwiper = () => {
   const [data, setData] = useState([]);
   const sekletMap = Array.from({ length: 4 });
-  const { cartItems, likeItems } = useContext(MainContext)
+  const { cartItems, likeItems } = useContext(MainContext);
 
   async function getData() {
     const res = await axios.get(`${process.env.REACT_APP_PRODUCTCARD_URL}`);
@@ -32,7 +32,6 @@ const ProductSwiper = () => {
   useEffect(() => {
     getData();
   }, []);
-
 
   const [nextEl, nextElRef] = useSwiperRef();
   const [prevEl, prevElRef] = useSwiperRef();
@@ -52,7 +51,6 @@ const ProductSwiper = () => {
           </Style.ProductNavigation>
         </Style.ProductTitleContent>
 
-
         <Style.ProductSwiperWrapper>
           <Swiper
             navigation={{ prevEl, nextEl }}
@@ -64,7 +62,7 @@ const ProductSwiper = () => {
               320: {
                 slidesPerView: 1,
               },
-              430: {
+              830: {
                 slidesPerView: 2,
               },
               670: {
@@ -75,15 +73,29 @@ const ProductSwiper = () => {
               },
             }}
           >
-            {data.length ? data.map((el) => {
-              return (
-                <SwiperSlide key={el.id}>
-                  <ProductCard data={el} cardTxt={el.cardTxt} img={el.img} id={el.id} cash={el.cash} nowPrice={el.nowPrice} oldPrice={el.oldPrice} select={cartItems.find((item) => item.id === el.id)} like={likeItems.find((item) => item.id === el.id)} />
-                </SwiperSlide>
-              );
-            }) : sekletMap.map((_, el) => <SwiperSlide>
-              <Skeleton height={426} />
-            </SwiperSlide>)}
+            {data.length
+              ? data.map((el) => {
+                  return (
+                    <SwiperSlide key={el.id}>
+                      <ProductCard
+                        data={el}
+                        cardTxt={el.cardTxt}
+                        img={el.img}
+                        id={el.id}
+                        cash={el.cash}
+                        nowPrice={el.nowPrice}
+                        oldPrice={el.oldPrice}
+                        select={cartItems.find((item) => item.id === el.id)}
+                        like={likeItems.find((item) => item.id === el.id)}
+                      />
+                    </SwiperSlide>
+                  );
+                })
+              : sekletMap.map((_, el) => (
+                  <SwiperSlide>
+                    <Skeleton height={426} />
+                  </SwiperSlide>
+                ))}
           </Swiper>
         </Style.ProductSwiperWrapper>
       </Container>

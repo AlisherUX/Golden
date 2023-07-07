@@ -3,11 +3,13 @@ import * as Style from "./style";
 import { TrashCan } from "assets/images";
 import { NowPrice } from "components/Banner/style";
 import MainContext from "reducer/CartContext";
+import { Button } from "components/LikeModal/ModalItem/style";
+import { IconButton } from "@mui/material";
 
 const ModalItem = ({ product }) => {
   const { img, cardTxt, nowPrice, id } = product;
   const { removeFromCart } = useContext(MainContext);
-console.log(cardTxt, "alisher");
+  console.log(cardTxt, "alisher");
   return (
     <Style.CardContent>
       <Style.ProductImg>
@@ -24,10 +26,12 @@ console.log(cardTxt, "alisher");
         </Style.LeftActionsWrapper>
 
         <Style.RightActionsWrapper>
-          <Style.DeleteButton onClick={() => removeFromCart(id)}>
-            <TrashCan />
-            Удалить
-          </Style.DeleteButton>
+          <IconButton style={{ borderRadius: "10px" }}>
+            <Button onClick={() => removeFromCart(id)}>
+              <TrashCan />
+              Удалить
+            </Button>
+          </IconButton>
           <NowPrice style={{ fontSize: "16px" }}>{nowPrice}</NowPrice>
         </Style.RightActionsWrapper>
       </Style.UserActionContent>

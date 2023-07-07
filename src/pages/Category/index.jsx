@@ -17,7 +17,7 @@ import { useParams } from "react-router-dom";
 const Category = () => {
   const { type } = useParams();
   const [data, setData] = useState([]);
-  const sekletMap = Array.from({ length: 8 });
+  const sekletMap = Array.from({length: 2 });
   const {likeItems, cartItems} = useContext(MainContext)
   const categoryText = type.toLocaleLowerCase();
 

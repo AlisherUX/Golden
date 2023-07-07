@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { Box, Typography } from "@mui/material";
 import { adaptiveValue, colors, fonts } from "utils/variable";
+import { flex } from "utils/flex";
 
 const ModalInnerWrapper = styled(Box)`
   position: absolute;
@@ -19,9 +20,7 @@ const ModalInnerWrapper = styled(Box)`
 const TopContentWrapper = styled.div`
   width: 100%;
   border-bottom: 1px solid ${colors.white};
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  ${flex.spaceBetween}
   padding-inline: 40px;
   padding-bottom: 23px;
   padding-top: 16px;
@@ -41,7 +40,7 @@ const ChoosedProductsWrapper = styled.ul`
   width: 100%;
   padding-top: 24px;
   padding-inline: 40px;
-  display: flex;
+  ${flex.justFlex}
   flex-direction: column;
   gap: 20px;
 `;

@@ -8,13 +8,16 @@ const ProductCardContent = styled.div`
   width: 100%;
 `;
 
-const CardImgWrapper = styled(Link)`
-  padding-block: 28px;
+const CardLink = styled(Link)`
+  ${flex.justFlex}
+`;
+
+const CardImgWrapper = styled.div`
   background-color: #f9f9f9;
-  `;
+  position: relative;
+`;
 
 const CardImg = styled.img`
-  position: relative;
   max-width: 288px;
   width: 100%;
 `;
@@ -49,7 +52,7 @@ const StockStiker = styled.div`
   color: ${colors.gray};
   background-color: ${colors.light};
   position: absolute;
-  top: 35px;
+  top: 12px;
   left: 12px;
 `;
 
@@ -63,8 +66,8 @@ const SaleStiker = styled.span`
   line-height: 14px;
   font-family: ${fonts.sfM};
   position: absolute;
-  top: 35px;
-  right: 40px;
+  top: 12px;
+  right: 12px;
 `;
 
 const PresentWrapper = styled.div`
@@ -78,24 +81,24 @@ const PresentWrapper = styled.div`
   color: ${colors.dark};
   font-family: ${fonts.sfReg};
   position: absolute;
-  top: 67px;
+  top: 45px;
   left: 12px;
 `;
 
 const ButtonsContent = styled.div`
   width: 100%;
-  display: flex;
-  justify-content: space-between;
+  ${flex.flexBetween}
 `;
 
 export {
   ProductCardContent,
-  CardImgWrapper,
+  CardLink,
   ProductCardInfoWrapper,
   CardImg,
   MiniTxt,
   StockStiker,
   SaleStiker,
   PresentWrapper,
-  ButtonsContent
+  ButtonsContent,
+  CardImgWrapper,
 };

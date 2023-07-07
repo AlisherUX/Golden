@@ -96,4 +96,8 @@ export const GlobalStyles = createGlobalStyle`
     background-position-x: -200%;
   }
 }
+
+button{
+  cursor: pointer;
+}
 `;
