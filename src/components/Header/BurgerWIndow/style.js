@@ -1,10 +1,10 @@
 import styled from "styled-components";
-import { colors } from "../../../utils/variable";
-import { flex } from "../../../utils/flex";
+import { adaptiveValue, colors } from "utils/variable";
+import { flex } from "utils/flex";
 
 const WindowWrapper = styled.div`
   position: fixed;
-  top: 124px;
+  ${adaptiveValue("top", 65, 88)};
   left: 0;
   bottom: 0;
   z-index: 100;
@@ -21,8 +21,8 @@ const WindowWrapper = styled.div`
   @media (max-width: 700px) {
     display: flex;
   }
-  @media (max-width: 375px) {
-    top: 130px;
+  @media (max-width: 410px) {
+    ${adaptiveValue("top", 255, 88)};
   }
 `;
 
@@ -34,10 +34,10 @@ const BurgerNavWrapper = styled.nav`
 const BurgerNavBtn = styled.button`
   ${flex.flexBetween};
   ${flex.alignCenter};
+  padding-block: 16px;
+  color: ${colors.dark};
   background: transparent;
   border: none;
-  border-bottom: 1px solid ${colors.white};
-  padding-block: 16px;
 
   &:active {
     background: ${colors.white};

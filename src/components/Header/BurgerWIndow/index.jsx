@@ -9,7 +9,7 @@ const BurgerWindow = ({open}) => {
      <Style.BurgerNavWrapper>
          <Style.BurgerNavLink href='/'>Главная</Style.BurgerNavLink>
     
-         <Style.BurgerNavBtn href='/catalog'>Каталог <RightArrow/></Style.BurgerNavBtn>
+         <Style.BurgerNavBtn>Каталог <RightArrow/></Style.BurgerNavBtn>
         
          <Style.BurgerNavLink href='/discount'>Оптовая продажа</Style.BurgerNavLink>
         

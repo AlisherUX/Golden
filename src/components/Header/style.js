@@ -117,6 +117,13 @@ const BurgerMenuItem = styled.span`
   border-radius: 2px;
 `;
 
+const IconController = styled.div`
+  width: 14px;
+  height: 14px;
+  ${flex.center}
+  transform: ${(active) => (active.active ? "rotateX(180deg)" : "rotateX(0deg)")};
+`;
+
 export {
   HeaderWrapper,
   HeaderNavWrapper,
@@ -130,4 +137,5 @@ export {
   CallContent,
   BurgerMenu,
   BurgerMenuItem,
+  IconController
 };

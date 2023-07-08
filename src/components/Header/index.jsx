@@ -26,12 +26,12 @@ const Header = () => {
     setLikeModal(!likeModal);
   };
 
-  // const clickable = () => {
-  //   setButton(!button);
-  // };
+  const clickable = () => {
+    setButton(!button);
+  };
 
-  function changer(item, el) {
-   return item(!el)
+  const catalogSwitch = () => {
+    setActive(!active);
   };
 
   useEffect(() => {
@@ -41,7 +41,6 @@ const Header = () => {
       document.body.style = "overflow: auto";
     }
   }, [button]);
-
 
   return (
     <>
@@ -60,12 +59,13 @@ const Header = () => {
         <Style.HeaderNavWrapper>
           <Container>
             <Style.HeaderNavContent>
-              <CatalogWindow />
               <Style.LogoWrapper to="/">
                 <Logo />
               </Style.LogoWrapper>
 
-              <Style.BurgerMenu onClick={changer(setButton, button)}>
+              <CatalogWindow active={active} />
+
+              <Style.BurgerMenu onClick={clickable}>
                 <Style.BurgerMenuItem></Style.BurgerMenuItem>
                 <Style.BurgerMenuItem></Style.BurgerMenuItem>
                 <Style.BurgerMenuItem></Style.BurgerMenuItem>
@@ -75,8 +75,11 @@ const Header = () => {
                 <Link to="/">
                   <Style.HeaderLink>Главная</Style.HeaderLink>
                 </Link>
-                <Style.HeaderBtn onClick={changer(setActive, active)}>
-                  Каталог <HeaderDart/>
+                <Style.HeaderBtn onClick={catalogSwitch}>
+                  Каталог
+                  <Style.IconController active={active}>
+                    <HeaderDart />
+                  </Style.IconController>
                 </Style.HeaderBtn>
                 <Link to="/discount">
                   <Style.HeaderLink>Оптовая продажа</Style.HeaderLink>
