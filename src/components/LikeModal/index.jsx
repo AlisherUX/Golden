@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import * as Style from "./style";
 import Modal from "@mui/material/Modal";
 import { Button } from "@mui/material";
-import MainContext from "reducer/CartContext";
+import MainContext from "context/CartContext";
 import ModalItem from "./ModalItem";
 import { BlackCross, } from "assets/images";
 

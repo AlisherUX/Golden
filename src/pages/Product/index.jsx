@@ -33,7 +33,6 @@ const ProductView = () => {
     }
   }
 
-  console.log(data.cardTxt);
   useEffect(() => {
     getData();
   }, []);

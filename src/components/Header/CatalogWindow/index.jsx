@@ -3,9 +3,9 @@ import * as Style from "./style";
 
 const CatalogWindow = ({active}) => {
   return (
-    <Style.CatalogWrapper active={active}>
+    <Style.CatalogDormer active={active}>
         
-    </Style.CatalogWrapper>
+    </Style.CatalogDormer>
   )
 }
 

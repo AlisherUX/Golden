@@ -2,23 +2,16 @@ import React, { useContext, useState } from "react";
 import * as Style from "./style";
 import { TrashCan } from "assets/images";
 import { NowPrice } from "components/Banner/style";
-import MainContext from "reducer/CartContext";
+import MainContext from "context/CartContext";
 import { Button } from "components/LikeModal/ModalItem/style";
 import { IconButton } from "@mui/material";
 
 const ModalItem = ({ product }) => {
-  const { img, cardTxt, nowPrice, id } = product;
-  const { removeFromCart } = useContext(MainContext);
-  const [count, setCount] = useState(1)
+  const { img, cardTxt, nowPrice, id, quantity } = product;
+  const { removeFromCart, addOne, removeOne } = useContext(MainContext);
+  let price = parseFloat(nowPrice)
 
-  function increment() {
-    setCount((prev) => prev + 1)
-  }
-
-  function decrement() {
-    setCount((prev) => prev - 1)
-  }
-
+console.log(price)
   return (
     <Style.CardContent>
       <Style.ProductImg>
@@ -28,9 +21,9 @@ const ModalItem = ({ product }) => {
         <Style.LeftActionsWrapper>
           <Style.CardTitle>{cardTxt}</Style.CardTitle>
           <Style.Counter>
-            <Style.Characters onClick={() => decrement()} disabled={count == 1}>-</Style.Characters>
-            <Style.NumberWrapper>{count}</Style.NumberWrapper>
-            <Style.Characters onClick={() => increment()}>+</Style.Characters>
+            <Style.Characters onClick={() => removeOne(id)}>-</Style.Characters>
+            <Style.NumberWrapper>{quantity}</Style.NumberWrapper>
+            <Style.Characters onClick={() => addOne(id)}>+</Style.Characters>
           </Style.Counter>
         </Style.LeftActionsWrapper>
 
@@ -41,7 +34,7 @@ const ModalItem = ({ product }) => {
               Удалить
             </Button>
           </IconButton>
-          <NowPrice style={{ fontSize: "16px" }}>{(nowPrice * count).toLocaleString()}</NowPrice>
+          <NowPrice style={{ fontSize: "16px" }}>{(price * quantity).toLocaleString()}₽</NowPrice>
         </Style.RightActionsWrapper>
       </Style.UserActionContent>
     </Style.CardContent>

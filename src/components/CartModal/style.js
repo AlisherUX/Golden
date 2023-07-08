@@ -15,7 +15,7 @@ const ModalInnerWrapper = styled(Box)`
   background-color: ${colors.light};
   box-shadow: 24px;
   overflow-y: auto;
-`;
+  `;
 
 const TopContentWrapper = styled.div`
   width: 100%;
@@ -28,14 +28,14 @@ const TopContentWrapper = styled.div`
   top: 0px;
   z-index: 10;
   background-color: ${colors.light};
-`;
+  `;
 
 const TopContentTitle = styled(Typography)`
   color: ${colors.dark};
   font-size: 20px;
   font-family: ${fonts.sfM};
   line-height: 34px;
-`;
+  `;
 
 const ChoosedProductsWrapper = styled.ul`
   width: 100%;
@@ -47,7 +47,7 @@ const ChoosedProductsWrapper = styled.ul`
 `;
 
 const MainPriceContent = styled.div`
-  width: 100%;
+  ${flex.alignCenter}
   ${flex.flexBetween}
 `;
 
@@ -56,11 +56,14 @@ const MainPriceWrapper = styled.div`
   width: 100%;
   ${flex.spaceBetween}
   flex-direction: column;
+  gap: 8px;
 `;
 
 const ContinueButton = styled.button`
   padding-inline: 24px;
   padding-block: 10px;
+  max-height: 46px;
+  background: transparent;
   color: ${colors.primaryColor};
   color: ${colors.dark};
   font-family: ${fonts.sfReg};
@@ -90,6 +93,7 @@ const OrderButton = styled.button`
 
 const PriceBox = styled.div`
   ${flex.justFlex}
+  ${flex.alignCenter}
   gap: 8px;
 `;
 

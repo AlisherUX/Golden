@@ -1,5 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { Badge } from "@mui/material";
 import * as Style from "./style";
 import { Container } from "components/Container/style";
 import BurgerWindow from "components/Header/BurgerWIndow";
@@ -7,19 +8,16 @@ import HeaderTop from "components/Header/HeaderTop";
 import { Call, Cart, HeaderDart, Like, Logo } from "assets/images";
 import CatalogWindow from "components/Header/CatalogWindow";
 import CartModal from "components/CartModal";
-import { Badge } from "@mui/material";
-import MainContext from "../../reducer/CartContext";
+import MainContext from "context/CartContext";
 import LikeModal from "components/LikeModal";
 
 const Header = () => {
   const [button, setButton] = useState(false);
-  const [btn, setBtn] = useState(false);
+  const [active, setActive] = useState(false);
   const [cartModal, setCartModal] = useState(false);
   const [likeModal, setLikeModal] = useState(false);
   const { cartItems, likeItems } = useContext(MainContext);
-  console.log(cartItems);
 
-  console.log(likeItems);
   const handleModal = () => {
     setCartModal(!cartModal);
   };
@@ -28,11 +26,12 @@ const Header = () => {
     setLikeModal(!likeModal);
   };
 
-  const clickable = () => {
-    setButton(!button);
-  };
-  const click = () => {
-    setBtn(!btn);
+  // const clickable = () => {
+  //   setButton(!button);
+  // };
+
+  function changer(item, el) {
+   return item(!el)
   };
 
   useEffect(() => {
@@ -42,6 +41,7 @@ const Header = () => {
       document.body.style = "overflow: auto";
     }
   }, [button]);
+
 
   return (
     <>
@@ -65,7 +65,7 @@ const Header = () => {
                 <Logo />
               </Style.LogoWrapper>
 
-              <Style.BurgerMenu onClick={() => clickable()}>
+              <Style.BurgerMenu onClick={changer(setButton, button)}>
                 <Style.BurgerMenuItem></Style.BurgerMenuItem>
                 <Style.BurgerMenuItem></Style.BurgerMenuItem>
                 <Style.BurgerMenuItem></Style.BurgerMenuItem>
@@ -75,8 +75,8 @@ const Header = () => {
                 <Link to="/">
                   <Style.HeaderLink>Главная</Style.HeaderLink>
                 </Link>
-                <Style.HeaderBtn onClick={() => click(!btn)}>
-                  Каталог <HeaderDart />
+                <Style.HeaderBtn onClick={changer(setActive, active)}>
+                  Каталог <HeaderDart/>
                 </Style.HeaderBtn>
                 <Link to="/discount">
                   <Style.HeaderLink>Оптовая продажа</Style.HeaderLink>

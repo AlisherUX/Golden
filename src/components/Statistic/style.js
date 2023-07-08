@@ -33,7 +33,7 @@ const StatisticTxt = styled.p`
   ${adaptiveValue("font-size", 16, 14)};
   ${adaptiveValue("line-height", 26, 24)};
   font-family: ${fonts.sfSB};
-  color: ${(props) => (props.color ? "#454F5B" : "#FFF")};
+  color: "#454F5B";
 `;
 
 export { StatisticWrapper, StatisticBox, StatisticNum, StatisticTxt };

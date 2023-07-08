@@ -4,7 +4,7 @@ import { AddLike, Cross, Present, RemoveLike, Tick } from "assets/images";
 import { NowPrice, OldPrice, Prices } from "components/Banner/style";
 import Raiting from "components/Raiting";
 import { MainButton } from "pages/Product/style";
-import MainContext from "reducer/CartContext";
+import MainContext from "context/CartContext";
 import { IconButton } from "@mui/material";
 
 const ProductCard = ({ data, select, like }) => {
@@ -18,7 +18,7 @@ const ProductCard = ({ data, select, like }) => {
   const LikeToggle = () => {
     return like ? removeFromLike(id) : addToLike(data);
   };
-
+  
   return (
     <Style.ProductCardContent>
       <Style.CardLink to={`/product/detail/${id}`}>

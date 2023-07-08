@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const CatalogWrapper = styled.div`
+const CatalogDormer = styled.div`
     position: absolute;
     top: 70px;
     right: 155px;
@@ -8,4 +8,4 @@ const CatalogWrapper = styled.div`
     opacity: ${({ active }) => (active === true ? "0" : "1")};
 `;
 
-export { CatalogWrapper };
+export { CatalogDormer };

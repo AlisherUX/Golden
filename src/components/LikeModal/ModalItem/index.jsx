@@ -6,7 +6,7 @@ import RemoveShoppingCartIcon from '@mui/icons-material/RemoveShoppingCart';
 import { NowPrice, OldPrice, Prices } from "components/Banner/style";
 import Raiting from "components/Raiting";
 import { IconButton } from "@mui/material";
-import MainContext from "reducer/CartContext";
+import MainContext from "context/CartContext";
 
 const ModalItem = ({ product, select }) => {
   const { img, cardTxt, nowPrice, oldPrice, id } = product;

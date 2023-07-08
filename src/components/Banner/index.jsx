@@ -65,7 +65,6 @@ const Banner = () => {
 
                     <Style.BannerPrice>
                       <span>Цена</span>
-
                       <Style.Prices>
                         <Style.NowPrice>{el.nowprice}</Style.NowPrice>
                         <Style.OldPrice>{el.oldprice}</Style.OldPrice>

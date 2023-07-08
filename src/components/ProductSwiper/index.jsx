@@ -12,7 +12,7 @@ import { Navigation } from "swiper";
 import ProductCard from "../ProductCard";
 import axios from "axios";
 import Skeleton from "react-loading-skeleton";
-import MainContext from "reducer/CartContext";
+import MainContext from "context/CartContext";
 import { useSwiperRef } from "hooks/useSwiperRef";
 
 const ProductSwiper = () => {

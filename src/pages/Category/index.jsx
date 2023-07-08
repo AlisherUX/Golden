@@ -11,7 +11,7 @@ import { Title } from "components/WhyOur/style";
 import axios from "axios";
 import Skeleton from "react-loading-skeleton";
 import { BreadCrumbLink, BreadCrumbTypography, BreadCrumbs } from "pages/Catalog/style";
-import MainContext from "reducer/CartContext";
+import MainContext from "context/CartContext";
 import { useParams } from "react-router-dom";
 
 const Category = () => {

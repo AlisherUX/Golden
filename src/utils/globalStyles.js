@@ -104,4 +104,13 @@ button{
   color: ${colors.light};
   transition: 0.3s;
 }
+
+.loader-page{
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 `;
