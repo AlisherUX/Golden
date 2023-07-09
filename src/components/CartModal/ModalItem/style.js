@@ -9,17 +9,6 @@ const CardContent = styled.div`
   border: 1px solid ${colors.gray};
 `;
 
-const ProductImg = styled.div`
-  background-color: ${colors.secondLactic};
-  border: 1px solid ${colors.lightGray};
-
-  & > img {
-    width: 136px;
-    height: 120px;
-    object-fit: contain;
-  }
-`;
-
 const UserActionContent = styled.div`
   width: 100%;
   ${flex.justFlex}
@@ -29,20 +18,6 @@ const LeftActionsWrapper = styled.div`
   width: 100%;
   ${flex.flexBetween}
   flex-direction: column;
-`;
-
-const RightActionsWrapper = styled.div`
-  width: 100%;
-  ${flex.flexBetween}
-  flex-direction: column;
-  align-items: flex-end;
-`;
-
-const CardTitle = styled.p`
-  color: ${colors.dark};
-  font-size: 16px;
-  font-family: ${fonts.sfReg};
-  line-height: 26px;
 `;
 
 const Counter = styled.div`
@@ -73,12 +48,9 @@ const NumberWrapper = styled.div`
 `;
 
 export {
-  ProductImg,
   UserActionContent,
   CardContent,
   LeftActionsWrapper,
-  RightActionsWrapper,
-  CardTitle,
   NumberWrapper,
   Counter,
   Characters

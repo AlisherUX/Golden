@@ -4,7 +4,13 @@ import * as Style from "./style";
 import { Button } from "@mui/material";
 import { BlackCross } from "assets/images";
 import ModalItem from "./ModalItem";
-import { EmptyText } from "components/LikeModal/style";
+import {
+  EmptyText,
+  ChoosedProductsWrapper,
+  ModalInnerWrapper,
+  TopContentWrapper,
+  TopContentTitle,
+} from "components/LikeModal/style";
 import MainContext from "context/CartContext";
 
 export default function CartModal({ cartModal, handleModal, data }) {
@@ -15,7 +21,7 @@ export default function CartModal({ cartModal, handleModal, data }) {
       accumulator + currentValue.nowPrice * currentValue.quantity,
     0
   );
-  
+
   return (
     <div>
       <Modal
@@ -24,40 +30,36 @@ export default function CartModal({ cartModal, handleModal, data }) {
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
-        <Style.ModalInnerWrapper>
-          <Style.TopContentWrapper>
-            <Style.TopContentTitle variant="p">Корзина</Style.TopContentTitle>
+        <ModalInnerWrapper>
+          <TopContentWrapper>
+            <TopContentTitle variant="p">Корзина</TopContentTitle>
             <Button style={{ minWidth: "30px" }} onClick={handleModal}>
               <BlackCross />
             </Button>
-          </Style.TopContentWrapper>
-          <Style.ChoosedProductsWrapper>
-            {data.length ? (
-              <Style.ChoosedProductsWrapper>
-                {data.map((el) => (
-                  <ModalItem key={el.id} product={el} />
-                ))}
+          </TopContentWrapper>
 
-                <Style.MainPriceContent>
-                  <Style.MainPriceWrapper>
-                    <Style.PriceBox>
-                      <Style.TotalText>Итого:</Style.TotalText>
-                      <Style.Price>{total.toLocaleString()}₽</Style.Price>
-                    </Style.PriceBox>
-                    <Style.OrderButton>Оформить заказ</Style.OrderButton>
-                  </Style.MainPriceWrapper>
+          {data.length ? (
+            <ChoosedProductsWrapper>
+              {data.map((el) => (
+                <ModalItem key={el.id} product={el} />
+              ))}
 
-                  <Style.ContinueButton>
-                    Продолжить покупки
-                  </Style.ContinueButton>
-                </Style.MainPriceContent>
+              <Style.MainPriceContent>
+                <Style.MainPriceWrapper>
+                  <Style.PriceBox>
+                    <Style.TotalText>Итого:</Style.TotalText>
+                    <Style.Price>22 000₽</Style.Price>
+                  </Style.PriceBox>
+                  <Style.OrderButton>Оформить заказ</Style.OrderButton>
+                </Style.MainPriceWrapper>
 
-              </Style.ChoosedProductsWrapper>
-            ) : (
-              <EmptyText>Your card modal is empty</EmptyText>
-            )}
-          </Style.ChoosedProductsWrapper>
-        </Style.ModalInnerWrapper>
+                <Style.ContinueButton>Продолжить покупки</Style.ContinueButton>
+              </Style.MainPriceContent>
+            </ChoosedProductsWrapper>
+          ) : (
+            <EmptyText>Your cart modal is empty</EmptyText>
+          )}
+        </ModalInnerWrapper>
       </Modal>
     </div>
   );

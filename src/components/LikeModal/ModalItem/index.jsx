@@ -1,11 +1,11 @@
 import React, { useContext } from "react";
+import { IconButton } from "@mui/material";
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import RemoveShoppingCartIcon from "@mui/icons-material/RemoveShoppingCart";
 import * as Style from "./style";
 import { TrashCan } from "assets/images";
-import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
-import RemoveShoppingCartIcon from '@mui/icons-material/RemoveShoppingCart';
 import { NowPrice, OldPrice, Prices } from "components/Banner/style";
 import Raiting from "components/Raiting";
-import { IconButton } from "@mui/material";
 import MainContext from "context/CartContext";
 
 const ModalItem = ({ product, select }) => {
@@ -19,9 +19,9 @@ const ModalItem = ({ product, select }) => {
 
   return (
     <Style.CardContent>
-      <Style.ProductImg>
-        <img src={img} alt="" />
-      </Style.ProductImg>
+        <Style.ProductImg to='/product'>
+          <img src={img} alt="" />
+        </Style.ProductImg>
       <Style.UserActionContent>
         <Style.LeftActionsWrapper>
           <Style.CardTitle>{cardTxt}</Style.CardTitle>
@@ -35,15 +35,12 @@ const ModalItem = ({ product, select }) => {
         <Style.RightActionsWrapper>
           <IconButton style={{ borderRadius: "10px" }}>
             <Style.Button onClick={CartToggle}>
-              {select ? "из корзины" : "В корзину"}
-              {select ? <RemoveShoppingCartIcon/> : <ShoppingCartIcon />}
-              
+              {select ? <RemoveShoppingCartIcon /> : <ShoppingCartIcon />}
             </Style.Button>
           </IconButton>
 
           <IconButton style={{ borderRadius: "10px" }}>
             <Style.Button onClick={() => removeFromLike(id)}>
-              Удалить
               <TrashCan />
             </Style.Button>
           </IconButton>

@@ -7,51 +7,51 @@ const ModalInnerWrapper = styled(Box)`
   position: absolute;
   top: 50%;
   left: 50%;
-  height: 700px;
   transform: translate(-50%, -50%);
   ${adaptiveValue("max-width", 836, 343)};
+  ${adaptiveValue("height", 700, 550)};
+  ${adaptiveValue("padding-bottom", 20, 10)};
   width: 100%;
-  padding-bottom: 20px;
-  background-color: #fff;
+  background-color: ${colors.light};
   box-shadow: 24px;
   overflow-y: auto;
 `;
 
 const TopContentWrapper = styled.div`
-  width: 100%;
+  ${adaptiveValue("padding-bottom", 23, 13)};
+  ${adaptiveValue("padding-inline", 40, 20)};
+  ${adaptiveValue("padding-top", 16, 8)};
   border-bottom: 1px solid ${colors.white};
   ${flex.spaceBetween}
-  padding-inline: 40px;
-  padding-bottom: 23px;
-  padding-top: 16px;
   position: sticky;
   top: 0px;
   z-index: 10;
   background-color: ${colors.light};
-`;
+  `;
 
 const TopContentTitle = styled(Typography)`
   color: ${colors.dark};
-  font-size: 20px;
+  ${adaptiveValue("font-size", 20, 16)};
+  ${adaptiveValue("line-height", 34, 17)};
   font-family: ${fonts.sfM};
-  line-height: 34px;
-`;
+  `;
 
 const ChoosedProductsWrapper = styled.ul`
-  width: 100%;
-  padding-top: 24px;
-  padding-inline: 40px;
+  ${adaptiveValue("padding-top", 24, 10)};
+  ${adaptiveValue("padding-inline", 40, 10)};
+  ${adaptiveValue("gap", 20, 10)};
   ${flex.justFlex}
   flex-direction: column;
-  gap: 20px;
-`;
+  `;
 
 const EmptyText = styled.p`
-  font-size: 18px;
+  ${adaptiveValue("font-size", 18, 15)};
+  ${adaptiveValue("width", 217, 181)};
   font-family: ${fonts.sfM};
   color: ${colors.gray};
-  margin-top: 32%;
-  text-align: center;
+  margin: 0 auto;
+  margin-top: 30%;
+  margin-bottom: 30%;
 `;
 
 export {
@@ -59,5 +59,5 @@ export {
   ModalInnerWrapper,
   TopContentWrapper,
   TopContentTitle,
-  ChoosedProductsWrapper
+  ChoosedProductsWrapper,
 };

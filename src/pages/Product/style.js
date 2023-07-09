@@ -2,10 +2,25 @@ import styled from "styled-components";
 import { flex } from "utils/flex";
 import { adaptiveValue, colors, fonts } from "utils/variable";
 
+const ProductWrapper = styled.div`
+  width: 100%;
+  ${flex.justFlex}
+  ${adaptiveValue("margin-bottom", 40, 20)};
+  ${adaptiveValue("gap", 30, 15)};
+
+  @media (max-width: 870px) {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+`;
+
 const ProductImagesContent = styled.div`
   ${flex.justFlex}
-  flex-direction: column;
-  gap: 20px;
+
+  & > img {
+    ${adaptiveValue("max-width", 605, 295)};
+  }
 `;
 
 const ProductInfoContent = styled.div`
@@ -15,50 +30,50 @@ const ProductInfoContent = styled.div`
 
 const InfoTitle = styled.p`
   color: ${colors.dark};
-  font-size: 24px;
+  ${adaptiveValue("font-size", 24, 18)};
+  ${adaptiveValue("line-height", 30, 20)};
+  ${adaptiveValue("margin-top", 16, 8)};
   font-family: ${fonts.sfSB};
-  line-height: 30px;
-  margin-top: 16px;
 `;
 
 const BreadCrumbWrapper = styled.div`
   ${adaptiveValue("margin-bottom", 40, 24)}
-  margin-top: 20px;
+  ${adaptiveValue("margin-top", 20, 10)};
 `;
 
 const RaitingContent = styled.div`
+  ${adaptiveValue("font-size", 14, 12)};
+  ${adaptiveValue("line-height", 21, 14)};
+  ${adaptiveValue("gap", 12, 6)};
   ${flex.alignCenter}
-  gap: 12px;
   color: ${colors.gray};
-  font-size: 14px;
   font-family: ${fonts.sfReg};
-  line-height: 21px;
   letter-spacing: 0.7px;
 `;
 
 const Facilities = styled.div`
   ${flex.justFlex}
   flex-direction: column;
-  gap: 8px;
-  margin-top: 12px;
+  ${adaptiveValue("gap", 8, 5)};
+  ${adaptiveValue("margin-top", 12, 6)};
 `;
 
 const FacilitiesTitle = styled.p`
   color: ${colors.dark};
-  font-size: 14px;
+  ${adaptiveValue("font-size", 14, 12)};
+  ${adaptiveValue("line-height", 24, 16)};
   font-family: ${fonts.sfSB};
-  line-height: 24px;
 `;
 
 const UserUnity = styled.div`
   ${flex.alignCenter}
-  gap: 30px;
+  ${adaptiveValue("gap", 30, 15)};
 `;
 
 const MainButton = styled.button`
   background-color: ${colors.primaryColor};
+  ${adaptiveValue("padding-block", 16, 8)};
   ${adaptiveValue("padding-inline", 118, 91)};
-  padding-block: 16px;
   max-width: max-content;
   width: 100%;
   display: block;
@@ -75,23 +90,21 @@ const MainButton = styled.button`
 
 const UserUnityWrapper = styled.div`
   ${flex.justFlex}
-  gap: 17px;
+  ${adaptiveValue("gap", 17, 8)};
+  ${adaptiveValue("margin-top", 24, 12)};
+  ${adaptiveValue("margin-bottom", 32, 16)};
   flex-direction: column;
-  margin-top: 24px;
-  margin-bottom: 32px;
 `;
 
 const LikeButton = styled.button`
-  width: 116px;
-  height: 24px;
+  ${adaptiveValue("gap", 8, 5)};
+  ${adaptiveValue("font-size", 14, 12)};
+  ${adaptiveValue("line-height", 24, 12)};
   ${flex.alignCenter}
-  gap: 8px;
   border: none;
   background: transparent;
   color: ${colors.gray};
-  font-size: 14px;
   font-family: ${fonts.sfReg};
-  line-height: 24px;
 `;
 
 export {
@@ -106,4 +119,5 @@ export {
   UserUnity,
   UserUnityWrapper,
   LikeButton,
+  ProductWrapper,
 };

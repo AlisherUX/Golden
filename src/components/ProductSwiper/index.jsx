@@ -62,7 +62,7 @@ const ProductSwiper = () => {
             className="productSwiper"
             breakpoints={{
               320: {
-                width: 280,
+                width: 240,
                 slidesPerView: 1,
               },
               576: {

@@ -1,21 +1,27 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { flex } from "utils/flex";
-import { colors, fonts } from "utils/variable";
+import { adaptiveValue, colors, fonts } from "utils/variable";
 
 const CardContent = styled.div`
+  ${adaptiveValue("gap", 12, 8)};
   width: 100%;
   ${flex.justFlex}
-  gap: 12px;
-  border: 1px solid ${colors.gray};
+  border-bottom: 1px solid ${colors.lightGray};
+
+  @media (max-width: 550px) {
+    flex-direction: column;
+  }
 `;
 
-const ProductImg = styled.div`
+const ProductImg = styled(Link)`
   border: 1px solid ${colors.white};
   background-color: ${colors.storm};
+  ${flex.center}
 
   & > img {
-    width: 136px;
-    height: 120px;
+    ${adaptiveValue("width", 136, 88)};
+    ${adaptiveValue("height", 120, 80)};
     object-fit: contain;
   }
 `;
@@ -23,36 +29,32 @@ const ProductImg = styled.div`
 const UserActionContent = styled.div`
   width: 100%;
   ${flex.justFlex}
+  ${flex.alignCenter  }
 `;
 
 const LeftActionsWrapper = styled.div`
   width: 100%;
   ${flex.flexBetween}
+  gap: 5px;
   flex-direction: column;
 `;
 
 const RightActionsWrapper = styled.div`
-  width: 100%;
-  ${flex.flexBetween}
+  ${flex.spaceBetween}
   flex-direction: column;
-  align-items: flex-end;
+  ${adaptiveValue("gap", 20, 0)};
 `;
 
 const CardTitle = styled.p`
   color: ${colors.dark};
-  font-size: 16px;
+  ${adaptiveValue("font-size", 16, 14)};
+  ${adaptiveValue("line-height", 26, 16)};
   font-family: ${fonts.sfReg};
-  line-height: 26px;
 `;
 
 const Button = styled.button`
   width: 100%;
-  ${flex.justFlex}
-  gap: 10px;
   color: ${colors.primaryColor};
-  font-size: 16px;
-  font-family: ${fonts.sfM};
-  line-height: 26px;
   background-color: transparent;
   border: none;
 `;
@@ -64,5 +66,5 @@ export {
   LeftActionsWrapper,
   RightActionsWrapper,
   CardTitle,
-  Button
+  Button,
 };

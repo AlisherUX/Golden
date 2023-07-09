@@ -104,9 +104,9 @@ const Header = () => {
                   </Style.HeaderItem>
                 </Badge>
               </Style.UserAction>
+              <BurgerWindow open={button} />
             </Style.HeaderNavContent>
           </Container>
-          <BurgerWindow open={button} />
         </Style.HeaderNavWrapper>
       </Style.HeaderWrapper>
     </>

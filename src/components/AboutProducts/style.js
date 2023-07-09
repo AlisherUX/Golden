@@ -78,7 +78,7 @@ const FeatureText = styled.p`
   color: ${colors.dark};
   font-family: ${fonts.sfReg};
   opacity: 0.9;
-  ${adaptiveValue("font-size", 20, 16)};
+  ${adaptiveValue("font-size", 20, 13)};
   ${adaptiveValue("line-height", 24, 26)};
 `;
 

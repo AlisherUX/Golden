@@ -21,7 +21,7 @@ const ProductCard = ({ data, select, like }) => {
   
   return (
     <Style.ProductCardContent>
-      <Style.CardLink to={`/product/detail/${id}`}>
+      <Style.CardLink to='/product'>
         <Style.CardImgWrapper>
           <Style.CardImg src={img} alt="" />
           <Style.PresentWrapper>

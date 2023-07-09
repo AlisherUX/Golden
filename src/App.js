@@ -32,7 +32,7 @@ function App() {
           <Route path="/about-us" element={<AboutUs />} />
           <Route path="/catalog" element={<Catalog />} />
           <Route path="/category/:type" element={<Category />} />
-          <Route path="/product/detail/:id" element={<Product />} />
+          <Route path="/product" element={<Product />} />
           <Route path="*" element={<PageNotFound />} />
         </Routes>
       }

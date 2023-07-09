@@ -44,9 +44,6 @@ const Footer = () => {
                 <Link to="/catalog">
                   <Style.NavLink>Каталог</Style.NavLink>
                 </Link>
-                <Link to="/discount">
-                  <Style.NavLink>Оптовая продажа</Style.NavLink>
-                </Link>
                 <Link to="/about-us">
                   <Style.NavLink>О нас</Style.NavLink>
                 </Link>

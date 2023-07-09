@@ -11,8 +11,6 @@ const BurgerWindow = ({open}) => {
     
          <Style.BurgerNavBtn>Каталог <RightArrow/></Style.BurgerNavBtn>
         
-         <Style.BurgerNavLink href='/discount'>Оптовая продажа</Style.BurgerNavLink>
-        
          <Style.BurgerNavLink href='/about-us'>О нас</Style.BurgerNavLink>
      </Style.BurgerNavWrapper>
 
