@@ -102,7 +102,7 @@ const NavLinksWrapper = styled.div`
     gap: 16px;
 `;
 
-const NavLink = styled.p`
+const NavLink = styled.a`
     ${adaptiveValue("font-size", 16, 14)}
     ${adaptiveValue("line-height", 26, 24)}
     color: ${colors.light};

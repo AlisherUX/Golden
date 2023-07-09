@@ -9,13 +9,13 @@ const AboutBanner = () => {
     <Container>
       <Style.AboutBannerWrapper>
         <Style.BannerVideoContent>
-        <Style.BannerItemTop>
-          <Pattern />
-        </Style.BannerItemTop>
-          <img src={AboutBannerImg} alt="" />
-        <Style.BannerItemBottom>
-          <Pattern />
-        </Style.BannerItemBottom>
+          <Style.BannerItemTop>
+            <Pattern />
+          </Style.BannerItemTop>
+          <Style.Video src={AboutBannerImg} alt=""/>
+          <Style.BannerItemBottom>
+            <Pattern />
+          </Style.BannerItemBottom>
         </Style.BannerVideoContent>
 
         <Style.BannerEntries>

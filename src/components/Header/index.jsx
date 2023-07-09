@@ -81,9 +81,6 @@ const Header = () => {
                     <HeaderDart />
                   </Style.IconController>
                 </Style.HeaderBtn>
-                <Link to="/discount">
-                  <Style.HeaderLink>Оптовая продажа</Style.HeaderLink>
-                </Link>
                 <Link to="/about-us">
                   <Style.HeaderLink>О нас</Style.HeaderLink>
                 </Link>

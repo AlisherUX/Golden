@@ -1,11 +1,15 @@
 import styled from "styled-components";
-import { flex } from "../../utils/flex";
-import { colors, fonts } from "../../utils/variable";
+import { flex } from "utils/flex";
+import { adaptiveValue, colors, fonts } from "utils/variable";
 import { Link } from "react-router-dom";
 
 const ProductCardContent = styled.div`
-  max-width: 288px;
+  ${adaptiveValue("max-width", 288, 240)};
   width: 100%;
+  
+  @media (max-width: 660px) {
+    margin: 0 auto;
+  }
 `;
 
 const CardLink = styled(Link)`
@@ -18,71 +22,71 @@ const CardImgWrapper = styled.div`
 `;
 
 const CardImg = styled.img`
-  max-width: 288px;
+  ${adaptiveValue("max-width", 288, 240)};
   width: 100%;
 `;
 
 const ProductCardInfoWrapper = styled.div`
-  padding-inline: 12px;
-  padding-block: 10px;
+  ${adaptiveValue("padding-inline", 12, 8)};
+  ${adaptiveValue("padding-block", 10, 6)};
+  ${adaptiveValue("gap", 10, 8)};
   ${flex.justFlex};
   flex-direction: column;
-  gap: 10px;
   border-bottom: 2px solid ${colors.lactic};
   border-left: 2px solid ${colors.lactic};
   border-right: 2px solid ${colors.lactic};
 `;
 
 const MiniTxt = styled.p`
+  ${adaptiveValue("font-size", 16, 10)};
+  ${adaptiveValue("line-height", 26, 18)};
   font-family: ${fonts.sfReg};
-  font-size: 16px;
-  line-height: 26px;
   text-align: left;
   color: ${colors.gray};
-`;
+  `;
 
 const StockStiker = styled.div`
   ${flex.justFlex};
   ${flex.alignCenter};
-  gap: 8px;
-  padding-inline-end: 8px;
-  font-size: 14px;
-  line-height: 24px;
+  ${adaptiveValue("padding-inline-end", 8, 6)};
+  ${adaptiveValue("gap", 8, 6)};
+  ${adaptiveValue("font-size", 14, 10)};
+  ${adaptiveValue("line-height", 24, 18)};
   font-family: ${fonts.sfReg};
   color: ${colors.gray};
   background-color: ${colors.light};
   position: absolute;
-  top: 12px;
-  left: 12px;
-`;
+  ${adaptiveValue("top", 12, 10)};
+  ${adaptiveValue("left", 12, 10)};
+  `;
 
 const SaleStiker = styled.span`
-  padding-inline: 10px;
-  padding-block: 8px;
+  ${adaptiveValue("padding-inline", 10, 8)};
+  ${adaptiveValue("padding-block", 8, 6)};
   background-color: ${colors.light};
   ${flex.center};
   color: ${colors.dark};
-  font-size: 12px;
-  line-height: 14px;
+  ${adaptiveValue("font-size", 12, 10)};
+  ${adaptiveValue("line-height", 14, 12)};
   font-family: ${fonts.sfM};
   position: absolute;
-  top: 12px;
-  right: 12px;
-`;
+  ${adaptiveValue("top", 12, 10)};
+  ${adaptiveValue("right", 12, 10)};
+  `;
 
 const PresentWrapper = styled.div`
   ${flex.justFlex};
-  gap: 10px;
+  ${adaptiveValue("padding-inline", 8, 6)};
+  ${adaptiveValue("padding-block", 6, 4)};
+  ${adaptiveValue("gap", 10, 8)};
+  ${adaptiveValue("font-size", 12, 10)};
+  ${adaptiveValue("line-height", 14, 12)};
   background-color: ${colors.light};
-  padding-inline: 8px;
-  padding-block: 6px;
-  font-size: 12px;
-  line-height: 14px;
   color: ${colors.dark};
   font-family: ${fonts.sfReg};
   position: absolute;
-  top: 45px;
-  left: 12px;
+  ${adaptiveValue("top", 45, 35)};
+  ${adaptiveValue("left", 12, 10)};
 `;
 
 const ButtonsContent = styled.div`

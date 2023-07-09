@@ -1,5 +1,5 @@
 import React, { useRef, useEffect, useState } from "react";
-import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper";
+import { Navigation, Pagination, Mousewheel, Keyboard, Autoplay } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Container } from "components/Container/style";
 import { BannerArrow } from "assets/images";
@@ -42,9 +42,8 @@ const Banner = () => {
             type: "bullets",
             clickable: true,
           }}
-          mousewheel={true}
-          keyboard={true}
-          modules={[Navigation, Pagination, Mousewheel, Keyboard]}
+          autoplay={true}
+          modules={[Navigation, Pagination, Autoplay]}
         >
           <SwiperSlide>
             {data.map((el) => {

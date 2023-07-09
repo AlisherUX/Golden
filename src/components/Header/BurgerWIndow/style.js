@@ -4,10 +4,10 @@ import { flex } from "utils/flex";
 
 const WindowWrapper = styled.div`
   position: fixed;
-  ${adaptiveValue("top", 65, 88)};
+  ${adaptiveValue("top", 150, 90)};
   left: 0;
   bottom: 0;
-  z-index: 100;
+  z-index: -1;
   flex-direction: column;
   ${flex.flexBetween}
   width: 100%;
@@ -17,12 +17,12 @@ const WindowWrapper = styled.div`
     open === true ? "translateX(0%)" : "translateX(-100%)"};
   transition: 0.5s;
   display: none;
-
+  
   @media (max-width: 700px) {
     display: flex;
   }
-  @media (max-width: 410px) {
-    ${adaptiveValue("top", 255, 88)};
+  @media (max-width: 488px) {
+    ${adaptiveValue("top", 140, 110)};
   }
 `;
 
@@ -31,13 +31,13 @@ const BurgerNavWrapper = styled.nav`
   flex-direction: column;
 `;
 
-const BurgerNavBtn = styled.button`
+const BurgerNavBtn = styled.div`
   ${flex.flexBetween};
   ${flex.alignCenter};
+  width: 100%;
   padding-block: 16px;
   color: ${colors.dark};
-  background: transparent;
-  border: none;
+  border-bottom: 1px solid ${colors.white};
 
   &:active {
     background: ${colors.white};

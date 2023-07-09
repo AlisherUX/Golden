@@ -44,7 +44,7 @@ const ProductCard = ({ data, select, like }) => {
         </Prices>
         <Style.ButtonsContent>
           <MainButton onClick={CartToggle} style={{ paddingInline: "45px" }}>
-            {select ? "Remove From Cart" : "Add To Cart"}
+            {select ? "Remove" : "Add"}
           </MainButton>
 
           <IconButton onClick={LikeToggle} color="primary">

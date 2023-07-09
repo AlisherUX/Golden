@@ -35,8 +35,9 @@ const ModalItem = ({ product, select }) => {
         <Style.RightActionsWrapper>
           <IconButton style={{ borderRadius: "10px" }}>
             <Style.Button onClick={CartToggle}>
-              {select ? "В корзину" : "из корзины"}
-              {select ? <ShoppingCartIcon /> : <RemoveShoppingCartIcon/>}
+              {select ? "из корзины" : "В корзину"}
+              {select ? <RemoveShoppingCartIcon/> : <ShoppingCartIcon />}
+              
             </Style.Button>
           </IconButton>
 

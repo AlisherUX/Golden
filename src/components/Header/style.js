@@ -24,6 +24,7 @@ const HeaderNavContent = styled.div`
 
 const HeaderNavWrapper = styled.div`
   width: 100%;
+  background-color: ${colors.light};
   box-shadow: inset 0px -1px 0px ${colors.silver};
 `;
 
@@ -121,7 +122,8 @@ const IconController = styled.div`
   width: 14px;
   height: 14px;
   ${flex.center}
-  transform: ${(active) => (active.active ? "rotateX(180deg)" : "rotateX(0deg)")};
+  transform: ${(active) =>
+    active.active ? "rotateX(180deg)" : "rotateX(0deg)"};
 `;
 
 export {
@@ -137,5 +139,5 @@ export {
   CallContent,
   BurgerMenu,
   BurgerMenuItem,
-  IconController
+  IconController,
 };

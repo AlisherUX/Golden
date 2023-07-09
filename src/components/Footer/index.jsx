@@ -57,8 +57,8 @@ const Footer = () => {
               <Style.NavTitle>Наши контакты</Style.NavTitle>
               <Style.NavLinksWrapper>
                 <Style.NavSubTitle>Телефоны</Style.NavSubTitle>
-                <Style.NavLink>+7 (988) 565 00 38</Style.NavLink>
-                <Style.NavLink>+375 33 662 82 56</Style.NavLink>
+                <Style.NavLink href={`tel:+${79885650038}`}>+7 (988) 565 00 38</Style.NavLink>
+                <Style.NavLink href={`tel:+${375336628256}`}>+375 33 662 82 56</Style.NavLink>
               </Style.NavLinksWrapper>
               <Style.NavLinksWrapper>
                 <Style.NavSubTitle>Email</Style.NavSubTitle>
@@ -101,9 +101,6 @@ const Footer = () => {
                     </Link>
                     <Link to="/catalog">
                       <Style.NavLink>Каталог</Style.NavLink>
-                    </Link>
-                    <Link to="/discount">
-                      <Style.NavLink>Оптовая продажа</Style.NavLink>
                     </Link>
                     <Link to="/about-us">
                       <Style.NavLink>О нас</Style.NavLink>

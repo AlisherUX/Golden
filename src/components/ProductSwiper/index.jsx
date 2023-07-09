@@ -8,7 +8,7 @@ import "swiper/css/free-mode";
 import "swiper/css/pagination";
 import { BannerArrow } from "../../assets/images";
 import { BannerButtons } from "../Banner/style";
-import { Navigation } from "swiper";
+import { Navigation, Mousewheel, Keyboard, Autoplay } from "swiper";
 import ProductCard from "../ProductCard";
 import axios from "axios";
 import Skeleton from "react-loading-skeleton";
@@ -52,21 +52,29 @@ const ProductSwiper = () => {
         <Style.ProductSwiperWrapper>
           <Swiper
             navigation={{ prevEl, nextEl }}
-            modules={[Navigation]}
-            spaceBetween={30}
+            spaceBetween={20}
+            speed={400}
+            mousewheel={true}
+            keyboard={true}
+            autoplay={true}
+            modules={[Navigation, Mousewheel, Keyboard, Autoplay]}
             freeMode={true}
             className="productSwiper"
             breakpoints={{
               320: {
+                width: 280,
                 slidesPerView: 1,
               },
-              830: {
+              576: {
+                width: 606,
                 slidesPerView: 2,
               },
-              670: {
+              768: {
+                width: 924,
                 slidesPerView: 3,
               },
-              1180: {
+              992: {
+                width: 1242,
                 slidesPerView: 4,
               },
             }}

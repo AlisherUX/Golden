@@ -1,8 +1,7 @@
 import React from "react";
-import Header from "../../components/Header";
+import Header from "components/Header";
 import Footer from "components/Footer";
 import Statistic from "components/Statistic";
-import { StatisticWrapper } from "components/Statistic/style";
 import {
   BreadCrumbLink,
   BreadCrumbTypography,
@@ -15,6 +14,7 @@ const AboutUs = () => {
   return (
     <div>
       <Header />
+
       <Container>
         <BreadCrumbs aria-label="breadcrumb">
           <BreadCrumbLink
@@ -30,12 +30,10 @@ const AboutUs = () => {
           </BreadCrumbTypography>
         </BreadCrumbs>
 
-
-        <AboutBanner/>
+        <AboutBanner />
       </Container>
-      <Statistic>
-        <StatisticWrapper color={false} />
-      </Statistic>
+
+      <Statistic/>
       <Footer />
     </div>
   );
