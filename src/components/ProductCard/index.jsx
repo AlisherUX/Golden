@@ -39,8 +39,8 @@ const ProductCard = ({ data, select, like }) => {
       <Raiting />
         <Style.MiniTxt>{cardTxt}</Style.MiniTxt>
         <Prices>
-          <NowPrice style={{ fontSize: "20px" }}>{oldPrice}</NowPrice>
-          <OldPrice style={{ fontSize: "18px" }}>{nowPrice}</OldPrice>
+          <NowPrice style={{ fontSize: "20px" }}>{nowPrice}₽</NowPrice>
+          <OldPrice style={{ fontSize: "18px" }}>{oldPrice}</OldPrice>
         </Prices>
         <Style.ButtonsContent>
           <MainButton onClick={CartToggle} style={{ paddingInline: "45px" }}>

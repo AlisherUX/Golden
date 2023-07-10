@@ -12,12 +12,12 @@ const data = [
 },
 {
     id: 3,
-    text: "Замки для дома",
+    text: "",
     type: "forHome",
 },
 {
     id: 4,
-    text: "Замки для отелей",
+    text: "",
     type: "forGarden",
 },
 {
@@ -27,12 +27,12 @@ const data = [
   },
   {
     id: 6,
-    text: "Замки для шкафчиков",
+    text: "",
     type: "forClub",
   },
   {
     id: 7,
-    text: "Замки для раздевалок",
+    text: "",
     type: "forKitchen",
   }
 ];

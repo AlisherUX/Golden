@@ -40,8 +40,17 @@ const CatalogUl = styled.ul`
 const CatalogLi = styled(Link)`
   color: ${colors.dark};
   font-family: ${fonts.sfReg};
+  background: ${colors.light};
+  border: none;
+  ${adaptiveValue("padding-block", 8, 2)};
+  ${adaptiveValue("padding-right", 10, 5)};
   ${adaptiveValue("font-size", 16, 10)};
   ${adaptiveValue("line-height", 26, 14)};
+
+  &:hover {
+    background: #cee7ff;
+    border-right: 2px solid ${colors.primaryColor};
+  }
 `;
 
 const CatalogTitle = styled.p`
@@ -52,19 +61,6 @@ const CatalogTitle = styled.p`
   color: ${colors.dark};
   font-family: ${fonts.sfM};
   border-bottom: 1px solid ${colors.primaryColor};
-`;
-
-const Button = styled.button`
-  background: transparent;
-  width: 100%;
-  border: none;
-  ${adaptiveValue("padding-block", 8, 2)};
-  ${adaptiveValue("padding-right", 10, 5)};
-
-  &:hover {
-    background: #cee7ff;
-    border-right: 2px solid ${colors.primaryColor};
-  }
 `;
 
 const BottomButton = styled.button`
@@ -90,7 +86,6 @@ export {
   CatalogUl,
   CatalogLi,
   CatalogTitle,
-  Button,
   CatalogImg,
   BottomButton,
 };

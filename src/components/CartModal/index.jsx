@@ -48,7 +48,7 @@ export default function CartModal({ cartModal, handleModal, data }) {
                 <Style.MainPriceWrapper>
                   <Style.PriceBox>
                     <Style.TotalText>Итого:</Style.TotalText>
-                    <Style.Price>22 000₽</Style.Price>
+                    <Style.Price>{total}₽</Style.Price>
                   </Style.PriceBox>
                   <Style.OrderButton>Оформить заказ</Style.OrderButton>
                 </Style.MainPriceWrapper>

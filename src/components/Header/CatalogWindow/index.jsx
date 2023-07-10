@@ -1,49 +1,87 @@
-import React from "react";
+import React, { useState } from "react";
 import * as Style from "./style";
-import { data } from "./data";
-import { MainButton } from "pages/Product/style";
 import { Link } from "react-router-dom";
-import { Handle10 } from "assets/images";
+import {
+  Handle,
+  Handle10,
+  Handle2,
+  Handle3,
+  Handle5,
+  Handle6,
+  Handle9,
+} from "assets/images";
 
 const CatalogWindow = ({ active }) => {
-  // const [first, setFirst] = useState(null);
-  // const result = data.map((el) => el.id)
+  const [img, setImg] = useState(null);
+  let forWork = "forWork";
+  let forOffice = "forOffice";
+  let forFlat = "forFlat";
+  let forHome = "forHome";
+  let forGarden = "forGarden";
+  let forClub = "forClub";
+  let forKitchen = "forKitchen";
 
-  // function change() {
-  //   if (result[0] == 1) {
-  //     setFirst(Handle11)
-  //   }else if(result[1] == 2){
-  //     setFirst(Handle10);
-  //   }
-  // }
-
-  // function remove() {
-  //   setFirst(false);
-  // }
+  const change = (el) => {
+    setTimeout(() => {
+      setImg(el)
+    }, 1000);
+  };
 
   return (
     <Style.CatalogDormer active={active}>
       <Style.CatalogUl>
         <Style.CatalogTitle>Накладные электронные замки</Style.CatalogTitle>
-        {data.map((el) => (
-          <Style.Button>
-            <Style.CatalogLi
-              // onMouseOver={change}
-              // onMouseOut={remove}
-              key={el.id}
-              to={`/category/${el.type}`}
-            >
-              {el.text}
-            </Style.CatalogLi>
-          </Style.Button>
-        ))}
+
+        <Style.CatalogLi
+          onMouseOver={() => change(Handle10)}
+          to={`/category/${forWork}`}
+        >
+          Врезные электронные замки
+        </Style.CatalogLi>
+        <Style.CatalogLi
+          onMouseOver={() => change(Handle9)}
+          to={`/category/${forFlat}`}
+        >
+          Замки для квартиры
+        </Style.CatalogLi>
+        <Style.CatalogLi
+          onMouseOver={() => change(Handle)}
+          to={`/category/${forHome}`}
+        >
+          Замки для дома
+        </Style.CatalogLi>
+        <Style.CatalogLi
+          onMouseOver={() => change(Handle2)}
+          to={`/category/${forGarden}`}
+        >
+          Замки для отелей
+        </Style.CatalogLi>
+        <Style.CatalogLi
+          onMouseOver={() => change(Handle3)}
+          to={`/category/${forOffice}`}
+        >
+          Замки для офиса
+        </Style.CatalogLi>
+        <Style.CatalogLi
+          onMouseOver={() => change(Handle5)}
+          to={`/category/${forClub}`}
+        >
+          Замки для шкафчиков
+        </Style.CatalogLi>
+        <Style.CatalogLi
+          onMouseOver={() => change(Handle6)}
+          to={`/category/${forKitchen}`}
+        >
+          Замки для раздевалок
+        </Style.CatalogLi>
+
         <Link to="/catalog">
           <Style.BottomButton>Смотреть все</Style.BottomButton>
         </Link>
       </Style.CatalogUl>
 
       <Style.ImgContent>
-        <Style.CatalogImg src={Handle10} alt="" />
+        <Style.CatalogImg src={img} alt="" />
       </Style.ImgContent>
     </Style.CatalogDormer>
   );
