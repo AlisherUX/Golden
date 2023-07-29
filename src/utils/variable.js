@@ -6,8 +6,8 @@ const sfM = "SF-ProText-Medium";
 
 //Colors
 const primaryColor = "#4295E4";
-const secondaryColor = "#F2F8FF"
-const secondLactic = "#F9F9F9"
+const secondaryColor = "#F2F8FF";
+const secondLactic = "#F9F9F9";
 const dark = "#161C24";
 const lightBlue = "#56A9F8";
 const deepDark = "#0D2436";
