@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { flex } from "utils/flex";
-import { colors, fonts } from "utils/variable";
+import { colors } from "utils/variable";
 
 const CardContent = styled.div`
   width: 100%;

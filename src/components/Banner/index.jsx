@@ -1,5 +1,5 @@
 import React, { useRef, useEffect, useState } from "react";
-import { Navigation, Pagination, Mousewheel, Keyboard, Autoplay } from "swiper";
+import { Navigation, Pagination, Autoplay } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Container } from "components/Container/style";
 import { BannerArrow } from "assets/images";
@@ -107,7 +107,7 @@ const Banner = () => {
               );
             })}
           </SwiperSlide>
-          {/* a */}
+          
           <SwiperSlide>
             {data.map((el) => {
               return (
@@ -144,11 +144,11 @@ const Banner = () => {
 
       <Style.SwiperNavigation>
         <Style.BannerButtons ref={prevElRef}>
-          <BannerArrow style={{ transform: "rotate(180deg)" }} />
+          <BannerArrow aria-label="name" style={{ transform: "rotate(180deg)" }} />
         </Style.BannerButtons>
         <div className="pagination-bullets"></div>
         <Style.BannerButtons ref={nextElRef}>
-          <BannerArrow />
+          <BannerArrow aria-label="name"/>
         </Style.BannerButtons>
       </Style.SwiperNavigation>
     </Style.BannerWrapper>

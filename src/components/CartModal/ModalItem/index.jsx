@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import { IconButton } from "@mui/material";
 import * as Style from "./style";
 import { TrashCan } from "assets/images";

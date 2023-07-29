@@ -14,13 +14,14 @@ const deepDark = "#0D2436";
 const gray = "#454F5B";
 const light = "#fff";
 const secondLight = "#fff";
-const lightGray = "#A4A4A4";
+const lightGray = "#969696";
 const white = "#EAEAEA";
 const lactic = "#FAFAFA";
 const storm = "#F7F7F7";
 const darkBlue = "#203546";
 const silver = "#c4cdd5";
 const titan = "#EAEFF6";
+const hawkesBlue = "#cee7ff"
 
 //Dark mode
 //light = #3b3a3a
@@ -46,7 +47,8 @@ const colors = {
     secondLactic,
     darkBlue,
     silver,
-    titan
+    titan,
+    hawkesBlue
 }
 
 const fonts = {

@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { Box, Typography } from "@mui/material";
 import { adaptiveValue, colors, fonts } from "utils/variable";
 import { flex } from "utils/flex";
 

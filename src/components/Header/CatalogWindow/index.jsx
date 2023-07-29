@@ -12,7 +12,7 @@ import {
 } from "assets/images";
 
 const CatalogWindow = ({ active }) => {
-  const [img, setImg] = useState(null);
+  const [img, setImg] = useState(Handle10);
   let forWork = "forWork";
   let forOffice = "forOffice";
   let forFlat = "forFlat";
@@ -23,8 +23,8 @@ const CatalogWindow = ({ active }) => {
 
   const change = (el) => {
     setTimeout(() => {
-      setImg(el)
-    }, 1000);
+      setImg(el);
+    }, 100);
   };
 
   return (

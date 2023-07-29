@@ -12,7 +12,7 @@ const CatalogDormer = styled.div`
   ${adaptiveValue("padding", 32, 10)};
   ${adaptiveValue("gap", 32, 16)};
   width: 100%;
-  z-index: 100;
+  z-index: 2;
   background-color: ${colors.light};
   box-shadow: 0px 4px 18px -2px rgba(0, 0, 0, 0.1);
   ${flex.flexBetween}
@@ -48,7 +48,7 @@ const CatalogLi = styled(Link)`
   ${adaptiveValue("line-height", 26, 14)};
 
   &:hover {
-    background: #cee7ff;
+    background: ${colors.hawkesBlue};
     border-right: 2px solid ${colors.primaryColor};
   }
 `;

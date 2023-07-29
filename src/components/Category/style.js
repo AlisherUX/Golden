@@ -37,6 +37,7 @@ const CategoryCard = styled.div`
 const CardImg = styled.img`
   ${adaptiveValue("max-width", 340, 40)};
   width: 100%;
+  height: 100%;
 
   @media (max-width: 960px) {
     ${adaptiveValue("max-width", 340, 240)};

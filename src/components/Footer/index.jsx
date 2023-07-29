@@ -22,13 +22,13 @@ const Footer = () => {
             </Style.FooterLogoWrapper>
 
             <Style.SocialMediaContent>
-              <Link target="blank" to="https://m.vk.com/">
+              <Link target="blank" to="https://m.vk.com/" aria-label="Read more">
                 <Wk />
               </Link>
-              <Link target="blank" to="https://twitter.com/?lang=ru">
+              <Link target="blank" to="https://twitter.com/?lang=ru" aria-label="Read more">
                 <Twitter />
               </Link>
-              <Link target="blank" to="https://ru-ru.facebook.com/">
+              <Link target="blank" to="https://ru-ru.facebook.com/" aria-label="Read more">
                 <Facebook />
               </Link>
             </Style.SocialMediaContent>

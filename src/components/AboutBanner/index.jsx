@@ -2,7 +2,6 @@ import React from "react";
 import * as Style from "./style";
 import { Container } from "components/Container/style";
 import AboutBannerImg from "assets/images/AboutBannerImg.png";
-import Pattern from "assets/images/Pattern";
 
 const AboutBanner = () => {
   return (
@@ -10,11 +9,9 @@ const AboutBanner = () => {
       <Style.AboutBannerWrapper>
         <Style.BannerVideoContent>
           <Style.BannerItemTop>
-            <Pattern />
           </Style.BannerItemTop>
           <Style.Video src={AboutBannerImg} alt=""/>
           <Style.BannerItemBottom>
-            <Pattern />
           </Style.BannerItemBottom>
         </Style.BannerVideoContent>
 

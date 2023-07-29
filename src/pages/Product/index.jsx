@@ -1,10 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Accordion from "@mui/material/Accordion";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import { Breadcrumbs, Link, Typography } from "@mui/material";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import axios from "axios";
 import * as Style from "./style";
 import Footer from "components/Footer";
 import ProductSwiper from "components/ProductSwiper";
@@ -17,25 +16,21 @@ import { Demo, GrayLike, TickBox } from "assets/images";
 import Raiting from "components/Raiting";
 import { Feature, FeatureText } from "components/AboutProducts/style";
 import { NowPrice, OldPrice, Prices } from "components/Banner/style";
-// import { useParams } from "react-router-dom";
 
 const ProductView = () => {
-  // const { id } = useParams();
-  // const productId = id.toLocaleLowerCase();
-  const [data, setData] = useState([]);
-  // const [title, setTitle] = useState(0);
+  // const [data, setData] = useState([]);
 
-  async function getData() {
-    const res = await axios.get(`${process.env.REACT_APP_PRODUCTCARD_URL}`);
+  // async function getData() {
+  //   const res = await axios.get(`${process.env.REACT_APP_PRODUCTCARD_URL}`);
 
-    if (res.status === 200) {
-      setData(res.data);
-    }
-  }
+  //   if (res.status === 200) {
+  //     setData(res.data);
+  //   }
+  // }
 
-  useEffect(() => {
-    getData();
-  }, []);
+  // useEffect(() => {
+  //   getData();
+  // }, []);
 
   return (
     <Wrapper>

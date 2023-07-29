@@ -38,7 +38,7 @@ const Category = () => {
                       </Link>
                     </Style.CardItemsWrapper>
 
-                    <Style.CardImg src={el.img} />
+                    <Style.CardImg src={el.img} alt=""/>
                   </Style.CategoryCard>
                 );
               })

@@ -18,20 +18,8 @@ const Header = () => {
   const [likeModal, setLikeModal] = useState(false);
   const { cartItems, likeItems } = useContext(MainContext);
 
-  const handleModal = () => {
-    setCartModal(!cartModal);
-  };
-
-  const handleLikeModal = () => {
-    setLikeModal(!likeModal);
-  };
-
-  const clickable = () => {
-    setButton(!button);
-  };
-
-  const catalogSwitch = () => {
-    setActive(!active);
+  const Switch = (el, item) => {
+    item(!el);
   };
 
   useEffect(() => {
@@ -49,12 +37,12 @@ const Header = () => {
         <CartModal
           cartModal={cartModal}
           data={cartItems}
-          handleModal={handleModal}
+          handleModal={() => Switch(cartModal, setCartModal)}
         />
         <LikeModal
           likeModal={likeModal}
           data={likeItems}
-          handleLikeModal={handleLikeModal}
+          handleLikeModal={() => Switch(likeModal, setLikeModal)}
         />
         <Style.HeaderNavWrapper>
           <Container>
@@ -65,7 +53,7 @@ const Header = () => {
 
               <CatalogWindow active={active} />
 
-              <Style.BurgerMenu onClick={clickable}>
+              <Style.BurgerMenu onClick={() => Switch(button, setButton)}>
                 <Style.BurgerMenuItem></Style.BurgerMenuItem>
                 <Style.BurgerMenuItem></Style.BurgerMenuItem>
                 <Style.BurgerMenuItem></Style.BurgerMenuItem>
@@ -75,7 +63,7 @@ const Header = () => {
                 <Link to="/">
                   <Style.HeaderLink>Главная</Style.HeaderLink>
                 </Link>
-                <Style.HeaderBtn onClick={catalogSwitch}>
+                <Style.HeaderBtn onClick={() => Switch(active, setActive)}>
                   Каталог
                   <Style.IconController active={active}>
                     <HeaderDart />
@@ -93,13 +81,17 @@ const Header = () => {
                 </Style.CallContent>
 
                 <Badge badgeContent={+likeItems.length} color="primary">
-                  <Style.HeaderItem onClick={handleLikeModal}>
+                  <Style.HeaderItem
+                    onClick={() => Switch(likeModal, setLikeModal)}
+                  >
                     <Like />
                   </Style.HeaderItem>
                 </Badge>
 
                 <Badge badgeContent={cartItems.length} color="primary">
-                  <Style.HeaderItem onClick={handleModal}>
+                  <Style.HeaderItem
+                    onClick={() => Switch(cartModal, setCartModal)}
+                  >
                     <Cart />
                   </Style.HeaderItem>
                 </Badge>

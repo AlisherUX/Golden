@@ -8,24 +8,28 @@ export const GlobalStyles = createGlobalStyle`
    font-family: "SF-ProText-Regular";
    src: url(/fonts/SF-ProText-Regular.ttf);
    font-weight: 400;
+    font-display: swap;
 }
 
 @font-face {
    font-family: "SF-ProText-SemiBold";
    src: url(/fonts/SF-ProText-SemiBold.ttf);
    font-weight: 600;
+    font-display: swap;
 }
 
 @font-face {
    font-family: "SF-ProText-Medium";
    src: url(/fonts/SF-ProText-Medium.ttf);
    font-weight: 500;
+    font-display: swap;
 }
 
 @font-face {
    font-family: "SF-ProText-Light";
    src: url(/fonts/SF-ProText-Light.ttf);
    font-weight: 300;
+    font-display: swap;
 }
 
  *{
