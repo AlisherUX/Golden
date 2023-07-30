@@ -63,7 +63,7 @@ const Header = () => {
                 <Link to="/">
                   <Style.HeaderLink>Главная</Style.HeaderLink>
                 </Link>
-                <Style.HeaderBtn onClick={() => Switch(active, setActive)}>
+                <Style.HeaderBtn aria-label="button" onClick={() => Switch(active, setActive)}>
                   Каталог
                   <Style.IconController active={active}>
                     <HeaderDart />

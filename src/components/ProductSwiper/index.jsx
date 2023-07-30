@@ -7,7 +7,7 @@ import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
 import { BannerArrow } from "../../assets/images";
-import { BannerButtons } from "../Banner/style";
+import { BannerButton } from "../Banner/style";
 import { Navigation, Mousewheel, Keyboard, Autoplay } from "swiper";
 import ProductCard from "../ProductCard";
 import axios from "axios";
@@ -40,12 +40,13 @@ const ProductSwiper = () => {
           <Title>Наши популярные продукты</Title>
 
           <Style.ProductNavigation>
-            <BannerButtons ref={prevElRef}>
+            <BannerButton aria-label="button" ref={prevElRef}>
               <BannerArrow style={{ transform: "rotate(180deg)" }} />
-            </BannerButtons>
-            <BannerButtons ref={nextElRef}>
+            </BannerButton>
+            
+            <BannerButton aria-label="button" ref={nextElRef}>
               <BannerArrow />
-            </BannerButtons>
+            </BannerButton>
           </Style.ProductNavigation>
         </Style.ProductTitleContent>
 

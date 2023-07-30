@@ -34,7 +34,7 @@ const Category = () => {
                     <Style.CardItemsWrapper>
                       <Style.CardEntry>{el.text}</Style.CardEntry>
                       <Link to={`/category/${el.type}`}>
-                        <Style.CardBtn>Перейти</Style.CardBtn>
+                        <Style.CardBtn aria-label="button">Перейти</Style.CardBtn>
                       </Link>
                     </Style.CardItemsWrapper>
 
@@ -48,7 +48,7 @@ const Category = () => {
         </Style.CategoryCards>
       </Container>
       <Link to="/catalog">
-        <BlueButton text={"Все категории"} />
+        <BlueButton aria-label="button" text={"Все категории"} />
       </Link>
     </Style.CategoryWrapper>
   );

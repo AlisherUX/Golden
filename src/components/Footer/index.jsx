@@ -54,8 +54,8 @@ const Footer = () => {
               <Style.NavTitle>Наши контакты</Style.NavTitle>
               <Style.NavLinksWrapper>
                 <Style.NavSubTitle>Телефоны</Style.NavSubTitle>
-                <Style.NavLink href={`tel:+${79885650038}`}>+7 (988) 565 00 38</Style.NavLink>
-                <Style.NavLink href={`tel:+${375336628256}`}>+375 33 662 82 56</Style.NavLink>
+                <Style.NavLink>+7 (988) 565 00 38</Style.NavLink>
+                <Style.NavLink>+375 33 662 82 56</Style.NavLink>
               </Style.NavLinksWrapper>
               <Style.NavLinksWrapper>
                 <Style.NavSubTitle>Email</Style.NavSubTitle>
@@ -83,7 +83,7 @@ const Footer = () => {
             <Accordion sx={{ backgroundColor: "#345E7E", borderRadius: "5px" }}>
               <AccordionSummary
                 expandIcon={<ExpandMoreIcon />}
-                aria-controls="panel1a-content"
+                aria-controls="navigation"
                 id="panel1a-header"
               >
                 <Typography>
@@ -110,7 +110,7 @@ const Footer = () => {
             <Accordion sx={{ backgroundColor: "#345E7E" }}>
               <AccordionSummary
                 expandIcon={<ExpandMoreIcon />}
-                aria-controls="panel2a-content"
+                aria-controls="our-contacts"
                 id="panel2a-header"
               >
                 <Typography>
@@ -136,11 +136,11 @@ const Footer = () => {
             <Accordion sx={{ backgroundColor: "#345E7E" }}>
               <AccordionSummary
                 expandIcon={<ExpandMoreIcon />}
-                aria-controls="panel2a-content"
+                aria-controls=""
                 id="panel2a-header"
               >
                 <Typography>
-                  <Style.NavTitle>Наш адрес</Style.NavTitle>
+                  <Style.NavTitle>our-address</Style.NavTitle>
                 </Typography>
               </AccordionSummary>
               <AccordionDetails>
@@ -156,7 +156,7 @@ const Footer = () => {
               <AccordionSummary
                 expandIcon={<ExpandMoreIcon />}
                 aria-controls="panel2a-content"
-                id="panel2a-header"
+                id="information"
               >
                 <Typography>
                   <Style.NavTitle>Информация</Style.NavTitle>

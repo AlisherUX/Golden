@@ -1,7 +1,7 @@
 import React from "react";
 import * as Style from "./style";
 import { Container } from "components/Container/style";
-import AboutBannerImg from "assets/images/AboutBannerImg.png";
+import AboutBannerImg from "assets/images/AboutBannerImg.avif";
 
 const AboutBanner = () => {
   return (

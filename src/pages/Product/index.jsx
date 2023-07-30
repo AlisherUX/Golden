@@ -18,19 +18,6 @@ import { Feature, FeatureText } from "components/AboutProducts/style";
 import { NowPrice, OldPrice, Prices } from "components/Banner/style";
 
 const ProductView = () => {
-  // const [data, setData] = useState([]);
-
-  // async function getData() {
-  //   const res = await axios.get(`${process.env.REACT_APP_PRODUCTCARD_URL}`);
-
-  //   if (res.status === 200) {
-  //     setData(res.data);
-  //   }
-  // }
-
-  // useEffect(() => {
-  //   getData();
-  // }, []);
 
   return (
     <Wrapper>

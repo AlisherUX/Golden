@@ -21,15 +21,15 @@ const ModalItem = ({ product }) => {
         <LeftActionsWrapper>
           <CardTitle>{cardTxt}</CardTitle>
           <Style.Counter>
-            <Style.Characters onClick={() => removeOne(id)}>-</Style.Characters>
+            <Style.Characters aria-label="button" onClick={() => removeOne(id)}>-</Style.Characters>
             <Style.NumberWrapper>{quantity}</Style.NumberWrapper>
-            <Style.Characters onClick={() => addOne(id)}>+</Style.Characters>
+            <Style.Characters aria-label="button" onClick={() => addOne(id)}>+</Style.Characters>
           </Style.Counter>
         </LeftActionsWrapper>
 
         <RightActionsWrapper>
           <IconButton style={{ borderRadius: "10px" }}>
-            <Button onClick={() => removeFromCart(id)}>
+            <Button aria-label="button" onClick={() => removeFromCart(id)}>
               <TrashCan />
             </Button>
           </IconButton>

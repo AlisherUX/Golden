@@ -20,7 +20,7 @@ export default function LikeModal({ likeModal, handleLikeModal, data }) {
         <Style.ModalInnerWrapper>
           <Style.TopContentWrapper>
             <Style.TopContentTitle variant="p">Избранное</Style.TopContentTitle>
-            <Button style={{ minWidth: "30px" }} onClick={handleLikeModal}>
+            <Button aria-label="button" style={{ minWidth: "30px" }} onClick={handleLikeModal}>
               <BlackCross />
             </Button>
           </Style.TopContentWrapper>

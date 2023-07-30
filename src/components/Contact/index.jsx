@@ -76,7 +76,7 @@ const Contact = () => {
                       name="email"
                     />
                   </Style.InputWrapper>
-                  <Style.SubmitBtn>Отправить</Style.SubmitBtn>
+                  <Style.SubmitBtn aria-label="button">Отправить</Style.SubmitBtn>
                 </Style.ContactForm>
               );
             }}

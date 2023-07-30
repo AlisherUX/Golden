@@ -33,7 +33,7 @@ export default function CartModal({ cartModal, handleModal, data }) {
         <ModalInnerWrapper>
           <TopContentWrapper>
             <TopContentTitle variant="p">Корзина</TopContentTitle>
-            <Button style={{ minWidth: "30px" }} onClick={handleModal}>
+            <Button style={{ minWidth: "30px" }} onClick={handleModal} aria-label="button">
               <BlackCross />
             </Button>
           </TopContentWrapper>
@@ -50,10 +50,10 @@ export default function CartModal({ cartModal, handleModal, data }) {
                     <Style.TotalText>Итого:</Style.TotalText>
                     <Style.Price>{total}₽</Style.Price>
                   </Style.PriceBox>
-                  <Style.OrderButton>Оформить заказ</Style.OrderButton>
+                  <Style.OrderButton aria-label="button">Оформить заказ</Style.OrderButton>
                 </Style.MainPriceWrapper>
 
-                <Style.ContinueButton>Продолжить покупки</Style.ContinueButton>
+                <Style.ContinueButton aria-label="button">Продолжить покупки</Style.ContinueButton>
               </Style.MainPriceContent>
             </ChoosedProductsWrapper>
           ) : (

@@ -76,7 +76,7 @@ const CatalogWindow = ({ active }) => {
         </Style.CatalogLi>
 
         <Link to="/catalog">
-          <Style.BottomButton>Смотреть все</Style.BottomButton>
+          <Style.BottomButton aria-label="button">Смотреть все</Style.BottomButton>
         </Link>
       </Style.CatalogUl>
 

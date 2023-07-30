@@ -43,7 +43,7 @@ const ProductCard = ({ data, select, like }) => {
           <OldPrice style={{ fontSize: "18px" }}>{oldPrice}</OldPrice>
         </Prices>
         <Style.ButtonsContent>
-          <MainButton onClick={CartToggle} style={{ paddingInline: "45px" }}>
+          <MainButton aria-label="button" onClick={CartToggle} style={{ paddingInline: "45px" }}>
             {select ? "Remove" : "Add"}
           </MainButton>
 

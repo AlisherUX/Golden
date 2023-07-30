@@ -143,13 +143,13 @@ const Banner = () => {
       </Container>
 
       <Style.SwiperNavigation>
-        <Style.BannerButtons ref={prevElRef}>
-          <BannerArrow aria-label="name" style={{ transform: "rotate(180deg)" }} />
-        </Style.BannerButtons>
+        <Style.BannerButton ref={prevElRef} aria-label="button">
+          <BannerArrow style={{ transform: "rotate(180deg)" }} />
+        </Style.BannerButton>
         <div className="pagination-bullets"></div>
-        <Style.BannerButtons ref={nextElRef}>
-          <BannerArrow aria-label="name"/>
-        </Style.BannerButtons>
+        <Style.BannerButton ref={nextElRef} aria-label="button">
+          <BannerArrow />
+        </Style.BannerButton>
       </Style.SwiperNavigation>
     </Style.BannerWrapper>
   );

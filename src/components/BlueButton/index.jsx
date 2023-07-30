@@ -20,7 +20,7 @@ const Button = styled.button`
 `;
 
 const BlueButton = ({ text }) => {
-  return <Button>{text}</Button>;
+  return <Button aria-label="button">{text}</Button>;
 };
 
 export default BlueButton;

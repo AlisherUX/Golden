@@ -7,7 +7,7 @@ const BannerWrapper = styled.div`
   background: ${colors.lactic};
 `;
 
-const BannerButtons = styled.button`
+const BannerButton = styled.button`
   background: transparent;
   width: 32px;
   height: 32px;
@@ -141,7 +141,7 @@ const OldPrice = styled.p`
 
 export {
   BannerWrapper,
-  BannerButtons,
+  BannerButton,
   SwiperNavigation,
   BannerImg,
   BannerContent,

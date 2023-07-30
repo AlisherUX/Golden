@@ -34,13 +34,13 @@ const ModalItem = ({ product, select }) => {
 
         <Style.RightActionsWrapper>
           <IconButton style={{ borderRadius: "10px" }}>
-            <Style.Button onClick={CartToggle}>
+            <Style.Button aria-label="button" onClick={CartToggle}>
               {select ? <RemoveShoppingCartIcon /> : <ShoppingCartIcon />}
             </Style.Button>
           </IconButton>
 
           <IconButton style={{ borderRadius: "10px" }}>
-            <Style.Button onClick={() => removeFromLike(id)}>
+            <Style.Button aria-label="button" onClick={() => removeFromLike(id)}>
               <TrashCan />
             </Style.Button>
           </IconButton>
